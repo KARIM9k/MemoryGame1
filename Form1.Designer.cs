@@ -233,7 +233,6 @@
             // 
             this.gbGender1.Controls.Add(this.rbFemale1);
             this.gbGender1.Controls.Add(this.rbMale1);
-            this.gbGender1.Enabled = false;
             this.gbGender1.Location = new System.Drawing.Point(6, 66);
             this.gbGender1.Name = "gbGender1";
             this.gbGender1.Size = new System.Drawing.Size(262, 56);
