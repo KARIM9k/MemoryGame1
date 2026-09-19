@@ -16,7 +16,7 @@ namespace MemoryGame1
 
     public struct stGameInfo 
     {
-       public enLevel Level;
+       public string Level;
        public bool TowPlayers;
        public int NumberOfRounds;
        public int TimePerRound;
@@ -154,8 +154,28 @@ namespace MemoryGame1
 
         void UpdateLevel(enLevel Level)
         {
-            GameInfo.Level = Level;
-        } 
+            switch (Level) {
+                case enLevel.enEasy:
+                {
+                        GameInfo.Level = "Easy";    
+                        break; 
+                }
+                case enLevel.enMid:
+                {
+                        GameInfo.Level = "Mid";
+                        break; 
+                }
+                case enLevel.enHard:
+                {
+                        GameInfo.Level = "Hard";
+                        break; 
+                }
+            
+            
+            
+            }
+            
+        }
 
         void UpdateTimePerRound()
         {
@@ -331,6 +351,22 @@ namespace MemoryGame1
                 e.Cancel = false;
                 errorProvider1.SetError(txtPlayer2, "");
             }
+        }
+
+        private void rbEasy_CheckedChanged_1(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enEasy);
+        }
+
+        private void rbMid_CheckedChanged_1(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enMid);
+           
+        }
+
+        private void rbHard_CheckedChanged_1(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enHard);
         }
     }
 }
