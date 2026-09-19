@@ -40,7 +40,6 @@
             this.modernButton2 = new ModernButton();
             this.modernButton4 = new ModernButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
             this.gbNumberOfPlayers = new System.Windows.Forms.GroupBox();
             this.rbTwoPlayers = new System.Windows.Forms.RadioButton();
