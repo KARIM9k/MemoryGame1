@@ -10,13 +10,135 @@ using System.Windows.Forms;
 
 namespace MemoryGame1
 {
+
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            
         }
 
-      
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            panelMainMenue.Visible = true;
+            panelMainMenue.BringToFront();
+            panelSettings.Visible = false;
+            panelHowToPlay.Visible = false;
+            panelSettings.Visible = false;
+
+        }
+        private void ShowPanel(Panel panelToShow)
+        {
+            panelMainMenue.Visible = false;
+
+            panelStartGame.Visible = false;
+            
+            panelHowToPlay.Visible = false;
+
+            panelSettings.Visible = false;
+
+            if (panelToShow != null)
+            {
+                panelToShow.Visible = true;
+                panelToShow.BringToFront();
+            }
+        }
+
+        private void modernButton1_Click(object sender, EventArgs e)
+        {
+         
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls) 
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210); 
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150); 
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+
+            ShowPanel(panelStartGame);
+        }
+
+        private void modernButton2_Click(object sender, EventArgs e)
+        {
+           
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls) 
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210); 
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+            ShowPanel(panelSettings);
+        }
+
+        private void modernButton3_Click(object sender, EventArgs e)
+        {
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210);
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+
+            ShowPanel(panelHowToPlay);
+        }
+
+        private void modernButton4_Click(object sender, EventArgs e)
+        {
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210);
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+        }
     }
 }
