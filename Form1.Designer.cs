@@ -29,11 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMainMenue = new System.Windows.Forms.Panel();
+            this.modernButton1 = new ModernButton();
+            this.modernButton3 = new ModernButton();
+            this.modernButton2 = new ModernButton();
+            this.modernButton4 = new ModernButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
             this.gbNumberOfPlayers = new System.Windows.Forms.GroupBox();
@@ -58,10 +64,6 @@
             this.rbHard = new System.Windows.Forms.RadioButton();
             this.rbMid = new System.Windows.Forms.RadioButton();
             this.rbEasy = new System.Windows.Forms.RadioButton();
-            this.modernButton1 = new ModernButton();
-            this.modernButton3 = new ModernButton();
-            this.modernButton2 = new ModernButton();
-            this.modernButton4 = new ModernButton();
             this.panelStartGame.SuspendLayout();
             this.panelHowToPlay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,6 +113,17 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
             this.pictureBox1.BackgroundImage = global::MemoryGame1.Properties.Resources.image_2748e566;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,7 +136,7 @@
             // panelMainMenue
             // 
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BackgroundImage = global::MemoryGame1.Properties.Resources.image_640b8fd7;
+            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
             this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.modernButton1);
@@ -134,6 +147,94 @@
             this.panelMainMenue.Name = "panelMainMenue";
             this.panelMainMenue.Size = new System.Drawing.Size(237, 519);
             this.panelMainMenue.TabIndex = 5;
+            // 
+            // modernButton1
+            // 
+            this.modernButton1.BackColor = System.Drawing.Color.White;
+            this.modernButton1.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton1.BorderRadius = 20;
+            this.modernButton1.BorderSize = 2;
+            this.modernButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton1.FlatAppearance.BorderSize = 0;
+            this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton1.ForeColor = System.Drawing.Color.Black;
+            this.modernButton1.Location = new System.Drawing.Point(22, 31);
+            this.modernButton1.Name = "modernButton1";
+            this.modernButton1.Size = new System.Drawing.Size(187, 78);
+            this.modernButton1.TabIndex = 1;
+            this.modernButton1.Text = "Start Game";
+            this.modernButton1.UseVisualStyleBackColor = false;
+            this.modernButton1.Click += new System.EventHandler(this.modernButton1_Click);
+            this.modernButton1.MouseEnter += new System.EventHandler(this.modernButton1_MouseEnter);
+            this.modernButton1.MouseLeave += new System.EventHandler(this.modernButton1_MouseLeave);
+            // 
+            // modernButton3
+            // 
+            this.modernButton3.BackColor = System.Drawing.Color.White;
+            this.modernButton3.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton3.BorderRadius = 20;
+            this.modernButton3.BorderSize = 2;
+            this.modernButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton3.FlatAppearance.BorderSize = 0;
+            this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton3.ForeColor = System.Drawing.Color.Black;
+            this.modernButton3.Location = new System.Drawing.Point(22, 269);
+            this.modernButton3.Name = "modernButton3";
+            this.modernButton3.Size = new System.Drawing.Size(187, 78);
+            this.modernButton3.TabIndex = 3;
+            this.modernButton3.Text = "How To Play";
+            this.modernButton3.UseVisualStyleBackColor = false;
+            this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
+            this.modernButton3.MouseEnter += new System.EventHandler(this.modernButton3_MouseEnter);
+            this.modernButton3.MouseLeave += new System.EventHandler(this.modernButton3_MouseLeave);
+            // 
+            // modernButton2
+            // 
+            this.modernButton2.BackColor = System.Drawing.Color.White;
+            this.modernButton2.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton2.BorderRadius = 20;
+            this.modernButton2.BorderSize = 2;
+            this.modernButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton2.FlatAppearance.BorderSize = 0;
+            this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton2.ForeColor = System.Drawing.Color.Black;
+            this.modernButton2.Location = new System.Drawing.Point(22, 150);
+            this.modernButton2.Name = "modernButton2";
+            this.modernButton2.Size = new System.Drawing.Size(187, 78);
+            this.modernButton2.TabIndex = 2;
+            this.modernButton2.Text = "Settings";
+            this.modernButton2.UseVisualStyleBackColor = false;
+            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.modernButton2.MouseEnter += new System.EventHandler(this.modernButton2_MouseEnter);
+            this.modernButton2.MouseLeave += new System.EventHandler(this.modernButton2_MouseLeave);
+            // 
+            // modernButton4
+            // 
+            this.modernButton4.BackColor = System.Drawing.Color.White;
+            this.modernButton4.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton4.BorderRadius = 20;
+            this.modernButton4.BorderSize = 2;
+            this.modernButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton4.FlatAppearance.BorderSize = 0;
+            this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton4.ForeColor = System.Drawing.Color.Black;
+            this.modernButton4.Location = new System.Drawing.Point(22, 388);
+            this.modernButton4.Name = "modernButton4";
+            this.modernButton4.Size = new System.Drawing.Size(187, 78);
+            this.modernButton4.TabIndex = 4;
+            this.modernButton4.Text = "Quit";
+            this.modernButton4.UseVisualStyleBackColor = false;
+            this.modernButton4.Click += new System.EventHandler(this.modernButton4_Click);
+            this.modernButton4.MouseEnter += new System.EventHandler(this.modernButton4_MouseEnter);
+            this.modernButton4.MouseLeave += new System.EventHandler(this.modernButton4_MouseLeave);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // errorProvider1
             // 
@@ -427,48 +528,6 @@
             this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
             this.modernButton3.MouseEnter += new System.EventHandler(this.modernButton3_MouseEnter);
             this.modernButton3.MouseLeave += new System.EventHandler(this.modernButton3_MouseLeave);
-            // 
-            // modernButton2
-            // 
-            this.modernButton2.BackColor = System.Drawing.Color.White;
-            this.modernButton2.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton2.BorderRadius = 20;
-            this.modernButton2.BorderSize = 2;
-            this.modernButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton2.FlatAppearance.BorderSize = 0;
-            this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton2.ForeColor = System.Drawing.Color.Black;
-            this.modernButton2.Location = new System.Drawing.Point(22, 150);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(187, 78);
-            this.modernButton2.TabIndex = 2;
-            this.modernButton2.Text = "Settings";
-            this.modernButton2.UseVisualStyleBackColor = false;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
-            this.modernButton2.MouseEnter += new System.EventHandler(this.modernButton2_MouseEnter);
-            this.modernButton2.MouseLeave += new System.EventHandler(this.modernButton2_MouseLeave);
-            // 
-            // modernButton4
-            // 
-            this.modernButton4.BackColor = System.Drawing.Color.White;
-            this.modernButton4.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton4.BorderRadius = 20;
-            this.modernButton4.BorderSize = 2;
-            this.modernButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton4.FlatAppearance.BorderSize = 0;
-            this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton4.ForeColor = System.Drawing.Color.Black;
-            this.modernButton4.Location = new System.Drawing.Point(22, 388);
-            this.modernButton4.Name = "modernButton4";
-            this.modernButton4.Size = new System.Drawing.Size(187, 78);
-            this.modernButton4.TabIndex = 4;
-            this.modernButton4.Text = "Quit";
-            this.modernButton4.UseVisualStyleBackColor = false;
-            this.modernButton4.Click += new System.EventHandler(this.modernButton4_Click);
-            this.modernButton4.MouseEnter += new System.EventHandler(this.modernButton4_MouseEnter);
-            this.modernButton4.MouseLeave += new System.EventHandler(this.modernButton4_MouseLeave);
             // 
             // Form1
             // 
