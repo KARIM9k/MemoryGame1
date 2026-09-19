@@ -88,39 +88,53 @@ namespace MemoryGame1
             clickedButton.ForeColor = Color.White;
             clickedButton.BorderSize = 0;
         }
+
+        private void ChangeToWhiteColor(ModernButton sender)
+        {
+            if (sender is ModernButton btn)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+                btn.BorderColor = Color.FromArgb(180, 195, 210);
+                btn.BorderSize = 2;
+
+            }
+        }
         private void ShowPanel(Panel panelToShow)
         {
 
+            panelStartGame.Enabled = false;
             panelStartGame.Visible = false;
-            
+
+            panelHowToPlay.Enabled = false;
             panelHowToPlay.Visible = false;
 
+            panelSettings.Enabled = false;
             panelSettings.Visible = false;
 
             if (panelToShow != null)
             {
+                panelToShow.Enabled = true;
                 panelToShow.Visible = true;
                 panelToShow.BringToFront();
             }
+            
         }
 
         private void modernButton1_Click(object sender, EventArgs e)
         {
 
-            ChangeButton((ModernButton)sender);
             ShowPanel(panelStartGame);
         }
 
         private void modernButton2_Click(object sender, EventArgs e)
         {
 
-            ChangeButton((ModernButton)sender);
             ShowPanel(panelSettings);
         }
 
         private void modernButton3_Click(object sender, EventArgs e)
         {
-            ChangeButton((ModernButton)sender);
 
 
             ShowPanel(panelHowToPlay);
@@ -128,13 +142,59 @@ namespace MemoryGame1
 
         private void modernButton4_Click(object sender, EventArgs e)
         {
-            ChangeButton((ModernButton)sender);
             this.Close();
 
         }
 
         private void panelSettings_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+      
+
+        private void modernButton1_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+        }
+
+        private void modernButton1_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
+        }
+
+        private void modernButton2_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+
+        }
+
+        private void modernButton2_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
+
+        }
+
+        private void modernButton3_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+        }
+
+        private void modernButton3_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
+
+        }
+
+        private void modernButton4_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+
+        }
+
+        private void modernButton4_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
 
         }
     }
