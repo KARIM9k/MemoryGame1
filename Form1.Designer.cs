@@ -281,6 +281,7 @@
             this.gbPlayer2Info.Controls.Add(this.txtPlayer2);
             this.gbPlayer2Info.Controls.Add(this.label5);
             this.gbPlayer2Info.Enabled = false;
+            this.gbPlayer2Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPlayer2Info.Location = new System.Drawing.Point(541, 338);
             this.gbPlayer2Info.Name = "gbPlayer2Info";
             this.gbPlayer2Info.Size = new System.Drawing.Size(297, 128);
@@ -304,7 +305,7 @@
             this.rbFemale2.AutoSize = true;
             this.rbFemale2.Location = new System.Drawing.Point(135, 24);
             this.rbFemale2.Name = "rbFemale2";
-            this.rbFemale2.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale2.Size = new System.Drawing.Size(82, 24);
             this.rbFemale2.TabIndex = 1;
             this.rbFemale2.TabStop = true;
             this.rbFemale2.Text = "Female";
@@ -316,7 +317,7 @@
             this.rbMale2.AutoSize = true;
             this.rbMale2.Location = new System.Drawing.Point(15, 24);
             this.rbMale2.Name = "rbMale2";
-            this.rbMale2.Size = new System.Drawing.Size(58, 20);
+            this.rbMale2.Size = new System.Drawing.Size(65, 24);
             this.rbMale2.TabIndex = 0;
             this.rbMale2.TabStop = true;
             this.rbMale2.Text = "Male";
@@ -327,7 +328,7 @@
             // 
             this.txtPlayer2.Location = new System.Drawing.Point(78, 28);
             this.txtPlayer2.Name = "txtPlayer2";
-            this.txtPlayer2.Size = new System.Drawing.Size(194, 22);
+            this.txtPlayer2.Size = new System.Drawing.Size(194, 27);
             this.txtPlayer2.TabIndex = 2;
             this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer2_Validating);
             // 
@@ -336,7 +337,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(7, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Player2 :  ";
             // 
@@ -346,6 +347,7 @@
             this.gbPlayer1Info.Controls.Add(this.txtPlayer1);
             this.gbPlayer1Info.Controls.Add(this.label3);
             this.gbPlayer1Info.Enabled = false;
+            this.gbPlayer1Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPlayer1Info.Location = new System.Drawing.Point(541, 197);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
             this.gbPlayer1Info.Size = new System.Drawing.Size(297, 128);
@@ -369,7 +371,7 @@
             this.rbFemale1.AutoSize = true;
             this.rbFemale1.Location = new System.Drawing.Point(135, 24);
             this.rbFemale1.Name = "rbFemale1";
-            this.rbFemale1.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale1.Size = new System.Drawing.Size(82, 24);
             this.rbFemale1.TabIndex = 1;
             this.rbFemale1.TabStop = true;
             this.rbFemale1.Text = "Female";
@@ -381,7 +383,7 @@
             this.rbMale1.AutoSize = true;
             this.rbMale1.Location = new System.Drawing.Point(15, 24);
             this.rbMale1.Name = "rbMale1";
-            this.rbMale1.Size = new System.Drawing.Size(58, 20);
+            this.rbMale1.Size = new System.Drawing.Size(65, 24);
             this.rbMale1.TabIndex = 0;
             this.rbMale1.TabStop = true;
             this.rbMale1.Text = "Male";
@@ -392,7 +394,7 @@
             // 
             this.txtPlayer1.Location = new System.Drawing.Point(86, 26);
             this.txtPlayer1.Name = "txtPlayer1";
-            this.txtPlayer1.Size = new System.Drawing.Size(190, 22);
+            this.txtPlayer1.Size = new System.Drawing.Size(190, 27);
             this.txtPlayer1.TabIndex = 1;
             this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer1_Validating);
             // 
@@ -401,7 +403,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "PLayer1 :  ";
             // 
@@ -409,6 +411,7 @@
             // 
             this.gbTimePerRound.Controls.Add(this.lblTimePerRound);
             this.gbTimePerRound.Controls.Add(this.tbTimePerRound);
+            this.gbTimePerRound.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTimePerRound.Location = new System.Drawing.Point(237, 27);
             this.gbTimePerRound.Name = "gbTimePerRound";
             this.gbTimePerRound.Size = new System.Drawing.Size(280, 158);
@@ -419,10 +422,10 @@
             // lblTimePerRound
             // 
             this.lblTimePerRound.AutoSize = true;
-            this.lblTimePerRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.lblTimePerRound.Font = new System.Drawing.Font("Segoe UI", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimePerRound.Location = new System.Drawing.Point(71, 30);
             this.lblTimePerRound.Name = "lblTimePerRound";
-            this.lblTimePerRound.Size = new System.Drawing.Size(118, 42);
+            this.lblTimePerRound.Size = new System.Drawing.Size(130, 50);
             this.lblTimePerRound.TabIndex = 1;
             this.lblTimePerRound.Text = "label3";
             // 
@@ -440,6 +443,7 @@
             this.gbLevel.Controls.Add(this.rbHard);
             this.gbLevel.Controls.Add(this.rbMid);
             this.gbLevel.Controls.Add(this.rbEasy);
+            this.gbLevel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLevel.Location = new System.Drawing.Point(26, 27);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(192, 158);
@@ -452,7 +456,7 @@
             this.rbHard.AutoSize = true;
             this.rbHard.Location = new System.Drawing.Point(22, 111);
             this.rbHard.Name = "rbHard";
-            this.rbHard.Size = new System.Drawing.Size(58, 20);
+            this.rbHard.Size = new System.Drawing.Size(65, 24);
             this.rbHard.TabIndex = 2;
             this.rbHard.TabStop = true;
             this.rbHard.Text = "Hard";
@@ -464,7 +468,7 @@
             this.rbMid.AutoSize = true;
             this.rbMid.Location = new System.Drawing.Point(22, 71);
             this.rbMid.Name = "rbMid";
-            this.rbMid.Size = new System.Drawing.Size(50, 20);
+            this.rbMid.Size = new System.Drawing.Size(57, 24);
             this.rbMid.TabIndex = 1;
             this.rbMid.TabStop = true;
             this.rbMid.Text = "Mid";
@@ -476,7 +480,7 @@
             this.rbEasy.AutoSize = true;
             this.rbEasy.Location = new System.Drawing.Point(22, 30);
             this.rbEasy.Name = "rbEasy";
-            this.rbEasy.Size = new System.Drawing.Size(59, 20);
+            this.rbEasy.Size = new System.Drawing.Size(62, 24);
             this.rbEasy.TabIndex = 0;
             this.rbEasy.TabStop = true;
             this.rbEasy.Text = "Easy";
