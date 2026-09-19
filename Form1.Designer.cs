@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
@@ -123,6 +124,7 @@
             // panelMainMenue
             // 
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
             this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.modernButton1);
