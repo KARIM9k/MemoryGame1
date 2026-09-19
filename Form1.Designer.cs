@@ -127,9 +127,9 @@
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.label1);
-            this.panelMainMenue.Location = new System.Drawing.Point(257, 24);
+            this.panelMainMenue.Location = new System.Drawing.Point(257, 20);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(721, 473);
+            this.panelMainMenue.Size = new System.Drawing.Size(721, 481);
             this.panelMainMenue.TabIndex = 5;
             // 
             // label1
