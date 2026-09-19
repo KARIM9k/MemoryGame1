@@ -204,30 +204,16 @@ namespace MemoryGame1
         {
             if (Player == 1)
             {
-                GameInfo.GenderPlayer1 = Gender; 
+                GameInfo.GenderPlayer1 = Gender;
+               
             }
             else
             {
                 GameInfo.GenderPlayer2 = Gender;
+                
             }
+           
         } 
-
-        private void rbEasy_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enEasy); 
-        }
-
-        private void rbMid_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enMid);
-        }
-
-        private void rbHard_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enHard);
-        }
-
-        
 
       
 
@@ -275,10 +261,25 @@ namespace MemoryGame1
             ChangeToWhiteColor((ModernButton)sender);
         }
 
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
+
+
+
+        private void rbEasy_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateTimePerRound(); 
+            UpdateLevel(enLevel.enEasy);
         }
+
+        private void rbMid_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enMid);
+        }
+
+        private void rbHard_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enHard);
+        }
+
+
 
         private void rbOnePlayer_CheckedChanged(object sender, EventArgs e)
         {
@@ -305,7 +306,8 @@ namespace MemoryGame1
 
         private void rbMale1_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGender("Male",1); 
+            UpdateGender("Male",1);
+
         }
 
         private void rbFemale1_CheckedChanged(object sender, EventArgs e)
@@ -321,7 +323,15 @@ namespace MemoryGame1
         private void rbFemale2_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGender("Female", 2);
+           
         }
+
+
+        private void tbTimePerRound_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTimePerRound();
+        }
+
 
         private void txtPlayer1_Validating(object sender, CancelEventArgs e)
         {
@@ -353,25 +363,9 @@ namespace MemoryGame1
             }
         }
 
-        private void rbEasy_CheckedChanged_1(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enEasy);
-        }
+      
+        
 
-        private void rbMid_CheckedChanged_1(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enMid);
-           
-        }
-
-        private void rbHard_CheckedChanged_1(object sender, EventArgs e)
-        {
-            UpdateLevel(enLevel.enHard);
-        }
-
-        private void tbTimePerRound_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateTimePerRound(); 
-        }
+       
     }
 }

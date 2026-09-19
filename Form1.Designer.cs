@@ -259,6 +259,7 @@
             this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Tow Players";
             this.rbTwoPlayers.UseVisualStyleBackColor = true;
+            this.rbTwoPlayers.CheckedChanged += new System.EventHandler(this.rbTwoPlayers_CheckedChanged);
             // 
             // rbOnePlayer
             // 
@@ -270,12 +271,14 @@
             this.rbOnePlayer.TabStop = true;
             this.rbOnePlayer.Text = "One Player";
             this.rbOnePlayer.UseVisualStyleBackColor = true;
+            this.rbOnePlayer.CheckedChanged += new System.EventHandler(this.rbOnePlayer_CheckedChanged);
             // 
             // gbPlayer2Info
             // 
             this.gbPlayer2Info.Controls.Add(this.gbGender2);
             this.gbPlayer2Info.Controls.Add(this.txtPlayer2);
             this.gbPlayer2Info.Controls.Add(this.label5);
+            this.gbPlayer2Info.Enabled = false;
             this.gbPlayer2Info.Location = new System.Drawing.Point(541, 338);
             this.gbPlayer2Info.Name = "gbPlayer2Info";
             this.gbPlayer2Info.Size = new System.Drawing.Size(297, 128);
@@ -304,6 +307,7 @@
             this.rbFemale2.TabStop = true;
             this.rbFemale2.Text = "Female";
             this.rbFemale2.UseVisualStyleBackColor = true;
+            this.rbFemale2.CheckedChanged += new System.EventHandler(this.rbFemale2_CheckedChanged);
             // 
             // rbMale2
             // 
@@ -315,6 +319,7 @@
             this.rbMale2.TabStop = true;
             this.rbMale2.Text = "Male";
             this.rbMale2.UseVisualStyleBackColor = true;
+            this.rbMale2.CheckedChanged += new System.EventHandler(this.rbMale2_CheckedChanged);
             // 
             // txtPlayer2
             // 
@@ -322,6 +327,7 @@
             this.txtPlayer2.Name = "txtPlayer2";
             this.txtPlayer2.Size = new System.Drawing.Size(194, 22);
             this.txtPlayer2.TabIndex = 2;
+            this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer2_Validating);
             // 
             // label5
             // 
@@ -337,6 +343,7 @@
             this.gbPlayer1Info.Controls.Add(this.gbGender1);
             this.gbPlayer1Info.Controls.Add(this.txtPlayer1);
             this.gbPlayer1Info.Controls.Add(this.label3);
+            this.gbPlayer1Info.Enabled = false;
             this.gbPlayer1Info.Location = new System.Drawing.Point(541, 197);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
             this.gbPlayer1Info.Size = new System.Drawing.Size(297, 128);
@@ -365,6 +372,7 @@
             this.rbFemale1.TabStop = true;
             this.rbFemale1.Text = "Female";
             this.rbFemale1.UseVisualStyleBackColor = true;
+            this.rbFemale1.CheckedChanged += new System.EventHandler(this.rbFemale1_CheckedChanged);
             // 
             // rbMale1
             // 
@@ -376,6 +384,7 @@
             this.rbMale1.TabStop = true;
             this.rbMale1.Text = "Male";
             this.rbMale1.UseVisualStyleBackColor = true;
+            this.rbMale1.CheckedChanged += new System.EventHandler(this.rbMale1_CheckedChanged);
             // 
             // txtPlayer1
             // 
@@ -383,6 +392,7 @@
             this.txtPlayer1.Name = "txtPlayer1";
             this.txtPlayer1.Size = new System.Drawing.Size(190, 22);
             this.txtPlayer1.TabIndex = 1;
+            this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer1_Validating);
             // 
             // label3
             // 
@@ -445,7 +455,7 @@
             this.rbHard.TabStop = true;
             this.rbHard.Text = "Hard";
             this.rbHard.UseVisualStyleBackColor = true;
-            this.rbHard.CheckedChanged += new System.EventHandler(this.rbHard_CheckedChanged_1);
+            this.rbHard.CheckedChanged += new System.EventHandler(this.rbHard_CheckedChanged);
             // 
             // rbMid
             // 
@@ -457,7 +467,7 @@
             this.rbMid.TabStop = true;
             this.rbMid.Text = "Mid";
             this.rbMid.UseVisualStyleBackColor = true;
-            this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged_1);
+            this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
             // 
             // rbEasy
             // 
@@ -469,7 +479,7 @@
             this.rbEasy.TabStop = true;
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = true;
-            this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged_1);
+            this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged);
             // 
             // Form1
             // 
