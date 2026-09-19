@@ -36,7 +36,25 @@ namespace MemoryGame1
         public Form1()
         {
             InitializeComponent();
+
+
+            switch (GameInfo.Level) {
+                case enLevel.enEasy:
+                {
+                        break; 
+                }
+                case enLevel.enMid:
+                {
+                        break; 
+                }
+                case enLevel.enHard:
+                {
+                        break; 
+                }
             
+            }
+           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
