@@ -51,10 +51,10 @@
             this.btnA.TabIndex = 1;
             this.btnA.Text = "button2";
             this.btnA.UseVisualStyleBackColor = true;
+            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(684, 378);
             this.button2.Location = new System.Drawing.Point(316, 186);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
