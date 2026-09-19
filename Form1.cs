@@ -368,5 +368,10 @@ namespace MemoryGame1
         {
             UpdateLevel(enLevel.enHard);
         }
+
+        private void tbTimePerRound_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTimePerRound(); 
+        }
     }
 }

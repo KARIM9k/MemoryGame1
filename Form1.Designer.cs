@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
@@ -39,7 +38,6 @@
             this.modernButton3 = new ModernButton();
             this.modernButton2 = new ModernButton();
             this.modernButton4 = new ModernButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
             this.gbNumberOfPlayers = new System.Windows.Forms.GroupBox();
@@ -113,17 +111,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
             this.pictureBox1.BackgroundImage = global::MemoryGame1.Properties.Resources.image_2748e566;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -136,7 +123,6 @@
             // panelMainMenue
             // 
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
             this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.modernButton1);
@@ -236,10 +222,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // panelSettings
             // 
             this.panelSettings.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -272,7 +254,7 @@
             this.rbTwoPlayers.AutoSize = true;
             this.rbTwoPlayers.Location = new System.Drawing.Point(145, 21);
             this.rbTwoPlayers.Name = "rbTwoPlayers";
-            this.rbTwoPlayers.Size = new System.Drawing.Size(103, 20);
+            this.rbTwoPlayers.Size = new System.Drawing.Size(116, 24);
             this.rbTwoPlayers.TabIndex = 1;
             this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Tow Players";
@@ -283,7 +265,7 @@
             this.rbOnePlayer.AutoSize = true;
             this.rbOnePlayer.Location = new System.Drawing.Point(25, 21);
             this.rbOnePlayer.Name = "rbOnePlayer";
-            this.rbOnePlayer.Size = new System.Drawing.Size(95, 20);
+            this.rbOnePlayer.Size = new System.Drawing.Size(107, 24);
             this.rbOnePlayer.TabIndex = 0;
             this.rbOnePlayer.TabStop = true;
             this.rbOnePlayer.Text = "One Player";
@@ -435,9 +417,11 @@
             // tbTimePerRound
             // 
             this.tbTimePerRound.Location = new System.Drawing.Point(6, 75);
+            this.tbTimePerRound.Maximum = 100;
             this.tbTimePerRound.Name = "tbTimePerRound";
             this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
             this.tbTimePerRound.TabIndex = 0;
+            this.tbTimePerRound.ValueChanged += new System.EventHandler(this.tbTimePerRound_ValueChanged);
             // 
             // gbLevel
             // 
@@ -486,48 +470,6 @@
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = true;
             this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged_1);
-            // 
-            // modernButton1
-            // 
-            this.modernButton1.BackColor = System.Drawing.Color.White;
-            this.modernButton1.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton1.BorderRadius = 20;
-            this.modernButton1.BorderSize = 2;
-            this.modernButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton1.FlatAppearance.BorderSize = 0;
-            this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton1.ForeColor = System.Drawing.Color.Black;
-            this.modernButton1.Location = new System.Drawing.Point(22, 31);
-            this.modernButton1.Name = "modernButton1";
-            this.modernButton1.Size = new System.Drawing.Size(187, 78);
-            this.modernButton1.TabIndex = 1;
-            this.modernButton1.Text = "Start Game";
-            this.modernButton1.UseVisualStyleBackColor = false;
-            this.modernButton1.Click += new System.EventHandler(this.modernButton1_Click);
-            this.modernButton1.MouseEnter += new System.EventHandler(this.modernButton1_MouseEnter);
-            this.modernButton1.MouseLeave += new System.EventHandler(this.modernButton1_MouseLeave);
-            // 
-            // modernButton3
-            // 
-            this.modernButton3.BackColor = System.Drawing.Color.White;
-            this.modernButton3.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton3.BorderRadius = 20;
-            this.modernButton3.BorderSize = 2;
-            this.modernButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton3.FlatAppearance.BorderSize = 0;
-            this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton3.ForeColor = System.Drawing.Color.Black;
-            this.modernButton3.Location = new System.Drawing.Point(22, 269);
-            this.modernButton3.Name = "modernButton3";
-            this.modernButton3.Size = new System.Drawing.Size(187, 78);
-            this.modernButton3.TabIndex = 3;
-            this.modernButton3.Text = "How To Play";
-            this.modernButton3.UseVisualStyleBackColor = false;
-            this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
-            this.modernButton3.MouseEnter += new System.EventHandler(this.modernButton3_MouseEnter);
-            this.modernButton3.MouseLeave += new System.EventHandler(this.modernButton3_MouseLeave);
             // 
             // Form1
             // 
