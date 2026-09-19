@@ -295,6 +295,8 @@
             this.gbPlayer2Info.Controls.Add(this.txtPlayer2);
             this.gbPlayer2Info.Controls.Add(this.label5);
             this.gbPlayer2Info.Enabled = false;
+            this.gbPlayer2Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPlayer2Info.Location = new System.Drawing.Point(541, 338);
             this.gbPlayer2Info.Location = new System.Drawing.Point(406, 274);
             this.gbPlayer2Info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbPlayer2Info.Name = "gbPlayer2Info";
@@ -323,6 +325,7 @@
             this.rbFemale2.Location = new System.Drawing.Point(101, 20);
             this.rbFemale2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbFemale2.Name = "rbFemale2";
+            this.rbFemale2.Size = new System.Drawing.Size(82, 24);
             this.rbFemale2.Size = new System.Drawing.Size(59, 17);
             this.rbFemale2.TabIndex = 1;
             this.rbFemale2.TabStop = true;
@@ -336,6 +339,7 @@
             this.rbMale2.Location = new System.Drawing.Point(11, 20);
             this.rbMale2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMale2.Name = "rbMale2";
+            this.rbMale2.Size = new System.Drawing.Size(65, 24);
             this.rbMale2.Size = new System.Drawing.Size(48, 17);
             this.rbMale2.TabIndex = 0;
             this.rbMale2.TabStop = true;
@@ -348,6 +352,7 @@
             this.txtPlayer2.Location = new System.Drawing.Point(59, 23);
             this.txtPlayer2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPlayer2.Name = "txtPlayer2";
+            this.txtPlayer2.Size = new System.Drawing.Size(194, 27);
             this.txtPlayer2.Size = new System.Drawing.Size(147, 20);
             this.txtPlayer2.TabIndex = 2;
             this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer2_Validating);
@@ -358,6 +363,7 @@
             this.label5.Location = new System.Drawing.Point(5, 27);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Player2 :  ";
@@ -368,6 +374,8 @@
             this.gbPlayer1Info.Controls.Add(this.txtPlayer1);
             this.gbPlayer1Info.Controls.Add(this.label3);
             this.gbPlayer1Info.Enabled = false;
+            this.gbPlayer1Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPlayer1Info.Location = new System.Drawing.Point(541, 197);
             this.gbPlayer1Info.Location = new System.Drawing.Point(406, 160);
             this.gbPlayer1Info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
@@ -396,6 +404,7 @@
             this.rbFemale1.Location = new System.Drawing.Point(101, 20);
             this.rbFemale1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbFemale1.Name = "rbFemale1";
+            this.rbFemale1.Size = new System.Drawing.Size(82, 24);
             this.rbFemale1.Size = new System.Drawing.Size(59, 17);
             this.rbFemale1.TabIndex = 1;
             this.rbFemale1.TabStop = true;
@@ -409,6 +418,7 @@
             this.rbMale1.Location = new System.Drawing.Point(11, 20);
             this.rbMale1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMale1.Name = "rbMale1";
+            this.rbMale1.Size = new System.Drawing.Size(65, 24);
             this.rbMale1.Size = new System.Drawing.Size(48, 17);
             this.rbMale1.TabIndex = 0;
             this.rbMale1.TabStop = true;
@@ -421,6 +431,7 @@
             this.txtPlayer1.Location = new System.Drawing.Point(65, 21);
             this.txtPlayer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPlayer1.Name = "txtPlayer1";
+            this.txtPlayer1.Size = new System.Drawing.Size(190, 27);
             this.txtPlayer1.Size = new System.Drawing.Size(143, 20);
             this.txtPlayer1.TabIndex = 1;
             this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer1_Validating);
@@ -431,6 +442,7 @@
             this.label3.Location = new System.Drawing.Point(5, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "PLayer1 :  ";
@@ -439,6 +451,8 @@
             // 
             this.gbTimePerRound.Controls.Add(this.lblTimePerRound);
             this.gbTimePerRound.Controls.Add(this.tbTimePerRound);
+            this.gbTimePerRound.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTimePerRound.Location = new System.Drawing.Point(237, 27);
             this.gbTimePerRound.Location = new System.Drawing.Point(178, 22);
             this.gbTimePerRound.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbTimePerRound.Name = "gbTimePerRound";
@@ -451,10 +465,13 @@
             // lblTimePerRound
             // 
             this.lblTimePerRound.AutoSize = true;
+            this.lblTimePerRound.Font = new System.Drawing.Font("Segoe UI", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimePerRound.Location = new System.Drawing.Point(71, 30);
             this.lblTimePerRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.lblTimePerRound.Location = new System.Drawing.Point(53, 25);
             this.lblTimePerRound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimePerRound.Name = "lblTimePerRound";
+            this.lblTimePerRound.Size = new System.Drawing.Size(130, 50);
             this.lblTimePerRound.Size = new System.Drawing.Size(95, 36);
             this.lblTimePerRound.TabIndex = 1;
             this.lblTimePerRound.Text = "label3";
@@ -474,6 +491,8 @@
             this.gbLevel.Controls.Add(this.rbHard);
             this.gbLevel.Controls.Add(this.rbMid);
             this.gbLevel.Controls.Add(this.rbEasy);
+            this.gbLevel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbLevel.Location = new System.Drawing.Point(26, 27);
             this.gbLevel.Location = new System.Drawing.Point(19, 22);
             this.gbLevel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbLevel.Name = "gbLevel";
@@ -489,6 +508,7 @@
             this.rbHard.Location = new System.Drawing.Point(17, 90);
             this.rbHard.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbHard.Name = "rbHard";
+            this.rbHard.Size = new System.Drawing.Size(65, 24);
             this.rbHard.Size = new System.Drawing.Size(48, 17);
             this.rbHard.TabIndex = 2;
             this.rbHard.TabStop = true;
@@ -502,6 +522,7 @@
             this.rbMid.Location = new System.Drawing.Point(17, 58);
             this.rbMid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMid.Name = "rbMid";
+            this.rbMid.Size = new System.Drawing.Size(57, 24);
             this.rbMid.Size = new System.Drawing.Size(42, 17);
             this.rbMid.TabIndex = 1;
             this.rbMid.TabStop = true;
@@ -515,6 +536,7 @@
             this.rbEasy.Location = new System.Drawing.Point(17, 25);
             this.rbEasy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbEasy.Name = "rbEasy";
+            this.rbEasy.Size = new System.Drawing.Size(62, 24);
             this.rbEasy.Size = new System.Drawing.Size(48, 17);
             this.rbEasy.TabIndex = 0;
             this.rbEasy.TabStop = true;
