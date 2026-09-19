@@ -28,117 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.modernButton4 = new ModernButton();
-            this.modernButton3 = new ModernButton();
-            this.modernButton2 = new ModernButton();
-            this.modernButton1 = new ModernButton();
-            this.panelMainMenue = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelMainMenue.SuspendLayout();
+            this.panelMainMenue = new System.Windows.Forms.Panel();
+            this.modernButton1 = new ModernButton();
+            this.modernButton3 = new ModernButton();
+            this.modernButton2 = new ModernButton();
+            this.modernButton4 = new ModernButton();
             this.panelStartGame.SuspendLayout();
             this.panelHowToPlay.SuspendLayout();
+            this.panelMainMenue.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // modernButton4
-            // 
-            this.modernButton4.BackColor = System.Drawing.Color.White;
-            this.modernButton4.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton4.BorderRadius = 20;
-            this.modernButton4.BorderSize = 2;
-            this.modernButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton4.FlatAppearance.BorderSize = 0;
-            this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton4.ForeColor = System.Drawing.Color.Black;
-            this.modernButton4.Location = new System.Drawing.Point(23, 433);
-            this.modernButton4.Name = "modernButton4";
-            this.modernButton4.Size = new System.Drawing.Size(187, 73);
-            this.modernButton4.TabIndex = 4;
-            this.modernButton4.Text = "Quit";
-            this.modernButton4.UseVisualStyleBackColor = false;
-            this.modernButton4.Click += new System.EventHandler(this.modernButton4_Click);
-            // 
-            // modernButton3
-            // 
-            this.modernButton3.BackColor = System.Drawing.Color.White;
-            this.modernButton3.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton3.BorderRadius = 20;
-            this.modernButton3.BorderSize = 2;
-            this.modernButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton3.FlatAppearance.BorderSize = 0;
-            this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton3.ForeColor = System.Drawing.Color.Black;
-            this.modernButton3.Location = new System.Drawing.Point(23, 320);
-            this.modernButton3.Name = "modernButton3";
-            this.modernButton3.Size = new System.Drawing.Size(187, 68);
-            this.modernButton3.TabIndex = 3;
-            this.modernButton3.Text = "How To Play";
-            this.modernButton3.UseVisualStyleBackColor = false;
-            this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
-            // 
-            // modernButton2
-            // 
-            this.modernButton2.BackColor = System.Drawing.Color.White;
-            this.modernButton2.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton2.BorderRadius = 20;
-            this.modernButton2.BorderSize = 2;
-            this.modernButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton2.FlatAppearance.BorderSize = 0;
-            this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton2.ForeColor = System.Drawing.Color.Black;
-            this.modernButton2.Location = new System.Drawing.Point(23, 185);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(187, 71);
-            this.modernButton2.TabIndex = 2;
-            this.modernButton2.Text = "Settings";
-            this.modernButton2.UseVisualStyleBackColor = false;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
-            // 
-            // modernButton1
-            // 
-            this.modernButton1.BackColor = System.Drawing.Color.White;
-            this.modernButton1.BorderColor = System.Drawing.Color.LightGray;
-            this.modernButton1.BorderRadius = 20;
-            this.modernButton1.BorderSize = 2;
-            this.modernButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modernButton1.FlatAppearance.BorderSize = 0;
-            this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.modernButton1.ForeColor = System.Drawing.Color.Black;
-            this.modernButton1.Location = new System.Drawing.Point(23, 63);
-            this.modernButton1.Name = "modernButton1";
-            this.modernButton1.Size = new System.Drawing.Size(187, 78);
-            this.modernButton1.TabIndex = 1;
-            this.modernButton1.Text = "Start Game";
-            this.modernButton1.UseVisualStyleBackColor = false;
-            this.modernButton1.Click += new System.EventHandler(this.modernButton1_Click);
-            // 
-            // panelMainMenue
-            // 
-            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMainMenue.Controls.Add(this.label1);
-            this.panelMainMenue.Location = new System.Drawing.Point(1145, 12);
-            this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(53, 37);
-            this.panelMainMenue.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 69);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Main Menue";
             // 
             // panelStartGame
             // 
@@ -168,6 +71,7 @@
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(859, 519);
             this.panelSettings.TabIndex = 6;
+            this.panelSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSettings_Paint);
             // 
             // panelHowToPlay
             // 
@@ -189,6 +93,97 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "How To Play";
             // 
+            // panelMainMenue
+            // 
+            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelMainMenue.BackgroundImage = global::MemoryGame1.Properties.Resources.image_640b8fd7;
+            this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMainMenue.Controls.Add(this.modernButton1);
+            this.panelMainMenue.Controls.Add(this.modernButton3);
+            this.panelMainMenue.Controls.Add(this.modernButton2);
+            this.panelMainMenue.Controls.Add(this.modernButton4);
+            this.panelMainMenue.Location = new System.Drawing.Point(12, 46);
+            this.panelMainMenue.Name = "panelMainMenue";
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 519);
+            this.panelMainMenue.TabIndex = 5;
+            // 
+            // modernButton1
+            // 
+            this.modernButton1.BackColor = System.Drawing.Color.White;
+            this.modernButton1.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton1.BorderRadius = 20;
+            this.modernButton1.BorderSize = 2;
+            this.modernButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton1.FlatAppearance.BorderSize = 0;
+            this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton1.ForeColor = System.Drawing.Color.Black;
+            this.modernButton1.Location = new System.Drawing.Point(22, 31);
+            this.modernButton1.Name = "modernButton1";
+            this.modernButton1.Size = new System.Drawing.Size(187, 78);
+            this.modernButton1.TabIndex = 1;
+            this.modernButton1.Text = "Start Game";
+            this.modernButton1.UseVisualStyleBackColor = false;
+            this.modernButton1.Click += new System.EventHandler(this.modernButton1_Click);
+            // 
+            // modernButton3
+            // 
+            this.modernButton3.BackColor = System.Drawing.Color.White;
+            this.modernButton3.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton3.BorderRadius = 20;
+            this.modernButton3.BorderSize = 2;
+            this.modernButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton3.FlatAppearance.BorderSize = 0;
+            this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton3.ForeColor = System.Drawing.Color.Black;
+            this.modernButton3.Location = new System.Drawing.Point(22, 269);
+            this.modernButton3.Name = "modernButton3";
+            this.modernButton3.Size = new System.Drawing.Size(187, 78);
+            this.modernButton3.TabIndex = 3;
+            this.modernButton3.Text = "How To Play";
+            this.modernButton3.UseVisualStyleBackColor = false;
+            this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
+            // 
+            // modernButton2
+            // 
+            this.modernButton2.BackColor = System.Drawing.Color.White;
+            this.modernButton2.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton2.BorderRadius = 20;
+            this.modernButton2.BorderSize = 2;
+            this.modernButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton2.FlatAppearance.BorderSize = 0;
+            this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton2.ForeColor = System.Drawing.Color.Black;
+            this.modernButton2.Location = new System.Drawing.Point(22, 150);
+            this.modernButton2.Name = "modernButton2";
+            this.modernButton2.Size = new System.Drawing.Size(187, 78);
+            this.modernButton2.TabIndex = 2;
+            this.modernButton2.Text = "Settings";
+            this.modernButton2.UseVisualStyleBackColor = false;
+            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            // 
+            // modernButton4
+            // 
+            this.modernButton4.BackColor = System.Drawing.Color.White;
+            this.modernButton4.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton4.BorderRadius = 20;
+            this.modernButton4.BorderSize = 2;
+            this.modernButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton4.FlatAppearance.BorderSize = 0;
+            this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton4.ForeColor = System.Drawing.Color.Black;
+            this.modernButton4.Location = new System.Drawing.Point(22, 388);
+            this.modernButton4.Name = "modernButton4";
+            this.modernButton4.Size = new System.Drawing.Size(187, 78);
+            this.modernButton4.TabIndex = 4;
+            this.modernButton4.Text = "Quit";
+            this.modernButton4.UseVisualStyleBackColor = false;
+            this.modernButton4.Click += new System.EventHandler(this.modernButton4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,19 +194,14 @@
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelHowToPlay);
             this.Controls.Add(this.panelStartGame);
-            this.Controls.Add(this.modernButton4);
-            this.Controls.Add(this.modernButton3);
-            this.Controls.Add(this.modernButton2);
-            this.Controls.Add(this.modernButton1);
             this.Name = "Form1";
             this.Text = "Card Mach Game";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panelMainMenue.ResumeLayout(false);
-            this.panelMainMenue.PerformLayout();
             this.panelStartGame.ResumeLayout(false);
             this.panelStartGame.PerformLayout();
             this.panelHowToPlay.ResumeLayout(false);
             this.panelHowToPlay.PerformLayout();
+            this.panelMainMenue.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -222,7 +212,6 @@
         private ModernButton modernButton3;
         private ModernButton modernButton4;
         private System.Windows.Forms.Panel panelMainMenue;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelStartGame;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelSettings;

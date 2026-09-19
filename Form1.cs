@@ -90,7 +90,6 @@ namespace MemoryGame1
         }
         private void ShowPanel(Panel panelToShow)
         {
-            panelMainMenue.Visible = false;
 
             panelStartGame.Visible = false;
             
@@ -130,6 +129,12 @@ namespace MemoryGame1
         private void modernButton4_Click(object sender, EventArgs e)
         {
             ChangeButton((ModernButton)sender);
+            this.Close();
+
+        }
+
+        private void panelSettings_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
