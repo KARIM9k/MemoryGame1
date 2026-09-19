@@ -37,12 +37,10 @@
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panelMainMenue.SuspendLayout();
             this.panelStartGame.SuspendLayout();
-            this.panelSettings.SuspendLayout();
             this.panelHowToPlay.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,9 +55,9 @@
             this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton4.ForeColor = System.Drawing.Color.Black;
-            this.modernButton4.Location = new System.Drawing.Point(34, 342);
+            this.modernButton4.Location = new System.Drawing.Point(23, 433);
             this.modernButton4.Name = "modernButton4";
-            this.modernButton4.Size = new System.Drawing.Size(142, 62);
+            this.modernButton4.Size = new System.Drawing.Size(187, 73);
             this.modernButton4.TabIndex = 4;
             this.modernButton4.Text = "Quit";
             this.modernButton4.UseVisualStyleBackColor = false;
@@ -76,9 +74,9 @@
             this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton3.ForeColor = System.Drawing.Color.Black;
-            this.modernButton3.Location = new System.Drawing.Point(34, 235);
+            this.modernButton3.Location = new System.Drawing.Point(23, 320);
             this.modernButton3.Name = "modernButton3";
-            this.modernButton3.Size = new System.Drawing.Size(142, 62);
+            this.modernButton3.Size = new System.Drawing.Size(187, 68);
             this.modernButton3.TabIndex = 3;
             this.modernButton3.Text = "How To Play";
             this.modernButton3.UseVisualStyleBackColor = false;
@@ -95,9 +93,9 @@
             this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton2.ForeColor = System.Drawing.Color.Black;
-            this.modernButton2.Location = new System.Drawing.Point(34, 133);
+            this.modernButton2.Location = new System.Drawing.Point(23, 185);
             this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(142, 62);
+            this.modernButton2.Size = new System.Drawing.Size(187, 71);
             this.modernButton2.TabIndex = 2;
             this.modernButton2.Text = "Settings";
             this.modernButton2.UseVisualStyleBackColor = false;
@@ -114,9 +112,9 @@
             this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton1.ForeColor = System.Drawing.Color.Black;
-            this.modernButton1.Location = new System.Drawing.Point(34, 41);
+            this.modernButton1.Location = new System.Drawing.Point(23, 63);
             this.modernButton1.Name = "modernButton1";
-            this.modernButton1.Size = new System.Drawing.Size(142, 62);
+            this.modernButton1.Size = new System.Drawing.Size(187, 78);
             this.modernButton1.TabIndex = 1;
             this.modernButton1.Text = "Start Game";
             this.modernButton1.UseVisualStyleBackColor = false;
@@ -127,9 +125,9 @@
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.label1);
-            this.panelMainMenue.Location = new System.Drawing.Point(257, 20);
+            this.panelMainMenue.Location = new System.Drawing.Point(1145, 12);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(721, 481);
+            this.panelMainMenue.Size = new System.Drawing.Size(53, 37);
             this.panelMainMenue.TabIndex = 5;
             // 
             // label1
@@ -147,9 +145,9 @@
             this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelStartGame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(257, 24);
+            this.panelStartGame.Location = new System.Drawing.Point(1147, 114);
             this.panelStartGame.Name = "panelStartGame";
-            this.panelStartGame.Size = new System.Drawing.Size(721, 469);
+            this.panelStartGame.Size = new System.Drawing.Size(53, 42);
             this.panelStartGame.TabIndex = 6;
             // 
             // label2
@@ -166,30 +164,19 @@
             // 
             this.panelSettings.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelSettings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSettings.Controls.Add(this.label3);
-            this.panelSettings.Location = new System.Drawing.Point(257, 28);
+            this.panelSettings.Location = new System.Drawing.Point(255, 46);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(721, 473);
+            this.panelSettings.Size = new System.Drawing.Size(859, 519);
             this.panelSettings.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, -5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 69);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Settings";
             // 
             // panelHowToPlay
             // 
             this.panelHowToPlay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelHowToPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHowToPlay.Controls.Add(this.label4);
-            this.panelHowToPlay.Location = new System.Drawing.Point(257, 24);
+            this.panelHowToPlay.Location = new System.Drawing.Point(1145, 55);
             this.panelHowToPlay.Name = "panelHowToPlay";
-            this.panelHowToPlay.Size = new System.Drawing.Size(721, 473);
+            this.panelHowToPlay.Size = new System.Drawing.Size(55, 53);
             this.panelHowToPlay.TabIndex = 6;
             // 
             // label4
@@ -207,10 +194,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1115, 555);
+            this.ClientSize = new System.Drawing.Size(1210, 612);
             this.Controls.Add(this.panelMainMenue);
-            this.Controls.Add(this.panelHowToPlay);
             this.Controls.Add(this.panelSettings);
+            this.Controls.Add(this.panelHowToPlay);
             this.Controls.Add(this.panelStartGame);
             this.Controls.Add(this.modernButton4);
             this.Controls.Add(this.modernButton3);
@@ -223,8 +210,6 @@
             this.panelMainMenue.PerformLayout();
             this.panelStartGame.ResumeLayout(false);
             this.panelStartGame.PerformLayout();
-            this.panelSettings.ResumeLayout(false);
-            this.panelSettings.PerformLayout();
             this.panelHowToPlay.ResumeLayout(false);
             this.panelHowToPlay.PerformLayout();
             this.ResumeLayout(false);
@@ -241,7 +226,6 @@
         private System.Windows.Forms.Panel panelStartGame;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelSettings;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelHowToPlay;
         private System.Windows.Forms.Label label4;
     }

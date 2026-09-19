@@ -116,7 +116,6 @@ namespace MemoryGame1
         {
 
             ChangeButton((ModernButton)sender);
-
             ShowPanel(panelSettings);
         }
 
