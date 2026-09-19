@@ -40,6 +40,7 @@
             this.modernButton2 = new ModernButton();
             this.modernButton4 = new ModernButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
             this.gbNumberOfPlayers = new System.Windows.Forms.GroupBox();
             this.rbTwoPlayers = new System.Windows.Forms.RadioButton();
@@ -113,6 +114,17 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::MemoryGame1.Properties.Resources.image_2748e566;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -219,6 +231,10 @@
             this.modernButton4.Click += new System.EventHandler(this.modernButton4_Click);
             this.modernButton4.MouseEnter += new System.EventHandler(this.modernButton4_MouseEnter);
             this.modernButton4.MouseLeave += new System.EventHandler(this.modernButton4_MouseLeave);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // errorProvider1
             // 
@@ -445,6 +461,7 @@
             this.rbHard.TabStop = true;
             this.rbHard.Text = "Hard";
             this.rbHard.UseVisualStyleBackColor = true;
+            this.rbHard.CheckedChanged += new System.EventHandler(this.rbHard_CheckedChanged_1);
             // 
             // rbMid
             // 
@@ -456,6 +473,7 @@
             this.rbMid.TabStop = true;
             this.rbMid.Text = "Mid";
             this.rbMid.UseVisualStyleBackColor = true;
+            this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged_1);
             // 
             // rbEasy
             // 
@@ -467,6 +485,49 @@
             this.rbEasy.TabStop = true;
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = true;
+            this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged_1);
+            // 
+            // modernButton1
+            // 
+            this.modernButton1.BackColor = System.Drawing.Color.White;
+            this.modernButton1.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton1.BorderRadius = 20;
+            this.modernButton1.BorderSize = 2;
+            this.modernButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton1.FlatAppearance.BorderSize = 0;
+            this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton1.ForeColor = System.Drawing.Color.Black;
+            this.modernButton1.Location = new System.Drawing.Point(22, 31);
+            this.modernButton1.Name = "modernButton1";
+            this.modernButton1.Size = new System.Drawing.Size(187, 78);
+            this.modernButton1.TabIndex = 1;
+            this.modernButton1.Text = "Start Game";
+            this.modernButton1.UseVisualStyleBackColor = false;
+            this.modernButton1.Click += new System.EventHandler(this.modernButton1_Click);
+            this.modernButton1.MouseEnter += new System.EventHandler(this.modernButton1_MouseEnter);
+            this.modernButton1.MouseLeave += new System.EventHandler(this.modernButton1_MouseLeave);
+            // 
+            // modernButton3
+            // 
+            this.modernButton3.BackColor = System.Drawing.Color.White;
+            this.modernButton3.BorderColor = System.Drawing.Color.LightGray;
+            this.modernButton3.BorderRadius = 20;
+            this.modernButton3.BorderSize = 2;
+            this.modernButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modernButton3.FlatAppearance.BorderSize = 0;
+            this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.modernButton3.ForeColor = System.Drawing.Color.Black;
+            this.modernButton3.Location = new System.Drawing.Point(22, 269);
+            this.modernButton3.Name = "modernButton3";
+            this.modernButton3.Size = new System.Drawing.Size(187, 78);
+            this.modernButton3.TabIndex = 3;
+            this.modernButton3.Text = "How To Play";
+            this.modernButton3.UseVisualStyleBackColor = false;
+            this.modernButton3.Click += new System.EventHandler(this.modernButton3_Click);
+            this.modernButton3.MouseEnter += new System.EventHandler(this.modernButton3_MouseEnter);
+            this.modernButton3.MouseLeave += new System.EventHandler(this.modernButton3_MouseLeave);
             // 
             // Form1
             // 
