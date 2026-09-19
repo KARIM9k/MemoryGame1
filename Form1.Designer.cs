@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelStartGame = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMainMenue = new System.Windows.Forms.Panel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.modernButton1 = new ModernButton();
             this.modernButton3 = new ModernButton();
             this.modernButton2 = new ModernButton();
             this.modernButton4 = new ModernButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
             this.gbNumberOfPlayers = new System.Windows.Forms.GroupBox();
             this.rbTwoPlayers = new System.Windows.Forms.RadioButton();
@@ -61,12 +63,11 @@
             this.rbHard = new System.Windows.Forms.RadioButton();
             this.rbMid = new System.Windows.Forms.RadioButton();
             this.rbEasy = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelStartGame.SuspendLayout();
-            this.panelSettings.SuspendLayout();
-            this.gbNumberOfPlayers.SuspendLayout();
             this.panelHowToPlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMainMenue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panelSettings.SuspendLayout();
             this.gbNumberOfPlayers.SuspendLayout();
             this.gbPlayer2Info.SuspendLayout();
@@ -76,15 +77,6 @@
             this.gbTimePerRound.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).BeginInit();
             this.gbLevel.SuspendLayout();
-            this.panelHowToPlay.SuspendLayout();
-            this.panelMainMenue.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.gbPlayer1Info.SuspendLayout();
-            this.gbGender1.SuspendLayout();
-            this.gbTimePerRound.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).BeginInit();
-            this.gbLevel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelStartGame
@@ -107,33 +99,8 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Start Game";
             // 
-            // panelSettings
-            // 
-            this.panelSettings.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelSettings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSettings.Controls.Add(this.gbNumberOfPlayers);
-            this.panelSettings.Controls.Add(this.gbPlayer2Info);
-            this.panelSettings.Controls.Add(this.gbPlayer1Info);
-            this.panelSettings.Controls.Add(this.gbTimePerRound);
-            this.panelSettings.Controls.Add(this.gbLevel);
-            this.panelSettings.Location = new System.Drawing.Point(255, 46);
-            this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(859, 519);
-            this.panelSettings.TabIndex = 6;
-            this.panelSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSettings_Paint);
-            // 
-            // gbNumberOfPlayers
             // panelHowToPlay
             // 
-            this.gbNumberOfPlayers.Controls.Add(this.rbTwoPlayers);
-            this.gbNumberOfPlayers.Controls.Add(this.rbOnePlayer);
-            this.gbNumberOfPlayers.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNumberOfPlayers.Location = new System.Drawing.Point(541, 27);
-            this.gbNumberOfPlayers.Name = "gbNumberOfPlayers";
-            this.gbNumberOfPlayers.Size = new System.Drawing.Size(276, 50);
-            this.gbNumberOfPlayers.TabIndex = 4;
-            this.gbNumberOfPlayers.TabStop = false;
-            this.gbNumberOfPlayers.Text = "Number Of Players : ";
             this.panelHowToPlay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelHowToPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelHowToPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -143,10 +110,21 @@
             this.panelHowToPlay.Size = new System.Drawing.Size(859, 519);
             this.panelHowToPlay.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelMainMenue
             // 
             this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BackgroundImage = global::MemoryGame1.Properties.Resources.image_640b8fd7;
+            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
             this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMainMenue.Controls.Add(this.modernButton1);
@@ -157,10 +135,6 @@
             this.panelMainMenue.Name = "panelMainMenue";
             this.panelMainMenue.Size = new System.Drawing.Size(237, 519);
             this.panelMainMenue.TabIndex = 5;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // modernButton1
             // 
@@ -246,6 +220,10 @@
             this.modernButton4.MouseEnter += new System.EventHandler(this.modernButton4_MouseEnter);
             this.modernButton4.MouseLeave += new System.EventHandler(this.modernButton4_MouseLeave);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // panelSettings
             // 
             this.panelSettings.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -265,6 +243,7 @@
             // 
             this.gbNumberOfPlayers.Controls.Add(this.rbTwoPlayers);
             this.gbNumberOfPlayers.Controls.Add(this.rbOnePlayer);
+            this.gbNumberOfPlayers.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNumberOfPlayers.Location = new System.Drawing.Point(541, 27);
             this.gbNumberOfPlayers.Name = "gbNumberOfPlayers";
             this.gbNumberOfPlayers.Size = new System.Drawing.Size(276, 50);
@@ -437,10 +416,10 @@
             this.lblTimePerRound.TabIndex = 1;
             this.lblTimePerRound.Text = "label3";
             // 
-            // trackBar1
+            // tbTimePerRound
             // 
             this.tbTimePerRound.Location = new System.Drawing.Point(6, 75);
-            this.tbTimePerRound.Name = "trackBar1";
+            this.tbTimePerRound.Name = "tbTimePerRound";
             this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
             this.tbTimePerRound.TabIndex = 0;
             // 
@@ -489,17 +468,6 @@
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::MemoryGame1.Properties.Resources.image_2748e566;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -516,7 +484,9 @@
             this.panelStartGame.ResumeLayout(false);
             this.panelStartGame.PerformLayout();
             this.panelHowToPlay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMainMenue.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panelSettings.ResumeLayout(false);
             this.gbNumberOfPlayers.ResumeLayout(false);
             this.gbNumberOfPlayers.PerformLayout();
@@ -530,18 +500,9 @@
             this.gbGender1.PerformLayout();
             this.gbTimePerRound.ResumeLayout(false);
             this.gbTimePerRound.PerformLayout();
-            this.gbLevel.ResumeLayout(false);
-            this.gbLevel.PerformLayout();
-            this.panelHowToPlay.ResumeLayout(false);
-            this.panelHowToPlay.PerformLayout();
-            this.panelMainMenue.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.gbTimePerRound.ResumeLayout(false);
-            this.gbTimePerRound.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).EndInit();
             this.gbLevel.ResumeLayout(false);
             this.gbLevel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
