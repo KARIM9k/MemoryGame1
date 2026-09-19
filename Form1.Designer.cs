@@ -256,7 +256,7 @@
             this.rbTwoPlayers.AutoSize = true;
             this.rbTwoPlayers.Location = new System.Drawing.Point(145, 21);
             this.rbTwoPlayers.Name = "rbTwoPlayers";
-            this.rbTwoPlayers.Size = new System.Drawing.Size(103, 20);
+            this.rbTwoPlayers.Size = new System.Drawing.Size(116, 24);
             this.rbTwoPlayers.TabIndex = 1;
             this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Tow Players";
@@ -267,7 +267,7 @@
             this.rbOnePlayer.AutoSize = true;
             this.rbOnePlayer.Location = new System.Drawing.Point(25, 21);
             this.rbOnePlayer.Name = "rbOnePlayer";
-            this.rbOnePlayer.Size = new System.Drawing.Size(95, 20);
+            this.rbOnePlayer.Size = new System.Drawing.Size(107, 24);
             this.rbOnePlayer.TabIndex = 0;
             this.rbOnePlayer.TabStop = true;
             this.rbOnePlayer.Text = "One Player";
