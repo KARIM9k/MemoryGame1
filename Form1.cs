@@ -38,22 +38,23 @@ namespace MemoryGame1
             InitializeComponent();
 
 
-            switch (GameInfo.Level) {
-                case enLevel.enEasy:
-                {
-                        break; 
-                }
-                case enLevel.enMid:
-                {
-                        break; 
-                }
-                case enLevel.enHard:
-                {
-                        break; 
-                }
+            //switch (GameInfo.Level) {
+            //    case enLevel.enEasy:
+            //    {
+            //            break; 
+            //    }
+            //    case enLevel.enMid:
+            //    {
+            //            break; 
+            //    }
+            //    case enLevel.enHard:
+            //    {
+            //            break; 
+            //    }
             
-            }
-           
+            //}
+
+                     
 
         }
 
@@ -151,6 +152,63 @@ namespace MemoryGame1
 
         }
 
+        void UpdateLevel(enLevel Level)
+        {
+            GameInfo.Level = Level;
+        } 
+
+        void UpdateTimePerRound()
+        {
+            GameInfo.TimePerRound = tbTimePerRound.Value;
+            lblTimePerRound.Text = tbTimePerRound.Value.ToString()+"s"; 
+        }
+
+        void UpdateNumberOfPlayers()
+        {
+            if (rbOnePlayer.Checked)
+            {
+                GameInfo.TowPlayers = false;
+                gbPlayer1Info.Enabled = true;
+                gbPlayer2Info.Enabled = false; 
+            }
+            else if (rbTwoPlayers.Checked)
+            {
+                GameInfo.TowPlayers = true;
+                gbPlayer1Info.Enabled = true;
+                gbPlayer2Info.Enabled = true;
+            }
+        }
+
+
+        void UpdateGender(string Gender,int Player)
+        {
+            if (Player == 1)
+            {
+                GameInfo.GenderPlayer1 = Gender; 
+            }
+            else
+            {
+                GameInfo.GenderPlayer2 = Gender;
+            }
+        } 
+
+        private void rbEasy_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enEasy); 
+        }
+
+        private void rbMid_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enMid);
+        }
+
+        private void rbHard_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateLevel(enLevel.enHard);
+        }
+
+        }
+
       
 
         private void modernButton1_MouseEnter(object sender, EventArgs e)
@@ -196,6 +254,82 @@ namespace MemoryGame1
         {
             ChangeToWhiteColor((ModernButton)sender);
 
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTimePerRound(); 
+        }
+
+        private void rbOnePlayer_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateNumberOfPlayers(); 
+        }
+
+        private void rbTwoPlayers_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateNumberOfPlayers();
+        }
+
+        private void txtPlayer1_TextChanged(object sender, EventArgs e)
+        {
+          
+            GameInfo.NamePlayer1 = txtPlayer1.Text; 
+
+           
+        }
+
+        private void txtPlayer2_TextChanged(object sender, EventArgs e)
+        {
+            GameInfo.NamePlayer2 = txtPlayer2.Text;
+        }
+
+        private void rbMale1_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateGender("Male",1); 
+        }
+
+        private void rbFemale1_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateGender("Female", 1);
+        }
+
+        private void rbMale2_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateGender("Male", 2);
+        }
+
+        private void rbFemale2_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateGender("Female", 2);
+        }
+
+        private void txtPlayer1_Validating(object sender, CancelEventArgs e)
+        {
+            if (gbPlayer1Info.Enabled&&string.IsNullOrEmpty(txtPlayer1.Text))
+            {
+                e.Cancel = true;
+                txtPlayer1.Focus();
+                errorProvider1.SetError(txtPlayer1, "Required"); 
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPlayer1, ""); 
+            }
+        }
+
+        private void txtPlayer2_Validating(object sender, CancelEventArgs e)
+        {
+            if (gbPlayer2Info.Enabled&&string.IsNullOrEmpty(txtPlayer2.Text))
+            {
+                e.Cancel = true;
+                txtPlayer2.Focus();
+                errorProvider1.SetError(txtPlayer2, "Required");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPlayer2, "");
+            }
         }
     }
 }
