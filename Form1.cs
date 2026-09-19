@@ -207,7 +207,7 @@ namespace MemoryGame1
             UpdateLevel(enLevel.enHard);
         }
 
-        }
+        
 
       
 
@@ -253,6 +253,7 @@ namespace MemoryGame1
         private void modernButton4_MouseLeave(object sender, EventArgs e)
         {
             ChangeToWhiteColor((ModernButton)sender);
+        }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {

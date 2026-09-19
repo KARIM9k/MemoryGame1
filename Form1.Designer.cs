@@ -56,7 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gbTimePerRound = new System.Windows.Forms.GroupBox();
             this.lblTimePerRound = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tbTimePerRound = new System.Windows.Forms.TrackBar();
             this.gbLevel = new System.Windows.Forms.GroupBox();
             this.rbHard = new System.Windows.Forms.RadioButton();
             this.rbMid = new System.Windows.Forms.RadioButton();
@@ -82,7 +82,7 @@
             this.gbPlayer1Info.SuspendLayout();
             this.gbGender1.SuspendLayout();
             this.gbTimePerRound.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).BeginInit();
             this.gbLevel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -419,7 +419,7 @@
             // gbTimePerRound
             // 
             this.gbTimePerRound.Controls.Add(this.lblTimePerRound);
-            this.gbTimePerRound.Controls.Add(this.trackBar1);
+            this.gbTimePerRound.Controls.Add(this.tbTimePerRound);
             this.gbTimePerRound.Location = new System.Drawing.Point(237, 27);
             this.gbTimePerRound.Name = "gbTimePerRound";
             this.gbTimePerRound.Size = new System.Drawing.Size(280, 158);
@@ -439,10 +439,10 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(6, 75);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(252, 56);
-            this.trackBar1.TabIndex = 0;
+            this.tbTimePerRound.Location = new System.Drawing.Point(6, 75);
+            this.tbTimePerRound.Name = "trackBar1";
+            this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
+            this.tbTimePerRound.TabIndex = 0;
             // 
             // gbLevel
             // 
@@ -530,7 +530,6 @@
             this.gbGender1.PerformLayout();
             this.gbTimePerRound.ResumeLayout(false);
             this.gbTimePerRound.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).EndInit();
             this.gbLevel.ResumeLayout(false);
             this.gbLevel.PerformLayout();
             this.panelHowToPlay.ResumeLayout(false);
@@ -539,7 +538,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbTimePerRound.ResumeLayout(false);
             this.gbTimePerRound.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).EndInit();
             this.gbLevel.ResumeLayout(false);
             this.gbLevel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
