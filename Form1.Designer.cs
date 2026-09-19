@@ -84,18 +84,20 @@
             this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelStartGame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(1145, 95);
+            this.panelStartGame.Location = new System.Drawing.Point(859, 77);
+            this.panelStartGame.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelStartGame.Name = "panelStartGame";
-            this.panelStartGame.Size = new System.Drawing.Size(53, 42);
+            this.panelStartGame.Size = new System.Drawing.Size(40, 34);
             this.panelStartGame.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 91);
+            this.label2.Location = new System.Drawing.Point(28, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(336, 69);
+            this.label2.Size = new System.Drawing.Size(269, 55);
             this.label2.TabIndex = 0;
             this.label2.Text = "Start Game";
             // 
@@ -105,9 +107,10 @@
             this.panelHowToPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelHowToPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHowToPlay.Controls.Add(this.pictureBox1);
-            this.panelHowToPlay.Location = new System.Drawing.Point(267, 46);
+            this.panelHowToPlay.Location = new System.Drawing.Point(200, 38);
+            this.panelHowToPlay.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelHowToPlay.Name = "panelHowToPlay";
-            this.panelHowToPlay.Size = new System.Drawing.Size(859, 519);
+            this.panelHowToPlay.Size = new System.Drawing.Size(645, 422);
             this.panelHowToPlay.TabIndex = 6;
             // 
             // pictureBox1
@@ -116,8 +119,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(857, 517);
+            this.pictureBox1.Size = new System.Drawing.Size(643, 420);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,9 +135,10 @@
             this.panelMainMenue.Controls.Add(this.modernButton3);
             this.panelMainMenue.Controls.Add(this.modernButton2);
             this.panelMainMenue.Controls.Add(this.modernButton4);
-            this.panelMainMenue.Location = new System.Drawing.Point(12, 46);
+            this.panelMainMenue.Location = new System.Drawing.Point(9, 38);
+            this.panelMainMenue.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 519);
+            this.panelMainMenue.Size = new System.Drawing.Size(178, 422);
             this.panelMainMenue.TabIndex = 5;
             // 
             // modernButton1
@@ -147,9 +152,10 @@
             this.modernButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton1.ForeColor = System.Drawing.Color.Black;
-            this.modernButton1.Location = new System.Drawing.Point(22, 31);
+            this.modernButton1.Location = new System.Drawing.Point(17, 25);
+            this.modernButton1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.modernButton1.Name = "modernButton1";
-            this.modernButton1.Size = new System.Drawing.Size(187, 78);
+            this.modernButton1.Size = new System.Drawing.Size(140, 64);
             this.modernButton1.TabIndex = 1;
             this.modernButton1.Text = "Start Game";
             this.modernButton1.UseVisualStyleBackColor = false;
@@ -168,9 +174,10 @@
             this.modernButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton3.ForeColor = System.Drawing.Color.Black;
-            this.modernButton3.Location = new System.Drawing.Point(22, 269);
+            this.modernButton3.Location = new System.Drawing.Point(17, 218);
+            this.modernButton3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.modernButton3.Name = "modernButton3";
-            this.modernButton3.Size = new System.Drawing.Size(187, 78);
+            this.modernButton3.Size = new System.Drawing.Size(140, 64);
             this.modernButton3.TabIndex = 3;
             this.modernButton3.Text = "How To Play";
             this.modernButton3.UseVisualStyleBackColor = false;
@@ -189,9 +196,10 @@
             this.modernButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton2.ForeColor = System.Drawing.Color.Black;
-            this.modernButton2.Location = new System.Drawing.Point(22, 150);
+            this.modernButton2.Location = new System.Drawing.Point(17, 122);
+            this.modernButton2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(187, 78);
+            this.modernButton2.Size = new System.Drawing.Size(140, 64);
             this.modernButton2.TabIndex = 2;
             this.modernButton2.Text = "Settings";
             this.modernButton2.UseVisualStyleBackColor = false;
@@ -210,9 +218,10 @@
             this.modernButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modernButton4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.modernButton4.ForeColor = System.Drawing.Color.Black;
-            this.modernButton4.Location = new System.Drawing.Point(22, 388);
+            this.modernButton4.Location = new System.Drawing.Point(17, 315);
+            this.modernButton4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.modernButton4.Name = "modernButton4";
-            this.modernButton4.Size = new System.Drawing.Size(187, 78);
+            this.modernButton4.Size = new System.Drawing.Size(140, 64);
             this.modernButton4.TabIndex = 4;
             this.modernButton4.Text = "Quit";
             this.modernButton4.UseVisualStyleBackColor = false;
@@ -233,9 +242,10 @@
             this.panelSettings.Controls.Add(this.gbPlayer1Info);
             this.panelSettings.Controls.Add(this.gbTimePerRound);
             this.panelSettings.Controls.Add(this.gbLevel);
-            this.panelSettings.Location = new System.Drawing.Point(263, 46);
+            this.panelSettings.Location = new System.Drawing.Point(197, 38);
+            this.panelSettings.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(863, 518);
+            this.panelSettings.Size = new System.Drawing.Size(648, 421);
             this.panelSettings.TabIndex = 6;
             this.panelSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSettings_Paint);
             // 
@@ -244,9 +254,11 @@
             this.gbNumberOfPlayers.Controls.Add(this.rbTwoPlayers);
             this.gbNumberOfPlayers.Controls.Add(this.rbOnePlayer);
             this.gbNumberOfPlayers.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNumberOfPlayers.Location = new System.Drawing.Point(541, 27);
+            this.gbNumberOfPlayers.Location = new System.Drawing.Point(406, 22);
+            this.gbNumberOfPlayers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbNumberOfPlayers.Name = "gbNumberOfPlayers";
-            this.gbNumberOfPlayers.Size = new System.Drawing.Size(276, 50);
+            this.gbNumberOfPlayers.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbNumberOfPlayers.Size = new System.Drawing.Size(207, 40);
             this.gbNumberOfPlayers.TabIndex = 4;
             this.gbNumberOfPlayers.TabStop = false;
             this.gbNumberOfPlayers.Text = "Number Of Players : ";
@@ -254,9 +266,10 @@
             // rbTwoPlayers
             // 
             this.rbTwoPlayers.AutoSize = true;
-            this.rbTwoPlayers.Location = new System.Drawing.Point(145, 21);
+            this.rbTwoPlayers.Location = new System.Drawing.Point(109, 17);
+            this.rbTwoPlayers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbTwoPlayers.Name = "rbTwoPlayers";
-            this.rbTwoPlayers.Size = new System.Drawing.Size(116, 24);
+            this.rbTwoPlayers.Size = new System.Drawing.Size(93, 19);
             this.rbTwoPlayers.TabIndex = 1;
             this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Tow Players";
@@ -266,9 +279,10 @@
             // rbOnePlayer
             // 
             this.rbOnePlayer.AutoSize = true;
-            this.rbOnePlayer.Location = new System.Drawing.Point(25, 21);
+            this.rbOnePlayer.Location = new System.Drawing.Point(19, 17);
+            this.rbOnePlayer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbOnePlayer.Name = "rbOnePlayer";
-            this.rbOnePlayer.Size = new System.Drawing.Size(107, 24);
+            this.rbOnePlayer.Size = new System.Drawing.Size(86, 19);
             this.rbOnePlayer.TabIndex = 0;
             this.rbOnePlayer.TabStop = true;
             this.rbOnePlayer.Text = "One Player";
@@ -281,9 +295,11 @@
             this.gbPlayer2Info.Controls.Add(this.txtPlayer2);
             this.gbPlayer2Info.Controls.Add(this.label5);
             this.gbPlayer2Info.Enabled = false;
-            this.gbPlayer2Info.Location = new System.Drawing.Point(541, 338);
+            this.gbPlayer2Info.Location = new System.Drawing.Point(406, 274);
+            this.gbPlayer2Info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbPlayer2Info.Name = "gbPlayer2Info";
-            this.gbPlayer2Info.Size = new System.Drawing.Size(297, 128);
+            this.gbPlayer2Info.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbPlayer2Info.Size = new System.Drawing.Size(223, 104);
             this.gbPlayer2Info.TabIndex = 3;
             this.gbPlayer2Info.TabStop = false;
             this.gbPlayer2Info.Text = "Player2 Info :";
@@ -292,9 +308,11 @@
             // 
             this.gbGender2.Controls.Add(this.rbFemale2);
             this.gbGender2.Controls.Add(this.rbMale2);
-            this.gbGender2.Location = new System.Drawing.Point(10, 66);
+            this.gbGender2.Location = new System.Drawing.Point(7, 53);
+            this.gbGender2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbGender2.Name = "gbGender2";
-            this.gbGender2.Size = new System.Drawing.Size(262, 56);
+            this.gbGender2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbGender2.Size = new System.Drawing.Size(197, 46);
             this.gbGender2.TabIndex = 3;
             this.gbGender2.TabStop = false;
             this.gbGender2.Text = "Gender";
@@ -302,9 +320,10 @@
             // rbFemale2
             // 
             this.rbFemale2.AutoSize = true;
-            this.rbFemale2.Location = new System.Drawing.Point(135, 24);
+            this.rbFemale2.Location = new System.Drawing.Point(101, 20);
+            this.rbFemale2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbFemale2.Name = "rbFemale2";
-            this.rbFemale2.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale2.Size = new System.Drawing.Size(59, 17);
             this.rbFemale2.TabIndex = 1;
             this.rbFemale2.TabStop = true;
             this.rbFemale2.Text = "Female";
@@ -314,9 +333,10 @@
             // rbMale2
             // 
             this.rbMale2.AutoSize = true;
-            this.rbMale2.Location = new System.Drawing.Point(15, 24);
+            this.rbMale2.Location = new System.Drawing.Point(11, 20);
+            this.rbMale2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMale2.Name = "rbMale2";
-            this.rbMale2.Size = new System.Drawing.Size(58, 20);
+            this.rbMale2.Size = new System.Drawing.Size(48, 17);
             this.rbMale2.TabIndex = 0;
             this.rbMale2.TabStop = true;
             this.rbMale2.Text = "Male";
@@ -325,18 +345,20 @@
             // 
             // txtPlayer2
             // 
-            this.txtPlayer2.Location = new System.Drawing.Point(78, 28);
+            this.txtPlayer2.Location = new System.Drawing.Point(59, 23);
+            this.txtPlayer2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPlayer2.Name = "txtPlayer2";
-            this.txtPlayer2.Size = new System.Drawing.Size(194, 22);
+            this.txtPlayer2.Size = new System.Drawing.Size(147, 20);
             this.txtPlayer2.TabIndex = 2;
             this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer2_Validating);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 34);
+            this.label5.Location = new System.Drawing.Point(5, 27);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Player2 :  ";
             // 
@@ -346,9 +368,11 @@
             this.gbPlayer1Info.Controls.Add(this.txtPlayer1);
             this.gbPlayer1Info.Controls.Add(this.label3);
             this.gbPlayer1Info.Enabled = false;
-            this.gbPlayer1Info.Location = new System.Drawing.Point(541, 197);
+            this.gbPlayer1Info.Location = new System.Drawing.Point(406, 160);
+            this.gbPlayer1Info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
-            this.gbPlayer1Info.Size = new System.Drawing.Size(297, 128);
+            this.gbPlayer1Info.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbPlayer1Info.Size = new System.Drawing.Size(223, 104);
             this.gbPlayer1Info.TabIndex = 2;
             this.gbPlayer1Info.TabStop = false;
             this.gbPlayer1Info.Text = "Player1 Info :";
@@ -357,9 +381,11 @@
             // 
             this.gbGender1.Controls.Add(this.rbFemale1);
             this.gbGender1.Controls.Add(this.rbMale1);
-            this.gbGender1.Location = new System.Drawing.Point(6, 66);
+            this.gbGender1.Location = new System.Drawing.Point(5, 53);
+            this.gbGender1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbGender1.Name = "gbGender1";
-            this.gbGender1.Size = new System.Drawing.Size(262, 56);
+            this.gbGender1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbGender1.Size = new System.Drawing.Size(197, 46);
             this.gbGender1.TabIndex = 2;
             this.gbGender1.TabStop = false;
             this.gbGender1.Text = "Gender";
@@ -367,9 +393,10 @@
             // rbFemale1
             // 
             this.rbFemale1.AutoSize = true;
-            this.rbFemale1.Location = new System.Drawing.Point(135, 24);
+            this.rbFemale1.Location = new System.Drawing.Point(101, 20);
+            this.rbFemale1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbFemale1.Name = "rbFemale1";
-            this.rbFemale1.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale1.Size = new System.Drawing.Size(59, 17);
             this.rbFemale1.TabIndex = 1;
             this.rbFemale1.TabStop = true;
             this.rbFemale1.Text = "Female";
@@ -379,9 +406,10 @@
             // rbMale1
             // 
             this.rbMale1.AutoSize = true;
-            this.rbMale1.Location = new System.Drawing.Point(15, 24);
+            this.rbMale1.Location = new System.Drawing.Point(11, 20);
+            this.rbMale1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMale1.Name = "rbMale1";
-            this.rbMale1.Size = new System.Drawing.Size(58, 20);
+            this.rbMale1.Size = new System.Drawing.Size(48, 17);
             this.rbMale1.TabIndex = 0;
             this.rbMale1.TabStop = true;
             this.rbMale1.Text = "Male";
@@ -390,18 +418,20 @@
             // 
             // txtPlayer1
             // 
-            this.txtPlayer1.Location = new System.Drawing.Point(86, 26);
+            this.txtPlayer1.Location = new System.Drawing.Point(65, 21);
+            this.txtPlayer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPlayer1.Name = "txtPlayer1";
-            this.txtPlayer1.Size = new System.Drawing.Size(190, 22);
+            this.txtPlayer1.Size = new System.Drawing.Size(143, 20);
             this.txtPlayer1.TabIndex = 1;
             this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer1_Validating);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 29);
+            this.label3.Location = new System.Drawing.Point(5, 23);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "PLayer1 :  ";
             // 
@@ -409,9 +439,11 @@
             // 
             this.gbTimePerRound.Controls.Add(this.lblTimePerRound);
             this.gbTimePerRound.Controls.Add(this.tbTimePerRound);
-            this.gbTimePerRound.Location = new System.Drawing.Point(237, 27);
+            this.gbTimePerRound.Location = new System.Drawing.Point(178, 22);
+            this.gbTimePerRound.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbTimePerRound.Name = "gbTimePerRound";
-            this.gbTimePerRound.Size = new System.Drawing.Size(280, 158);
+            this.gbTimePerRound.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbTimePerRound.Size = new System.Drawing.Size(210, 129);
             this.gbTimePerRound.TabIndex = 1;
             this.gbTimePerRound.TabStop = false;
             this.gbTimePerRound.Text = "Time Per Round :";
@@ -420,18 +452,20 @@
             // 
             this.lblTimePerRound.AutoSize = true;
             this.lblTimePerRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.lblTimePerRound.Location = new System.Drawing.Point(71, 30);
+            this.lblTimePerRound.Location = new System.Drawing.Point(53, 25);
+            this.lblTimePerRound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimePerRound.Name = "lblTimePerRound";
-            this.lblTimePerRound.Size = new System.Drawing.Size(118, 42);
+            this.lblTimePerRound.Size = new System.Drawing.Size(95, 36);
             this.lblTimePerRound.TabIndex = 1;
             this.lblTimePerRound.Text = "label3";
             // 
             // tbTimePerRound
             // 
-            this.tbTimePerRound.Location = new System.Drawing.Point(6, 75);
+            this.tbTimePerRound.Location = new System.Drawing.Point(5, 61);
+            this.tbTimePerRound.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbTimePerRound.Maximum = 100;
             this.tbTimePerRound.Name = "tbTimePerRound";
-            this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
+            this.tbTimePerRound.Size = new System.Drawing.Size(189, 45);
             this.tbTimePerRound.TabIndex = 0;
             this.tbTimePerRound.ValueChanged += new System.EventHandler(this.tbTimePerRound_ValueChanged);
             // 
@@ -440,9 +474,11 @@
             this.gbLevel.Controls.Add(this.rbHard);
             this.gbLevel.Controls.Add(this.rbMid);
             this.gbLevel.Controls.Add(this.rbEasy);
-            this.gbLevel.Location = new System.Drawing.Point(26, 27);
+            this.gbLevel.Location = new System.Drawing.Point(19, 22);
+            this.gbLevel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbLevel.Name = "gbLevel";
-            this.gbLevel.Size = new System.Drawing.Size(192, 158);
+            this.gbLevel.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbLevel.Size = new System.Drawing.Size(144, 129);
             this.gbLevel.TabIndex = 0;
             this.gbLevel.TabStop = false;
             this.gbLevel.Text = "Level :";
@@ -450,9 +486,10 @@
             // rbHard
             // 
             this.rbHard.AutoSize = true;
-            this.rbHard.Location = new System.Drawing.Point(22, 111);
+            this.rbHard.Location = new System.Drawing.Point(17, 90);
+            this.rbHard.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbHard.Name = "rbHard";
-            this.rbHard.Size = new System.Drawing.Size(58, 20);
+            this.rbHard.Size = new System.Drawing.Size(48, 17);
             this.rbHard.TabIndex = 2;
             this.rbHard.TabStop = true;
             this.rbHard.Text = "Hard";
@@ -462,9 +499,10 @@
             // rbMid
             // 
             this.rbMid.AutoSize = true;
-            this.rbMid.Location = new System.Drawing.Point(22, 71);
+            this.rbMid.Location = new System.Drawing.Point(17, 58);
+            this.rbMid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbMid.Name = "rbMid";
-            this.rbMid.Size = new System.Drawing.Size(50, 20);
+            this.rbMid.Size = new System.Drawing.Size(42, 17);
             this.rbMid.TabIndex = 1;
             this.rbMid.TabStop = true;
             this.rbMid.Text = "Mid";
@@ -474,9 +512,10 @@
             // rbEasy
             // 
             this.rbEasy.AutoSize = true;
-            this.rbEasy.Location = new System.Drawing.Point(22, 30);
+            this.rbEasy.Location = new System.Drawing.Point(17, 25);
+            this.rbEasy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbEasy.Name = "rbEasy";
-            this.rbEasy.Size = new System.Drawing.Size(59, 20);
+            this.rbEasy.Size = new System.Drawing.Size(48, 17);
             this.rbEasy.TabIndex = 0;
             this.rbEasy.TabStop = true;
             this.rbEasy.Text = "Easy";
@@ -485,14 +524,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1210, 612);
+            this.ClientSize = new System.Drawing.Size(909, 513);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelMainMenue);
             this.Controls.Add(this.panelHowToPlay);
             this.Controls.Add(this.panelStartGame);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
             this.Text = "Card Mach Game";
             this.Load += new System.EventHandler(this.Form1_Load);
