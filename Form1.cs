@@ -66,6 +66,28 @@ namespace MemoryGame1
             panelSettings.Visible = false;
 
         }
+
+        private void ChangeButton(ModernButton sender)
+        {
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210);
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+        }
         private void ShowPanel(Panel panelToShow)
         {
             panelMainMenue.Visible = false;
@@ -85,97 +107,31 @@ namespace MemoryGame1
 
         private void modernButton1_Click(object sender, EventArgs e)
         {
-         
-            if (this.Controls != null)
-            {
-                foreach (Control ctrl in this.Controls) 
-                {
-                    if (ctrl is ModernButton btn)
-                    {
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                        btn.BorderSize = 2;
-                        btn.BorderColor = Color.FromArgb(180, 195, 210); 
-                    }
-                }
-            }
 
-            ModernButton clickedButton = (ModernButton)sender;
-            clickedButton.BackColor = Color.FromArgb(70, 110, 150); 
-            clickedButton.ForeColor = Color.White;
-            clickedButton.BorderSize = 0;
-
+            ChangeButton((ModernButton)sender);
             ShowPanel(panelStartGame);
         }
 
         private void modernButton2_Click(object sender, EventArgs e)
         {
-           
-            if (this.Controls != null)
-            {
-                foreach (Control ctrl in this.Controls) 
-                {
-                    if (ctrl is ModernButton btn)
-                    {
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                        btn.BorderSize = 2;
-                        btn.BorderColor = Color.FromArgb(180, 195, 210); 
-                    }
-                }
-            }
 
-            ModernButton clickedButton = (ModernButton)sender;
-            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
-            clickedButton.ForeColor = Color.White;
-            clickedButton.BorderSize = 0;
+            ChangeButton((ModernButton)sender);
+
             ShowPanel(panelSettings);
         }
 
         private void modernButton3_Click(object sender, EventArgs e)
         {
-            if (this.Controls != null)
-            {
-                foreach (Control ctrl in this.Controls)
-                {
-                    if (ctrl is ModernButton btn)
-                    {
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                        btn.BorderSize = 2;
-                        btn.BorderColor = Color.FromArgb(180, 195, 210);
-                    }
-                }
-            }
+            ChangeButton((ModernButton)sender);
 
-            ModernButton clickedButton = (ModernButton)sender;
-            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
-            clickedButton.ForeColor = Color.White;
-            clickedButton.BorderSize = 0;
 
             ShowPanel(panelHowToPlay);
         }
 
         private void modernButton4_Click(object sender, EventArgs e)
         {
-            if (this.Controls != null)
-            {
-                foreach (Control ctrl in this.Controls)
-                {
-                    if (ctrl is ModernButton btn)
-                    {
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                        btn.BorderSize = 2;
-                        btn.BorderColor = Color.FromArgb(180, 195, 210);
-                    }
-                }
-            }
+            ChangeButton((ModernButton)sender);
 
-            ModernButton clickedButton = (ModernButton)sender;
-            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
-            clickedButton.ForeColor = Color.White;
-            clickedButton.BorderSize = 0;
         }
     }
 }
