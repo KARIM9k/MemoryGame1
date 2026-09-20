@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,19 +12,19 @@ using System.Windows.Forms;
 namespace MemoryGame1
 {
 
-    public enum enLevel {enEasy=0,enMid=1,enHard=2 };
+    public enum enLevel {Easy=0,Mid=1,Hard=2 };
     public enum enGender {Male =0, Female=1 }; 
 
     public struct stGameInfo 
     {
-       public string Level;
+       public enLevel Level;
        public bool TowPlayers;
        public int NumberOfRounds;
        public int TimePerRound;
        public string NamePlayer1;
        public string NamePlayer2;
-       public string GenderPlayer1;
-       public string GenderPlayer2;
+       public enGender GenderPlayer1;
+       public enGender GenderPlayer2;
        public string Winner;
     }
 
@@ -152,29 +153,22 @@ namespace MemoryGame1
 
         }
 
-        void UpdateLevel(enLevel Level)
+        enLevel GetLevel(RadioButton Level)
         {
-            switch (Level) {
-                case enLevel.enEasy:
-                {
-                        GameInfo.Level = "Easy";    
-                        break; 
-                }
-                case enLevel.enMid:
-                {
-                        GameInfo.Level = "Mid";
-                        break; 
-                }
-                case enLevel.enHard:
-                {
-                        GameInfo.Level = "Hard";
-                        break; 
-                }
-            
-            
-            
-            }
-            
+            if (Level == rbEasy)
+                return enLevel.Easy;
+
+            else if (Level == rbMid)
+                return enLevel.Mid;
+
+            else
+                return enLevel.Hard;
+        }
+
+
+        void UpdateLevel(RadioButton Level)
+        {
+            GameInfo.Level = GetLevel(Level);
         }
 
         void UpdateTimePerRound()
@@ -199,18 +193,27 @@ namespace MemoryGame1
             }
         }
 
+        enGender GetGender(RadioButton Gender)
+        {
+            if (Gender == rbMale1)
+                return enGender.Male;
+            else if (Gender == rbFemale1)
+                return enGender.Female;
+            else if (Gender == rbMale2)
+                return enGender.Male;
+            else
+                return enGender.Female; 
+        }
 
-        void UpdateGender(string Gender,int Player)
+        void UpdateGender(RadioButton Gender,int Player)
         {
             if (Player == 1)
             {
-                GameInfo.GenderPlayer1 = Gender;
-               
+                GameInfo.GenderPlayer1 = GetGender(Gender);
             }
             else
             {
-                GameInfo.GenderPlayer2 = Gender;
-                
+                GameInfo.GenderPlayer2 = GetGender(Gender);
             }
            
         } 
@@ -266,17 +269,17 @@ namespace MemoryGame1
 
         private void rbEasy_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateLevel(enLevel.enEasy);
+            UpdateLevel((RadioButton)sender);
         }
 
         private void rbMid_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateLevel(enLevel.enMid);
+            UpdateLevel((RadioButton)sender);
         }
 
         private void rbHard_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateLevel(enLevel.enHard);
+              UpdateLevel((RadioButton)sender);
         }
 
 
@@ -306,24 +309,24 @@ namespace MemoryGame1
 
         private void rbMale1_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGender("Male",1);
+            UpdateGender((RadioButton)sender,1);
 
         }
 
         private void rbFemale1_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGender("Female", 1);
+            UpdateGender((RadioButton)sender, 1);
         }
 
         private void rbMale2_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGender("Male", 2);
+            UpdateGender((RadioButton)sender, 2);
         }
 
         private void rbFemale2_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGender("Female", 2);
-           
+            UpdateGender((RadioButton)sender, 2);
+
         }
 
 
