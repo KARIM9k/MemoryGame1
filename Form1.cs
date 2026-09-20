@@ -12,8 +12,8 @@ using System.Windows.Forms;
 namespace MemoryGame1
 {
 
-    public enum enLevel {Easy=0,Mid=1,Hard=2 };
-    public enum enGender {Male =0, Female=1 }; 
+    public enum enLevel {enEasy=0,enMid=1,enHard=2 };
+    public enum enGender {enMale =0, enFemale=1 }; 
 
     public struct stGameInfo 
     {
@@ -153,22 +153,24 @@ namespace MemoryGame1
 
         }
 
-        enLevel GetLevel(RadioButton Level)
+        enLevel GetLevelByName(string Level)
         {
-            if (Level == rbEasy)
-                return enLevel.Easy;
-
-            else if (Level == rbMid)
-                return enLevel.Mid;
-
-            else
-                return enLevel.Hard;
+            switch (Level)
+            {
+                case "Easy":
+                    return enLevel.enEasy;
+                case "Mid":
+                    return enLevel.enMid;
+                case "Hard":
+                    return enLevel.enHard;
+                default:return enLevel.enEasy;
+            }
         }
 
 
         void UpdateLevel(RadioButton Level)
         {
-            GameInfo.Level = GetLevel(Level);
+            GameInfo.Level = GetLevelByName(Level.Text);
         }
 
         void UpdateTimePerRound()
@@ -196,13 +198,13 @@ namespace MemoryGame1
         enGender GetGender(RadioButton Gender)
         {
             if (Gender == rbMale1)
-                return enGender.Male;
+                return enGender.enMale;
             else if (Gender == rbFemale1)
-                return enGender.Female;
+                return enGender.enFemale;
             else if (Gender == rbMale2)
-                return enGender.Male;
+                return enGender.enMale;
             else
-                return enGender.Female; 
+                return enGender.enFemale; 
         }
 
         void UpdateGender(RadioButton Gender,int Player)
