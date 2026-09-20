@@ -260,7 +260,7 @@
             this.gbNumberOfRounds.Controls.Add(this.label1);
             this.gbNumberOfRounds.Controls.Add(this.numericUpDown1);
             this.gbNumberOfRounds.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNumberOfRounds.Location = new System.Drawing.Point(26, 197);
+            this.gbNumberOfRounds.Location = new System.Drawing.Point(178, 310);
             this.gbNumberOfRounds.Name = "gbNumberOfRounds";
             this.gbNumberOfRounds.Size = new System.Drawing.Size(192, 88);
             this.gbNumberOfRounds.TabIndex = 2;
