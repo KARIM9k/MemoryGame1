@@ -311,6 +311,63 @@
             this.rbMid.UseVisualStyleBackColor = true;
             this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
             // 
+            // cgbLevel
+            // 
+            this.cgbLevel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.cgbLevel.BorderRadius = 15;
+            this.cgbLevel.BorderThickness = 2;
+            this.cgbLevel.Controls.Add(this.rbHard);
+            this.cgbLevel.Controls.Add(this.rbEasy);
+            this.cgbLevel.Controls.Add(this.rbMid);
+            this.cgbLevel.Location = new System.Drawing.Point(19, 27);
+            this.cgbLevel.Name = "cgbLevel";
+            this.cgbLevel.Size = new System.Drawing.Size(188, 171);
+            this.cgbLevel.TabIndex = 5;
+            this.cgbLevel.TabStop = false;
+            this.cgbLevel.Text = "Level";
+            // 
+            // rbHard
+            // 
+            this.rbHard.AutoSize = true;
+            this.rbHard.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.rbHard.Location = new System.Drawing.Point(21, 121);
+            this.rbHard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbHard.Name = "rbHard";
+            this.rbHard.Size = new System.Drawing.Size(91, 38);
+            this.rbHard.TabIndex = 2;
+            this.rbHard.TabStop = true;
+            this.rbHard.Text = "Hard";
+            this.rbHard.UseVisualStyleBackColor = true;
+            this.rbHard.CheckedChanged += new System.EventHandler(this.rbHard_CheckedChanged);
+            // 
+            // rbEasy
+            // 
+            this.rbEasy.AutoSize = true;
+            this.rbEasy.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEasy.Location = new System.Drawing.Point(21, 29);
+            this.rbEasy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbEasy.Name = "rbEasy";
+            this.rbEasy.Size = new System.Drawing.Size(89, 38);
+            this.rbEasy.TabIndex = 0;
+            this.rbEasy.TabStop = true;
+            this.rbEasy.Text = "Easy";
+            this.rbEasy.UseVisualStyleBackColor = true;
+            this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged);
+            // 
+            // rbMid
+            // 
+            this.rbMid.AutoSize = true;
+            this.rbMid.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.rbMid.Location = new System.Drawing.Point(23, 75);
+            this.rbMid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rbMid.Name = "rbMid";
+            this.rbMid.Size = new System.Drawing.Size(82, 38);
+            this.rbMid.TabIndex = 1;
+            this.rbMid.TabStop = true;
+            this.rbMid.Text = "Mid";
+            this.rbMid.UseVisualStyleBackColor = true;
+            this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
+            // 
             // gbNumberOfRounds
             // 
             this.gbNumberOfRounds.Controls.Add(this.label1);
@@ -318,9 +375,13 @@
             this.gbNumberOfRounds.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNumberOfRounds.Location = new System.Drawing.Point(237, 382);
             this.gbNumberOfRounds.Margin = new System.Windows.Forms.Padding(4);
+            this.gbNumberOfRounds.Location = new System.Drawing.Point(546, 84);
+            this.gbNumberOfRounds.Margin = new System.Windows.Forms.Padding(4);
             this.gbNumberOfRounds.Name = "gbNumberOfRounds";
             this.gbNumberOfRounds.Padding = new System.Windows.Forms.Padding(4);
             this.gbNumberOfRounds.Size = new System.Drawing.Size(256, 108);
+            this.gbNumberOfRounds.Padding = new System.Windows.Forms.Padding(4);
+            this.gbNumberOfRounds.Size = new System.Drawing.Size(270, 114);
             this.gbNumberOfRounds.TabIndex = 2;
             this.gbNumberOfRounds.TabStop = false;
             this.gbNumberOfRounds.Text = "Number Of Rounds : ";
@@ -328,7 +389,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 57);
+            this.label1.Location = new System.Drawing.Point(11, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 20);
@@ -338,6 +399,8 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(109, 54);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Location = new System.Drawing.Point(109, 34);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(101, 27);
@@ -390,7 +453,7 @@
             this.gbPlayer2Info.Controls.Add(this.label5);
             this.gbPlayer2Info.Enabled = false;
             this.gbPlayer2Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPlayer2Info.Location = new System.Drawing.Point(541, 337);
+            this.gbPlayer2Info.Location = new System.Drawing.Point(504, 223);
             this.gbPlayer2Info.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbPlayer2Info.Name = "gbPlayer2Info";
             this.gbPlayer2Info.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -463,7 +526,7 @@
             this.gbPlayer1Info.Controls.Add(this.label3);
             this.gbPlayer1Info.Enabled = false;
             this.gbPlayer1Info.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPlayer1Info.Location = new System.Drawing.Point(541, 197);
+            this.gbPlayer1Info.Location = new System.Drawing.Point(65, 223);
             this.gbPlayer1Info.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
             this.gbPlayer1Info.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -538,7 +601,7 @@
             this.gbTimePerRound.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTimePerRound.Name = "gbTimePerRound";
             this.gbTimePerRound.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbTimePerRound.Size = new System.Drawing.Size(280, 159);
+            this.gbTimePerRound.Size = new System.Drawing.Size(280, 171);
             this.gbTimePerRound.TabIndex = 1;
             this.gbTimePerRound.TabStop = false;
             this.gbTimePerRound.Text = "Time Per Round :";
