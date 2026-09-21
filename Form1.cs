@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MemoryGame1.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -15,6 +17,8 @@ namespace MemoryGame1
     public enum enLevel {enEasy=0,enMid=1,enHard=2 };
     public enum enGender {enMale =0, enFemale=1 }; 
 
+    public enum enCharacters {B1=0,B2=1,B3=2,B4=3,B5=4,G1=5,G2=6,G3=7,G4=8,G5=9}; 
+   
     public struct stGameInfo 
     {
        public enLevel Level;
@@ -25,6 +29,8 @@ namespace MemoryGame1
        public string NamePlayer2;
        public enGender GenderPlayer1;
        public enGender GenderPlayer2;
+       public enCharacters CharacterPlayer1;
+       public enCharacters CharacterPlayer2;
        public string Winner;
     }
 
@@ -148,10 +154,7 @@ namespace MemoryGame1
 
         }
 
-        private void panelSettings_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         enLevel GetLevelByName(string Level)
         {
@@ -212,6 +215,7 @@ namespace MemoryGame1
             if (Player == 1)
             {
                 GameInfo.GenderPlayer1 = GetGender(Gender);
+
             }
             else
             {
@@ -309,26 +313,72 @@ namespace MemoryGame1
             GameInfo.NamePlayer2 = txtPlayer2.Text;
         }
 
+       
+        void ChangeCharacters(RadioButton Gender,int Player)
+        {
+            if (Player==1)
+            {
+                if (Gender== rbMale1)
+                {
+                    pb1_1.Image = Resources.B1;
+                    pb1_2.Image = Resources.B2;
+                    pb1_3.Image = Resources.B3;
+                    pb1_4.Image = Resources.B4;
+                    pb1_5.Image = Resources.B5;
+                }
+                else
+                {
+                    pb1_1.Image = Resources.G1;
+                    pb1_2.Image = Resources.G2;
+                    pb1_3.Image = Resources.G3;
+                    pb1_4.Image = Resources.G4;
+                    pb1_5.Image = Resources.G5;
+                }
+            }
+            else
+            {
+                if (Gender == rbMale2)
+                {
+                    pb2_1.Image = Resources.B1;
+                    pb2_2.Image = Resources.B2;
+                    pb2_3.Image = Resources.B3;
+                    pb2_4.Image = Resources.B4;
+                    pb2_5.Image = Resources.B5;
+                }
+                else
+                {
+                    pb2_1.Image = Resources.G1;
+                    pb2_2.Image = Resources.G2;
+                    pb2_3.Image = Resources.G3;
+                    pb2_4.Image = Resources.G4;
+                    pb2_5.Image = Resources.G5;
+                }
+            }
+        }
+
         private void rbMale1_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGender((RadioButton)sender,1);
+            ChangeCharacters((RadioButton)sender, 1);
 
         }
 
         private void rbFemale1_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGender((RadioButton)sender, 1);
+            ChangeCharacters((RadioButton)sender, 1);
         }
 
         private void rbMale2_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGender((RadioButton)sender, 2);
+            ChangeCharacters((RadioButton)sender,2); 
         }
 
         private void rbFemale2_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGender((RadioButton)sender, 2);
-
+            ChangeCharacters((RadioButton)sender, 2);
         }
 
 
@@ -368,9 +418,111 @@ namespace MemoryGame1
             }
         }
 
-      
-        
+        enCharacters GetCharacter(PictureBox Character, enGender Gender)
+        {
+            if (Gender == enGender.enMale)
+            {
+                switch (Character.Name)
+                {
+                    case "pb1_1":
+                    case "pb2_1":
+                        return enCharacters.B1;
 
-       
+                    case "pb1_2":
+                    case "pb2_2":
+                        return enCharacters.B2;
+
+                    case "pb1_3":
+                    case "pb2_3":
+                        return enCharacters.B3;
+
+                    case "pb1_4":
+                    case "pb2_4":
+                        return enCharacters.B4;
+
+                    case "pb1_5":
+                    case "pb2_5":
+                        return enCharacters.B5;
+                }
+            }
+            else
+            {
+                switch (Character.Name)
+                {
+                    case "pb1_1":
+                    case "pb2_1":
+                        return enCharacters.G1;
+
+                    case "pb1_2":
+                    case "pb2_2":
+                        return enCharacters.G2;
+
+                    case "pb1_3":
+                    case "pb2_3":
+                        return enCharacters.G3;
+
+                    case "pb1_4":
+                    case "pb2_4":
+                        return enCharacters.G4;
+
+                    case "pb1_5":
+                    case "pb2_5":
+                        return enCharacters.G5;
+                }
+            }
+
+            return enCharacters.B1;
+        }
+
+
+        private void pb1_1_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender,GameInfo.GenderPlayer1);
+        }
+
+        private void pb1_2_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer1);
+        }
+
+        private void pb1_3_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer1);
+        }
+
+        private void pb1_4_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer1);
+        }
+
+        private void pb1_5_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer1);
+        }
+
+        private void pb2_1_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
+        }
+
+        private void pb2_2_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
+        }
+
+        private void pb2_3_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
+        }
+
+        private void pb2_4_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
+        }
+
+        private void pb2_5_Click(object sender, EventArgs e)
+        {
+            GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
+        }
     }
 }
