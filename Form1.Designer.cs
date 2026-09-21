@@ -550,18 +550,7 @@
             // 
             // cgbLevel
             // 
-            this.cgbLevel.BorderColor = System.Drawing.Color.MediumBlue;
-            this.cgbLevel.BorderRadius = 15;
-            this.cgbLevel.BorderThickness = 2;
-            this.cgbLevel.Controls.Add(this.rbHard);
-            this.cgbLevel.Controls.Add(this.rbEasy);
-            this.cgbLevel.Controls.Add(this.rbMid);
-            this.cgbLevel.Location = new System.Drawing.Point(19, 27);
-            this.cgbLevel.Name = "cgbLevel";
-            this.cgbLevel.Size = new System.Drawing.Size(188, 188);
-            this.cgbLevel.TabIndex = 5;
-            this.cgbLevel.TabStop = false;
-            this.cgbLevel.Text = "Level";
+            
             // 
             // Form1
             // 
