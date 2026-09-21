@@ -109,7 +109,7 @@
             this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelStartGame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(1156, 48);
+            this.panelStartGame.Location = new System.Drawing.Point(1063, 3);
             this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelStartGame.Name = "panelStartGame";
             this.panelStartGame.Size = new System.Drawing.Size(53, 41);
@@ -131,7 +131,7 @@
             this.panelHowToPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelHowToPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHowToPlay.Controls.Add(this.pBHowToPlay);
-            this.panelHowToPlay.Location = new System.Drawing.Point(265, 46);
+            this.panelHowToPlay.Location = new System.Drawing.Point(279, 42);
             this.panelHowToPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelHowToPlay.Name = "panelHowToPlay";
             this.panelHowToPlay.Size = new System.Drawing.Size(863, 543);
@@ -165,7 +165,7 @@
             this.panelSettings.Controls.Add(this.gbNumberOfPlayers);
             this.panelSettings.Controls.Add(this.gbTimePerRound);
             this.panelSettings.Controls.Add(this.cgbLevel);
-            this.panelSettings.Location = new System.Drawing.Point(266, 45);
+            this.panelSettings.Location = new System.Drawing.Point(280, 41);
             this.panelSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(884, 544);
@@ -181,10 +181,10 @@
             this.panelMainMenue.Controls.Add(this.modernButton3);
             this.panelMainMenue.Controls.Add(this.modernButton2);
             this.panelMainMenue.Controls.Add(this.modernButton4);
-            this.panelMainMenue.Location = new System.Drawing.Point(12, 47);
+            this.panelMainMenue.Location = new System.Drawing.Point(12, 41);
             this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 544);
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 550);
             this.panelMainMenue.TabIndex = 5;
             // 
             // gbPlayer1Info
@@ -226,12 +226,14 @@
             // pb1_5
             // 
             this.pb1_5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_5.Image = ((System.Drawing.Image)(resources.GetObject("pb1_5.Image")));
             this.pb1_5.Location = new System.Drawing.Point(202, 155);
             this.pb1_5.Name = "pb1_5";
             this.pb1_5.Size = new System.Drawing.Size(75, 73);
             this.pb1_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1_5.TabIndex = 10;
             this.pb1_5.TabStop = false;
+            this.pb1_5.Tag = "Avatar5";
             this.pb1_5.Click += new System.EventHandler(this.pb1_5_Click);
             // 
             // rbMale1
@@ -263,46 +265,58 @@
             // pb1_2
             // 
             this.pb1_2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_2.Image = ((System.Drawing.Image)(resources.GetObject("pb1_2.Image")));
             this.pb1_2.Location = new System.Drawing.Point(151, 58);
             this.pb1_2.Name = "pb1_2";
             this.pb1_2.Size = new System.Drawing.Size(75, 73);
             this.pb1_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1_2.TabIndex = 6;
             this.pb1_2.TabStop = false;
+            this.pb1_2.Tag = "Avatar2";
             this.pb1_2.Click += new System.EventHandler(this.pb1_2_Click);
+            this.pb1_2.Paint += new System.Windows.Forms.PaintEventHandler(this.pb1_2_Paint);
             // 
             // pb1_3
             // 
             this.pb1_3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_3.Image = ((System.Drawing.Image)(resources.GetObject("pb1_3.Image")));
             this.pb1_3.Location = new System.Drawing.Point(272, 58);
             this.pb1_3.Name = "pb1_3";
             this.pb1_3.Size = new System.Drawing.Size(75, 73);
             this.pb1_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1_3.TabIndex = 7;
             this.pb1_3.TabStop = false;
+            this.pb1_3.Tag = "Avatar3";
             this.pb1_3.Click += new System.EventHandler(this.pb1_3_Click);
             // 
             // pb1_4
             // 
             this.pb1_4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_4.Image = ((System.Drawing.Image)(resources.GetObject("pb1_4.Image")));
             this.pb1_4.Location = new System.Drawing.Point(95, 155);
             this.pb1_4.Name = "pb1_4";
             this.pb1_4.Size = new System.Drawing.Size(75, 73);
             this.pb1_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1_4.TabIndex = 8;
             this.pb1_4.TabStop = false;
+            this.pb1_4.Tag = "Avatar4";
             this.pb1_4.Click += new System.EventHandler(this.pb1_4_Click);
             // 
             // pb1_1
             // 
             this.pb1_1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pb1_1.Image = ((System.Drawing.Image)(resources.GetObject("pb1_1.Image")));
             this.pb1_1.Location = new System.Drawing.Point(33, 58);
             this.pb1_1.Name = "pb1_1";
             this.pb1_1.Size = new System.Drawing.Size(75, 73);
             this.pb1_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1_1.TabIndex = 9;
             this.pb1_1.TabStop = false;
+            this.pb1_1.Tag = "Avatar1";
             this.pb1_1.Click += new System.EventHandler(this.pb1_1_Click);
+            this.pb1_1.Paint += new System.Windows.Forms.PaintEventHandler(this.pb1_1_Paint);
+            this.pb1_1.MouseEnter += new System.EventHandler(this.pb1_1_MouseEnter);
             // 
             // label3
             // 
@@ -321,6 +335,8 @@
             this.txtPlayer1.Name = "txtPlayer1";
             this.txtPlayer1.Size = new System.Drawing.Size(227, 38);
             this.txtPlayer1.TabIndex = 1;
+            this.txtPlayer1.Enter += new System.EventHandler(this.txtPlayer1_Enter);
+            this.txtPlayer1.Leave += new System.EventHandler(this.txtPlayer1_Leave);
             this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer1_Validating);
             // 
             // gbPlayer2Info
@@ -362,12 +378,14 @@
             // pb2_5
             // 
             this.pb2_5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_5.Image = ((System.Drawing.Image)(resources.GetObject("pb2_5.Image")));
             this.pb2_5.Location = new System.Drawing.Point(259, 58);
             this.pb2_5.Name = "pb2_5";
             this.pb2_5.Size = new System.Drawing.Size(75, 73);
             this.pb2_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2_5.TabIndex = 14;
             this.pb2_5.TabStop = false;
+            this.pb2_5.Tag = "Avatar8";
             this.pb2_5.Click += new System.EventHandler(this.pb2_5_Click);
             // 
             // rbMale2
@@ -386,23 +404,27 @@
             // pb2_2
             // 
             this.pb2_2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_2.Image = ((System.Drawing.Image)(resources.GetObject("pb2_2.Image")));
             this.pb2_2.Location = new System.Drawing.Point(143, 58);
             this.pb2_2.Name = "pb2_2";
             this.pb2_2.Size = new System.Drawing.Size(75, 73);
             this.pb2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2_2.TabIndex = 11;
             this.pb2_2.TabStop = false;
+            this.pb2_2.Tag = "Avatar7";
             this.pb2_2.Click += new System.EventHandler(this.pb2_2_Click);
             // 
             // pb2_3
             // 
             this.pb2_3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_3.Image = ((System.Drawing.Image)(resources.GetObject("pb2_3.Image")));
             this.pb2_3.Location = new System.Drawing.Point(201, 155);
             this.pb2_3.Name = "pb2_3";
             this.pb2_3.Size = new System.Drawing.Size(75, 73);
             this.pb2_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2_3.TabIndex = 12;
             this.pb2_3.TabStop = false;
+            this.pb2_3.Tag = "Avatar10";
             this.pb2_3.Click += new System.EventHandler(this.pb2_3_Click);
             // 
             // rbFemale2
@@ -421,23 +443,27 @@
             // pb2_1
             // 
             this.pb2_1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_1.Image = ((System.Drawing.Image)(resources.GetObject("pb2_1.Image")));
             this.pb2_1.Location = new System.Drawing.Point(23, 58);
             this.pb2_1.Name = "pb2_1";
             this.pb2_1.Size = new System.Drawing.Size(75, 73);
             this.pb2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2_1.TabIndex = 10;
             this.pb2_1.TabStop = false;
+            this.pb2_1.Tag = "Avatar6";
             this.pb2_1.Click += new System.EventHandler(this.pb2_1_Click);
             // 
             // pb2_4
             // 
             this.pb2_4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_4.Image = ((System.Drawing.Image)(resources.GetObject("pb2_4.Image")));
             this.pb2_4.Location = new System.Drawing.Point(92, 155);
             this.pb2_4.Name = "pb2_4";
             this.pb2_4.Size = new System.Drawing.Size(75, 73);
             this.pb2_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb2_4.TabIndex = 13;
             this.pb2_4.TabStop = false;
+            this.pb2_4.Tag = "Avatar9";
             this.pb2_4.Click += new System.EventHandler(this.pb2_4_Click);
             // 
             // txtPlayer2
@@ -448,6 +474,8 @@
             this.txtPlayer2.Name = "txtPlayer2";
             this.txtPlayer2.Size = new System.Drawing.Size(233, 38);
             this.txtPlayer2.TabIndex = 2;
+            this.txtPlayer2.Enter += new System.EventHandler(this.txtPlayer2_Enter);
+            this.txtPlayer2.Leave += new System.EventHandler(this.txtPlayer2_Leave);
             this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlayer2_Validating);
             // 
             // label5
@@ -725,11 +753,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1205, 598);
+            this.BackgroundImage = global::MemoryGame1.Properties.Resources.download;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1176, 615);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelMainMenue);
             this.Controls.Add(this.panelHowToPlay);
             this.Controls.Add(this.panelStartGame);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Card Mach Game";

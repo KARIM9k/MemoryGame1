@@ -420,58 +420,72 @@ namespace MemoryGame1
 
         enCharacters GetCharacter(PictureBox Character, enGender Gender)
         {
+            bool isPlayer1 = Character.Name.StartsWith("pb1_");
+
+            if (isPlayer1)
+            {
+                if (GameInfo.GenderPlayer1 == enGender.enMale)
+                {
+                    pb1_1.Image = Resources.B1; pb1_2.Image = Resources.B2;
+                    pb1_3.Image = Resources.B3; pb1_4.Image = Resources.B4; pb1_5.Image = Resources.B5;
+                }
+                else
+                {
+                    pb1_1.Image = Resources.G1; pb1_2.Image = Resources.G2;
+                    pb1_3.Image = Resources.G3; pb1_4.Image = Resources.G4; pb1_5.Image = Resources.G5;
+                }
+            }
+            else
+            {
+                if (GameInfo.GenderPlayer2 == enGender.enMale)
+                {
+                    pb2_1.Image = Resources.B1; pb2_2.Image = Resources.B2;
+                    pb2_3.Image = Resources.B3; pb2_4.Image = Resources.B4; pb2_5.Image = Resources.B5;
+                }
+                else
+                {
+                    pb2_1.Image = Resources.G1; pb2_2.Image = Resources.G2;
+                    pb2_3.Image = Resources.G3; pb2_4.Image = Resources.G4; pb2_5.Image = Resources.G5;
+                }
+            }
+
+            PictureBox[] playerPics = isPlayer1
+                ? new PictureBox[] { pb1_1, pb1_2, pb1_3, pb1_4, pb1_5 }
+                : new PictureBox[] { pb2_1, pb2_2, pb2_3, pb2_4, pb2_5 };
+
+            foreach (var pic in playerPics)
+            {
+                if (pic != Character)
+                {
+                    pic.Image = DarkenImage(pic.Image, 0.4f);
+                }
+            }
+
             if (Gender == enGender.enMale)
             {
                 switch (Character.Name)
                 {
-                    case "pb1_1":
-                    case "pb2_1":
-                        return enCharacters.B1;
-
-                    case "pb1_2":
-                    case "pb2_2":
-                        return enCharacters.B2;
-
-                    case "pb1_3":
-                    case "pb2_3":
-                        return enCharacters.B3;
-
-                    case "pb1_4":
-                    case "pb2_4":
-                        return enCharacters.B4;
-
-                    case "pb1_5":
-                    case "pb2_5":
-                        return enCharacters.B5;
+                    case "pb1_1": case "pb2_1": return enCharacters.B1;
+                    case "pb1_2": case "pb2_2": return enCharacters.B2;
+                    case "pb1_3": case "pb2_3": return enCharacters.B3;
+                    case "pb1_4": case "pb2_4": return enCharacters.B4;
+                    case "pb1_5": case "pb2_5": return enCharacters.B5;
                 }
             }
             else
             {
                 switch (Character.Name)
                 {
-                    case "pb1_1":
-                    case "pb2_1":
-                        return enCharacters.G1;
-
-                    case "pb1_2":
-                    case "pb2_2":
-                        return enCharacters.G2;
-
-                    case "pb1_3":
-                    case "pb2_3":
-                        return enCharacters.G3;
-
-                    case "pb1_4":
-                    case "pb2_4":
-                        return enCharacters.G4;
-
-                    case "pb1_5":
-                    case "pb2_5":
-                        return enCharacters.G5;
+                    case "pb1_1": case "pb2_1": return enCharacters.G1;
+                    case "pb1_2": case "pb2_2": return enCharacters.G2;
+                    case "pb1_3": case "pb2_3": return enCharacters.G3;
+                    case "pb1_4": case "pb2_4": return enCharacters.G4;
+                    case "pb1_5": case "pb2_5": return enCharacters.G5;
                 }
             }
 
             return enCharacters.B1;
+        
         }
 
 
@@ -488,6 +502,7 @@ namespace MemoryGame1
         private void pb1_3_Click(object sender, EventArgs e)
         {
             GameInfo.CharacterPlayer1 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer1);
+
         }
 
         private void pb1_4_Click(object sender, EventArgs e)
@@ -524,5 +539,72 @@ namespace MemoryGame1
         {
             GameInfo.CharacterPlayer2 = GetCharacter((PictureBox)sender, GameInfo.GenderPlayer2);
         }
+
+        private void txtPlayer1_Enter(object sender, EventArgs e)
+        {
+            txtPlayer1.BackColor = Color.LightSkyBlue;
+        }
+
+        private void txtPlayer2_Enter(object sender, EventArgs e)
+        {
+            txtPlayer2.BackColor = Color.LightSkyBlue;
+        }
+
+        private void txtPlayer1_Leave(object sender, EventArgs e)
+        {
+            txtPlayer1.BackColor = Color.White;
+        }
+
+        private void txtPlayer2_Leave(object sender, EventArgs e)
+        {
+            txtPlayer2.BackColor = Color.White;
+
+        }
+
+        private void pb1_1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void pb1_1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pb1_2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+
+        private Image DarkenImage(Image image, float brightness = 0.5f)
+        {
+            if (image == null) return null;
+
+            Bitmap bmp = new Bitmap(image.Width, image.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                // مصفوفة تحكم بالألوان لتقليل السطوع/الإضاءة
+                System.Drawing.Imaging.ColorMatrix colorMatrix = new System.Drawing.Imaging.ColorMatrix(new float[][]
+                {
+            new float[] {brightness, 0, 0, 0, 0},
+            new float[] {0, brightness, 0, 0, 0},
+            new float[] {0, 0, brightness, 0, 0},
+            new float[] {0, 0, 0, 1, 0},
+            new float[] {0, 0, 0, 0, 1}
+                });
+
+                using (System.Drawing.Imaging.ImageAttributes attributes = new System.Drawing.Imaging.ImageAttributes())
+                {
+                    attributes.SetColorMatrix(colorMatrix);
+                    g.DrawImage(image, new Rectangle(0, 0, bmp.Width, bmp.Height),
+                        0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
+                }
+            }
+            return bmp;
+        }
+
+
+
     }
 }
