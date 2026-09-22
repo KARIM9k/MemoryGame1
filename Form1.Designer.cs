@@ -109,17 +109,17 @@
             this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelStartGame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(1063, 3);
+            this.panelStartGame.Location = new System.Drawing.Point(275, 37);
             this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelStartGame.Name = "panelStartGame";
-            this.panelStartGame.Size = new System.Drawing.Size(53, 41);
+            this.panelStartGame.Size = new System.Drawing.Size(885, 543);
             this.panelStartGame.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 91);
+            this.label2.Location = new System.Drawing.Point(245, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(336, 69);
             this.label2.TabIndex = 0;
@@ -180,7 +180,7 @@
             this.gbPlayer1Info.Controls.Add(this.label3);
             this.gbPlayer1Info.Controls.Add(this.txtPlayer1);
             this.gbPlayer1Info.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPlayer1Info.Location = new System.Drawing.Point(19, 204);
+            this.gbPlayer1Info.Location = new System.Drawing.Point(15, 204);
             this.gbPlayer1Info.Name = "gbPlayer1Info";
             this.gbPlayer1Info.Size = new System.Drawing.Size(407, 326);
             this.gbPlayer1Info.TabIndex = 7;
@@ -210,6 +210,7 @@
             // pb1_5
             // 
             this.pb1_5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_5.Enabled = false;
             this.pb1_5.Image = ((System.Drawing.Image)(resources.GetObject("pb1_5.Image")));
             this.pb1_5.Location = new System.Drawing.Point(202, 155);
             this.pb1_5.Name = "pb1_5";
@@ -249,6 +250,7 @@
             // pb1_2
             // 
             this.pb1_2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_2.Enabled = false;
             this.pb1_2.Image = ((System.Drawing.Image)(resources.GetObject("pb1_2.Image")));
             this.pb1_2.Location = new System.Drawing.Point(151, 58);
             this.pb1_2.Name = "pb1_2";
@@ -263,6 +265,7 @@
             // pb1_3
             // 
             this.pb1_3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_3.Enabled = false;
             this.pb1_3.Image = ((System.Drawing.Image)(resources.GetObject("pb1_3.Image")));
             this.pb1_3.Location = new System.Drawing.Point(272, 58);
             this.pb1_3.Name = "pb1_3";
@@ -276,6 +279,7 @@
             // pb1_4
             // 
             this.pb1_4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb1_4.Enabled = false;
             this.pb1_4.Image = ((System.Drawing.Image)(resources.GetObject("pb1_4.Image")));
             this.pb1_4.Location = new System.Drawing.Point(95, 155);
             this.pb1_4.Name = "pb1_4";
@@ -290,6 +294,7 @@
             // 
             this.pb1_1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pb1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pb1_1.Enabled = false;
             this.pb1_1.Image = ((System.Drawing.Image)(resources.GetObject("pb1_1.Image")));
             this.pb1_1.Location = new System.Drawing.Point(33, 58);
             this.pb1_1.Name = "pb1_1";
@@ -362,6 +367,7 @@
             // pb2_5
             // 
             this.pb2_5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_5.Enabled = false;
             this.pb2_5.Image = ((System.Drawing.Image)(resources.GetObject("pb2_5.Image")));
             this.pb2_5.Location = new System.Drawing.Point(259, 58);
             this.pb2_5.Name = "pb2_5";
@@ -388,6 +394,7 @@
             // pb2_2
             // 
             this.pb2_2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_2.Enabled = false;
             this.pb2_2.Image = ((System.Drawing.Image)(resources.GetObject("pb2_2.Image")));
             this.pb2_2.Location = new System.Drawing.Point(143, 58);
             this.pb2_2.Name = "pb2_2";
@@ -401,6 +408,7 @@
             // pb2_3
             // 
             this.pb2_3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_3.Enabled = false;
             this.pb2_3.Image = ((System.Drawing.Image)(resources.GetObject("pb2_3.Image")));
             this.pb2_3.Location = new System.Drawing.Point(201, 155);
             this.pb2_3.Name = "pb2_3";
@@ -427,6 +435,7 @@
             // pb2_1
             // 
             this.pb2_1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_1.Enabled = false;
             this.pb2_1.Image = ((System.Drawing.Image)(resources.GetObject("pb2_1.Image")));
             this.pb2_1.Location = new System.Drawing.Point(23, 58);
             this.pb2_1.Name = "pb2_1";
@@ -440,6 +449,7 @@
             // pb2_4
             // 
             this.pb2_4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pb2_4.Enabled = false;
             this.pb2_4.Image = ((System.Drawing.Image)(resources.GetObject("pb2_4.Image")));
             this.pb2_4.Location = new System.Drawing.Point(92, 155);
             this.pb2_4.Name = "pb2_4";
@@ -479,7 +489,7 @@
             this.gbNumberOfRounds.Controls.Add(this.label1);
             this.gbNumberOfRounds.Controls.Add(this.numericUpDown1);
             this.gbNumberOfRounds.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNumberOfRounds.Location = new System.Drawing.Point(533, 98);
+            this.gbNumberOfRounds.Location = new System.Drawing.Point(530, 98);
             this.gbNumberOfRounds.Name = "gbNumberOfRounds";
             this.gbNumberOfRounds.Size = new System.Drawing.Size(324, 94);
             this.gbNumberOfRounds.TabIndex = 8;
@@ -517,7 +527,7 @@
             this.gbNumberOfPlayers.Controls.Add(this.rbTwoPlayers);
             this.gbNumberOfPlayers.Controls.Add(this.rbOnePlayer);
             this.gbNumberOfPlayers.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNumberOfPlayers.Location = new System.Drawing.Point(533, 21);
+            this.gbNumberOfPlayers.Location = new System.Drawing.Point(530, 21);
             this.gbNumberOfPlayers.Name = "gbNumberOfPlayers";
             this.gbNumberOfPlayers.Size = new System.Drawing.Size(324, 71);
             this.gbNumberOfPlayers.TabIndex = 7;
@@ -532,7 +542,6 @@
             this.rbTwoPlayers.Name = "rbTwoPlayers";
             this.rbTwoPlayers.Size = new System.Drawing.Size(129, 28);
             this.rbTwoPlayers.TabIndex = 1;
-            this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Two Players";
             this.rbTwoPlayers.UseVisualStyleBackColor = true;
             this.rbTwoPlayers.CheckedChanged += new System.EventHandler(this.rbTwoPlayers_CheckedChanged);
@@ -545,7 +554,6 @@
             this.rbOnePlayer.Name = "rbOnePlayer";
             this.rbOnePlayer.Size = new System.Drawing.Size(118, 28);
             this.rbOnePlayer.TabIndex = 0;
-            this.rbOnePlayer.TabStop = true;
             this.rbOnePlayer.Text = "One Player";
             this.rbOnePlayer.UseVisualStyleBackColor = true;
             this.rbOnePlayer.CheckedChanged += new System.EventHandler(this.rbOnePlayer_CheckedChanged);
@@ -558,7 +566,7 @@
             this.gbTimePerRound.Controls.Add(this.tbTimePerRound);
             this.gbTimePerRound.Controls.Add(this.lblTimePerRound);
             this.gbTimePerRound.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.gbTimePerRound.Location = new System.Drawing.Point(228, 21);
+            this.gbTimePerRound.Location = new System.Drawing.Point(226, 21);
             this.gbTimePerRound.Name = "gbTimePerRound";
             this.gbTimePerRound.Size = new System.Drawing.Size(285, 171);
             this.gbTimePerRound.TabIndex = 6;
@@ -573,7 +581,6 @@
             this.tbTimePerRound.Name = "tbTimePerRound";
             this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
             this.tbTimePerRound.TabIndex = 0;
-            this.tbTimePerRound.Value = 30;
             this.tbTimePerRound.ValueChanged += new System.EventHandler(this.tbTimePerRound_ValueChanged);
             // 
             // lblTimePerRound
@@ -582,9 +589,9 @@
             this.lblTimePerRound.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTimePerRound.Location = new System.Drawing.Point(100, 37);
             this.lblTimePerRound.Name = "lblTimePerRound";
-            this.lblTimePerRound.Size = new System.Drawing.Size(51, 34);
+            this.lblTimePerRound.Size = new System.Drawing.Size(38, 34);
             this.lblTimePerRound.TabIndex = 1;
-            this.lblTimePerRound.Text = "30s";
+            this.lblTimePerRound.Text = "0s";
             // 
             // cgbLevel
             // 
@@ -595,9 +602,9 @@
             this.cgbLevel.Controls.Add(this.rbEasy);
             this.cgbLevel.Controls.Add(this.rbMid);
             this.cgbLevel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.cgbLevel.Location = new System.Drawing.Point(19, 21);
+            this.cgbLevel.Location = new System.Drawing.Point(15, 21);
             this.cgbLevel.Name = "cgbLevel";
-            this.cgbLevel.Size = new System.Drawing.Size(188, 171);
+            this.cgbLevel.Size = new System.Drawing.Size(189, 171);
             this.cgbLevel.TabIndex = 5;
             this.cgbLevel.TabStop = false;
             this.cgbLevel.Text = "Level";
@@ -611,7 +618,6 @@
             this.rbHard.Name = "rbHard";
             this.rbHard.Size = new System.Drawing.Size(80, 31);
             this.rbHard.TabIndex = 2;
-            this.rbHard.TabStop = true;
             this.rbHard.Text = "Hard";
             this.rbHard.UseVisualStyleBackColor = true;
             this.rbHard.CheckedChanged += new System.EventHandler(this.rbHard_CheckedChanged);
@@ -625,7 +631,6 @@
             this.rbEasy.Name = "rbEasy";
             this.rbEasy.Size = new System.Drawing.Size(77, 31);
             this.rbEasy.TabIndex = 0;
-            this.rbEasy.TabStop = true;
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = true;
             this.rbEasy.CheckedChanged += new System.EventHandler(this.rbEasy_CheckedChanged);
@@ -639,7 +644,6 @@
             this.rbMid.Name = "rbMid";
             this.rbMid.Size = new System.Drawing.Size(71, 31);
             this.rbMid.TabIndex = 1;
-            this.rbMid.TabStop = true;
             this.rbMid.Text = "Mid";
             this.rbMid.UseVisualStyleBackColor = true;
             this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
@@ -657,7 +661,7 @@
             this.panelMainMenue.Location = new System.Drawing.Point(12, 41);
             this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 550);
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 543);
             this.panelMainMenue.TabIndex = 5;
             // 
             // modernButton1
@@ -756,10 +760,10 @@
             this.BackgroundImage = global::MemoryGame1.Properties.Resources.download;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 615);
+            this.Controls.Add(this.panelStartGame);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelMainMenue);
             this.Controls.Add(this.panelHowToPlay);
-            this.Controls.Add(this.panelStartGame);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";

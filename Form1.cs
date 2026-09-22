@@ -32,6 +32,26 @@ namespace MemoryGame1
        public enCharacters CharacterPlayer1;
        public enCharacters CharacterPlayer2;
        public string Winner;
+
+
+        public void SetDefault()
+        {
+            Level = enLevel.enEasy;
+            TowPlayers = false;
+            NumberOfRounds = 5;
+            TimePerRound = 30;
+
+            NamePlayer1 = "Player 1";
+            NamePlayer2 = "Player 2";
+
+            GenderPlayer1 = enGender.enMale;
+            GenderPlayer2 = enGender.enMale;
+
+            CharacterPlayer1 = enCharacters.B1;
+            CharacterPlayer2 = enCharacters.B2;
+
+            Winner = "";
+        }
     }
 
 
@@ -44,24 +64,8 @@ namespace MemoryGame1
         {
             InitializeComponent();
 
-
-            //switch (GameInfo.Level) {
-            //    case enLevel.enEasy:
-            //    {
-            //            break; 
-            //    }
-            //    case enLevel.enMid:
-            //    {
-            //            break; 
-            //    }
-            //    case enLevel.enHard:
-            //    {
-            //            break; 
-            //    }
-            
-            //}
-
-                     
+            GameInfo = new stGameInfo();
+            GameInfo.SetDefault();                
 
         }
 
@@ -318,6 +322,12 @@ namespace MemoryGame1
         {
             if (Player==1)
             {
+                pb1_1.Enabled = true;
+                pb1_2.Enabled = true;
+                pb1_3.Enabled = true;
+                pb1_4.Enabled = true;
+                pb1_5.Enabled = true;
+
                 if (Gender== rbMale1)
                 {
                     pb1_1.Image = Resources.B1;
@@ -325,6 +335,8 @@ namespace MemoryGame1
                     pb1_3.Image = Resources.B3;
                     pb1_4.Image = Resources.B4;
                     pb1_5.Image = Resources.B5;
+
+                    
                 }
                 else
                 {
@@ -337,6 +349,11 @@ namespace MemoryGame1
             }
             else
             {
+                pb2_1.Enabled = true;
+                pb2_2.Enabled = true;
+                pb2_3.Enabled = true;
+                pb2_4.Enabled = true;
+                pb2_5.Enabled = true;
                 if (Gender == rbMale2)
                 {
                     pb2_1.Image = Resources.B1;
