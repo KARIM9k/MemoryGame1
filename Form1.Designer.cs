@@ -112,7 +112,7 @@
             this.panelStartGame.Location = new System.Drawing.Point(275, 37);
             this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelStartGame.Name = "panelStartGame";
-            this.panelStartGame.Size = new System.Drawing.Size(885, 543);
+            this.panelStartGame.Size = new System.Drawing.Size(889, 547);
             this.panelStartGame.TabIndex = 6;
             // 
             // label2
@@ -658,10 +658,10 @@
             this.panelMainMenue.Controls.Add(this.modernButton3);
             this.panelMainMenue.Controls.Add(this.modernButton2);
             this.panelMainMenue.Controls.Add(this.modernButton4);
-            this.panelMainMenue.Location = new System.Drawing.Point(12, 41);
+            this.panelMainMenue.Location = new System.Drawing.Point(12, 37);
             this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 543);
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 547);
             this.panelMainMenue.TabIndex = 5;
             // 
             // modernButton1
