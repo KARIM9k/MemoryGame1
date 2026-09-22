@@ -307,17 +307,18 @@ namespace MemoryGame1
         private void txtPlayer1_TextChanged(object sender, EventArgs e)
         {
           
-            GameInfo.NamePlayer1 = txtPlayer1.Text; 
-
-           
+            GameInfo.NamePlayer1 = txtPlayer1.Text;
+            lblStartGamePlayer1.Text = txtPlayer1.Text;           
         }
 
         private void txtPlayer2_TextChanged(object sender, EventArgs e)
         {
             GameInfo.NamePlayer2 = txtPlayer2.Text;
+            lblStartGamePlayer2.Text = txtPlayer2.Text;
+
         }
 
-       
+
         void ChangeCharacters(RadioButton Gender,int Player)
         {
             if (Player==1)
@@ -441,6 +442,7 @@ namespace MemoryGame1
 
             if (isPlayer1)
             {
+                
                 if (GameInfo.GenderPlayer1 == enGender.enMale)
                 {
                     pb1_1.Image = Resources.B1; pb1_2.Image = Resources.B2;
@@ -477,32 +479,61 @@ namespace MemoryGame1
                     pic.Image = DarkenImage(pic.Image, 0.4f);
                 }
             }
-
+            enCharacters selectedCharacter = enCharacters.B1;
             if (Gender == enGender.enMale)
             {
                 switch (Character.Name)
                 {
-                    case "pb1_1": case "pb2_1": return enCharacters.B1;
-                    case "pb1_2": case "pb2_2": return enCharacters.B2;
-                    case "pb1_3": case "pb2_3": return enCharacters.B3;
-                    case "pb1_4": case "pb2_4": return enCharacters.B4;
-                    case "pb1_5": case "pb2_5": return enCharacters.B5;
+                    case "pb1_1": case "pb2_1": selectedCharacter = enCharacters.B1;break;
+                    case "pb1_2": case "pb2_2": selectedCharacter = enCharacters.B2; break;
+                    case "pb1_3": case "pb2_3": selectedCharacter = enCharacters.B3; break;
+                    case "pb1_4": case "pb2_4": selectedCharacter = enCharacters.B4; break;
+                    case "pb1_5": case "pb2_5": selectedCharacter = enCharacters.B5; break;
                 }
             }
             else
             {
                 switch (Character.Name)
                 {
-                    case "pb1_1": case "pb2_1": return enCharacters.G1;
-                    case "pb1_2": case "pb2_2": return enCharacters.G2;
-                    case "pb1_3": case "pb2_3": return enCharacters.G3;
-                    case "pb1_4": case "pb2_4": return enCharacters.G4;
-                    case "pb1_5": case "pb2_5": return enCharacters.G5;
+                    case "pb1_1": case "pb2_1": selectedCharacter = enCharacters.G1; break;
+                    case "pb1_2": case "pb2_2": selectedCharacter = enCharacters.G2; break;
+                    case "pb1_3": case "pb2_3": selectedCharacter = enCharacters.G3; break;
+                    case "pb1_4": case "pb2_4": selectedCharacter = enCharacters.G4; break;
+                    case "pb1_5": case "pb2_5": selectedCharacter = enCharacters.G5; break;
                 }
             }
 
-            return enCharacters.B1;
+            if (isPlayer1)
+            {
+                pbStartGamePlayer1.BackgroundImage = GetCharacterImage(selectedCharacter);
+            }
+            else
+            {
+                pbStartGamePlayer2.BackgroundImage = GetCharacterImage(selectedCharacter);
+
+            }
+
+            return selectedCharacter;
         
+        }
+
+
+        private Image GetCharacterImage(enCharacters character)
+        {
+            switch (character)
+            {
+                case enCharacters.B1: return Resources.B1;
+                case enCharacters.B2: return Resources.B2;
+                case enCharacters.B3: return Resources.B3;
+                case enCharacters.B4: return Resources.B4;
+                case enCharacters.B5: return Resources.B5;
+                case enCharacters.G1: return Resources.G1;
+                case enCharacters.G2: return Resources.G2;
+                case enCharacters.G3: return Resources.G3;
+                case enCharacters.G4: return Resources.G4;
+                case enCharacters.G5: return Resources.G5;
+                default: return Resources.B1;
+            }
         }
 
 
@@ -560,6 +591,7 @@ namespace MemoryGame1
         private void txtPlayer1_Enter(object sender, EventArgs e)
         {
             txtPlayer1.BackColor = Color.LightSkyBlue;
+
         }
 
         private void txtPlayer2_Enter(object sender, EventArgs e)
@@ -601,7 +633,6 @@ namespace MemoryGame1
             Bitmap bmp = new Bitmap(image.Width, image.Height);
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                // مصفوفة تحكم بالألوان لتقليل السطوع/الإضاءة
                 System.Drawing.Imaging.ColorMatrix colorMatrix = new System.Drawing.Imaging.ColorMatrix(new float[][]
                 {
             new float[] {brightness, 0, 0, 0, 0},
@@ -621,7 +652,21 @@ namespace MemoryGame1
             return bmp;
         }
 
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnPlay_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+
+        }
+
+        private void btnPlay_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
+
+        }
     }
 }
