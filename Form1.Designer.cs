@@ -164,7 +164,7 @@
             // 
             this.lblStartGamePlayer1.AutoSize = true;
             this.lblStartGamePlayer1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartGamePlayer1.Location = new System.Drawing.Point(226, 418);
+            this.lblStartGamePlayer1.Location = new System.Drawing.Point(213, 415);
             this.lblStartGamePlayer1.Name = "lblStartGamePlayer1";
             this.lblStartGamePlayer1.Size = new System.Drawing.Size(127, 34);
             this.lblStartGamePlayer1.TabIndex = 3;
