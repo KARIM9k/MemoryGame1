@@ -36,7 +36,6 @@
             this.pBHowToPlay = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.panelMainMenue = new System.Windows.Forms.Panel();
             this.gbPlayer1Info = new CustomGroupBox();
             this.gbGenderAndCharacter1 = new CustomGroupBox();
             this.pb1_5 = new System.Windows.Forms.PictureBox();
@@ -72,6 +71,7 @@
             this.rbHard = new System.Windows.Forms.RadioButton();
             this.rbEasy = new System.Windows.Forms.RadioButton();
             this.rbMid = new System.Windows.Forms.RadioButton();
+            this.panelMainMenue = new System.Windows.Forms.Panel();
             this.modernButton1 = new ModernButton();
             this.modernButton3 = new ModernButton();
             this.modernButton2 = new ModernButton();
@@ -81,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBHowToPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panelSettings.SuspendLayout();
-            this.panelMainMenue.SuspendLayout();
             this.gbPlayer1Info.SuspendLayout();
             this.gbGenderAndCharacter1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1_5)).BeginInit();
@@ -102,6 +101,7 @@
             this.gbTimePerRound.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).BeginInit();
             this.cgbLevel.SuspendLayout();
+            this.panelMainMenue.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelStartGame
@@ -170,22 +170,6 @@
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(884, 544);
             this.panelSettings.TabIndex = 6;
-            // 
-            // panelMainMenue
-            // 
-            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
-            this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMainMenue.Controls.Add(this.modernButton1);
-            this.panelMainMenue.Controls.Add(this.modernButton3);
-            this.panelMainMenue.Controls.Add(this.modernButton2);
-            this.panelMainMenue.Controls.Add(this.modernButton4);
-            this.panelMainMenue.Location = new System.Drawing.Point(12, 41);
-            this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 550);
-            this.panelMainMenue.TabIndex = 5;
             // 
             // gbPlayer1Info
             // 
@@ -660,6 +644,22 @@
             this.rbMid.UseVisualStyleBackColor = true;
             this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
             // 
+            // panelMainMenue
+            // 
+            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
+            this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMainMenue.Controls.Add(this.modernButton1);
+            this.panelMainMenue.Controls.Add(this.modernButton3);
+            this.panelMainMenue.Controls.Add(this.modernButton2);
+            this.panelMainMenue.Controls.Add(this.modernButton4);
+            this.panelMainMenue.Location = new System.Drawing.Point(12, 41);
+            this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelMainMenue.Name = "panelMainMenue";
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 550);
+            this.panelMainMenue.TabIndex = 5;
+            // 
             // modernButton1
             // 
             this.modernButton1.BackColor = System.Drawing.Color.White;
@@ -771,7 +771,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBHowToPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panelSettings.ResumeLayout(false);
-            this.panelMainMenue.ResumeLayout(false);
             this.gbPlayer1Info.ResumeLayout(false);
             this.gbPlayer1Info.PerformLayout();
             this.gbGenderAndCharacter1.ResumeLayout(false);
@@ -800,6 +799,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).EndInit();
             this.cgbLevel.ResumeLayout(false);
             this.cgbLevel.PerformLayout();
+            this.panelMainMenue.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
