@@ -52,11 +52,20 @@
     <Compile Include="CustomGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlay.Designer.cs">
+      <DependentUpon>frmPlay.cs</DependentUpon>
     </Compile>
     <Compile Include="ModernButton.cs">
       <SubType>Component</SubType>
@@ -65,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlay.resx">
+      <DependentUpon>frmPlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Firefly_RemoveBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %288%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

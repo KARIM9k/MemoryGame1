@@ -33,9 +33,14 @@ namespace MemoryGame1
        public enCharacters CharacterPlayer2;
        public string Winner;
 
+        public int Player1FinalScore;
+        public int Player2FinalScore;
 
         public void SetDefault()
         {
+
+            Player1FinalScore = 0;
+            Player2FinalScore = 0;
             Level = enLevel.enEasy;
             TowPlayers = false;
             NumberOfRounds = 5;
@@ -654,7 +659,8 @@ namespace MemoryGame1
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-
+            frmPlay Form = new frmPlay(GameInfo);
+            Form.ShowDialog();
         }
 
         private void btnPlay_MouseEnter(object sender, EventArgs e)
