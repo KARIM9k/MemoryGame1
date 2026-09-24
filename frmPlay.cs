@@ -241,13 +241,13 @@ namespace MemoryGame1
         {
             timer1.Stop();
             RoundInfo.TimePerRound = GameInfo.TimePerRound;
-            lblTimer.Text = RoundInfo.TimePerRound.ToString();
+            lblTimer.Text = RoundInfo.TimePerRound.ToString()+'s';
             timer1.Start();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             RoundInfo.TimePerRound--;
-            lblTimer.Text = RoundInfo.TimePerRound.ToString(); 
+            lblTimer.Text = RoundInfo.TimePerRound.ToString()+'s'; 
             if (RoundInfo.TimePerRound == 0)
             {
 
