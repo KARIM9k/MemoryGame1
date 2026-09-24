@@ -122,7 +122,7 @@
             this.panelStartGame.Controls.Add(this.pbStartGamePlayer2);
             this.panelStartGame.Controls.Add(this.pbStartGamePlayer1);
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(279, 37);
+            this.panelStartGame.Location = new System.Drawing.Point(275, 37);
             this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelStartGame.Name = "panelStartGame";
             this.panelStartGame.Size = new System.Drawing.Size(889, 547);

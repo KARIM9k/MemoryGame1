@@ -135,6 +135,7 @@ namespace MemoryGame1
 
         private void StartPlay()
         {
+            lblRounds.Text = $"{_CurrentRound}/{GameInfo.NumberOfRounds}";
             switch (GameInfo.Level)
             {
                 case enLevel.enEasy:
@@ -409,7 +410,6 @@ namespace MemoryGame1
                 MessageBox.Show($"{roundWinner}\n\nClick OK to start the next round.", $"Round {_CurrentRound} Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 _CurrentRound++;
-
                 StartPlay();
             }
         }
