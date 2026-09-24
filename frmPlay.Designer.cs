@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlay));
             this.PlayGamePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblPlayer1Score = new System.Windows.Forms.Label();
-            this.lblPlayer2Score = new System.Windows.Forms.Label();
-            this.lblPlayerTurn = new System.Windows.Forms.Label();
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundedPictureBox3 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox1 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox2 = new MemoryGame1.RoundedPictureBox();
@@ -60,6 +55,18 @@
             this.roundedPictureBox22 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox23 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox24 = new MemoryGame1.RoundedPictureBox();
+            this.lblPlayer1Score = new System.Windows.Forms.Label();
+            this.lblPlayer2Score = new System.Windows.Forms.Label();
+            this.lblPlayerTurn = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPlayer1NameInfrmPlay = new System.Windows.Forms.Label();
+            this.lblPlayer2NameInfrmPlay = new System.Windows.Forms.Label();
+            this.pbPlayer2ImageInfrmPlay = new MemoryGame1.RoundedPictureBox();
+            this.pbPlayer1ImageInfrmPlay = new MemoryGame1.RoundedPictureBox();
+            this.btnClosefrmPlay = new ModernButton();
             this.PlayGamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
@@ -85,10 +92,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2ImageInfrmPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1ImageInfrmPlay)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayGamePanel
             // 
+            this.PlayGamePanel.BackgroundImage = global::MemoryGame1.Properties.Resources.Transgender_nonsense;
+            this.PlayGamePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox3);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox1);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox2);
@@ -114,52 +125,10 @@
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox23);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox24);
             this.PlayGamePanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PlayGamePanel.Location = new System.Drawing.Point(258, 0);
+            this.PlayGamePanel.Location = new System.Drawing.Point(279, 0);
             this.PlayGamePanel.Name = "PlayGamePanel";
             this.PlayGamePanel.Size = new System.Drawing.Size(930, 626);
             this.PlayGamePanel.TabIndex = 1;
-            // 
-            // lblPlayer1Score
-            // 
-            this.lblPlayer1Score.AutoSize = true;
-            this.lblPlayer1Score.Location = new System.Drawing.Point(102, 254);
-            this.lblPlayer1Score.Name = "lblPlayer1Score";
-            this.lblPlayer1Score.Size = new System.Drawing.Size(44, 16);
-            this.lblPlayer1Score.TabIndex = 2;
-            this.lblPlayer1Score.Text = "label1";
-            // 
-            // lblPlayer2Score
-            // 
-            this.lblPlayer2Score.AutoSize = true;
-            this.lblPlayer2Score.Location = new System.Drawing.Point(102, 354);
-            this.lblPlayer2Score.Name = "lblPlayer2Score";
-            this.lblPlayer2Score.Size = new System.Drawing.Size(44, 16);
-            this.lblPlayer2Score.TabIndex = 3;
-            this.lblPlayer2Score.Text = "label2";
-            // 
-            // lblPlayerTurn
-            // 
-            this.lblPlayerTurn.AutoSize = true;
-            this.lblPlayerTurn.Location = new System.Drawing.Point(102, 99);
-            this.lblPlayerTurn.Name = "lblPlayerTurn";
-            this.lblPlayerTurn.Size = new System.Drawing.Size(44, 16);
-            this.lblPlayerTurn.TabIndex = 4;
-            this.lblPlayerTurn.Text = "label1";
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lblTimer.Location = new System.Drawing.Point(58, 27);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(132, 48);
-            this.lblTimer.TabIndex = 5;
-            this.lblTimer.Text = "label1";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // roundedPictureBox3
             // 
@@ -473,17 +442,167 @@
             this.roundedPictureBox24.TabIndex = 25;
             this.roundedPictureBox24.TabStop = false;
             // 
+            // lblPlayer1Score
+            // 
+            this.lblPlayer1Score.AutoSize = true;
+            this.lblPlayer1Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer1Score.Font = new System.Drawing.Font("MV Boli", 19F, System.Drawing.FontStyle.Bold);
+            this.lblPlayer1Score.Location = new System.Drawing.Point(44, 362);
+            this.lblPlayer1Score.Name = "lblPlayer1Score";
+            this.lblPlayer1Score.Size = new System.Drawing.Size(41, 41);
+            this.lblPlayer1Score.TabIndex = 2;
+            this.lblPlayer1Score.Text = "0";
+            // 
+            // lblPlayer2Score
+            // 
+            this.lblPlayer2Score.AutoSize = true;
+            this.lblPlayer2Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer2Score.Font = new System.Drawing.Font("MV Boli", 19F, System.Drawing.FontStyle.Bold);
+            this.lblPlayer2Score.Location = new System.Drawing.Point(181, 362);
+            this.lblPlayer2Score.Name = "lblPlayer2Score";
+            this.lblPlayer2Score.Size = new System.Drawing.Size(41, 41);
+            this.lblPlayer2Score.TabIndex = 3;
+            this.lblPlayer2Score.Text = "0";
+            // 
+            // lblPlayerTurn
+            // 
+            this.lblPlayerTurn.AutoSize = true;
+            this.lblPlayerTurn.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerTurn.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold);
+            this.lblPlayerTurn.Location = new System.Drawing.Point(112, 124);
+            this.lblPlayerTurn.Name = "lblPlayerTurn";
+            this.lblPlayerTurn.Size = new System.Drawing.Size(123, 40);
+            this.lblPlayerTurn.TabIndex = 4;
+            this.lblPlayerTurn.Text = "Player1";
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimer.Font = new System.Drawing.Font("MV Boli", 22.2F, System.Drawing.FontStyle.Bold);
+            this.lblTimer.Location = new System.Drawing.Point(152, 29);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(65, 49);
+            this.lblTimer.TabIndex = 5;
+            this.lblTimer.Text = "0s";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 22.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(-11, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 49);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Turn:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("MV Boli", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-11, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 49);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Timer:";
+            // 
+            // lblPlayer1NameInfrmPlay
+            // 
+            this.lblPlayer1NameInfrmPlay.AutoSize = true;
+            this.lblPlayer1NameInfrmPlay.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer1NameInfrmPlay.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPlayer1NameInfrmPlay.Location = new System.Drawing.Point(25, 202);
+            this.lblPlayer1NameInfrmPlay.Name = "lblPlayer1NameInfrmPlay";
+            this.lblPlayer1NameInfrmPlay.Size = new System.Drawing.Size(85, 26);
+            this.lblPlayer1NameInfrmPlay.TabIndex = 10;
+            this.lblPlayer1NameInfrmPlay.Text = "Player1";
+            // 
+            // lblPlayer2NameInfrmPlay
+            // 
+            this.lblPlayer2NameInfrmPlay.AutoSize = true;
+            this.lblPlayer2NameInfrmPlay.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayer2NameInfrmPlay.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPlayer2NameInfrmPlay.Location = new System.Drawing.Point(145, 202);
+            this.lblPlayer2NameInfrmPlay.Name = "lblPlayer2NameInfrmPlay";
+            this.lblPlayer2NameInfrmPlay.Size = new System.Drawing.Size(90, 26);
+            this.lblPlayer2NameInfrmPlay.TabIndex = 11;
+            this.lblPlayer2NameInfrmPlay.Text = "Player2";
+            // 
+            // pbPlayer2ImageInfrmPlay
+            // 
+            this.pbPlayer2ImageInfrmPlay.BackColor = System.Drawing.Color.Transparent;
+            this.pbPlayer2ImageInfrmPlay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pbPlayer2ImageInfrmPlay.BorderSize = 3;
+            this.pbPlayer2ImageInfrmPlay.CornerRadius = 20;
+            this.pbPlayer2ImageInfrmPlay.Location = new System.Drawing.Point(134, 243);
+            this.pbPlayer2ImageInfrmPlay.Name = "pbPlayer2ImageInfrmPlay";
+            this.pbPlayer2ImageInfrmPlay.Size = new System.Drawing.Size(118, 107);
+            this.pbPlayer2ImageInfrmPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPlayer2ImageInfrmPlay.TabIndex = 7;
+            this.pbPlayer2ImageInfrmPlay.TabStop = false;
+            // 
+            // pbPlayer1ImageInfrmPlay
+            // 
+            this.pbPlayer1ImageInfrmPlay.BackColor = System.Drawing.Color.Transparent;
+            this.pbPlayer1ImageInfrmPlay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pbPlayer1ImageInfrmPlay.BorderSize = 3;
+            this.pbPlayer1ImageInfrmPlay.CornerRadius = 20;
+            this.pbPlayer1ImageInfrmPlay.Location = new System.Drawing.Point(12, 243);
+            this.pbPlayer1ImageInfrmPlay.Name = "pbPlayer1ImageInfrmPlay";
+            this.pbPlayer1ImageInfrmPlay.Size = new System.Drawing.Size(116, 107);
+            this.pbPlayer1ImageInfrmPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPlayer1ImageInfrmPlay.TabIndex = 6;
+            this.pbPlayer1ImageInfrmPlay.TabStop = false;
+            // 
+            // btnClosefrmPlay
+            // 
+            this.btnClosefrmPlay.BackColor = System.Drawing.Color.White;
+            this.btnClosefrmPlay.BorderColor = System.Drawing.Color.LightGray;
+            this.btnClosefrmPlay.BorderRadius = 20;
+            this.btnClosefrmPlay.BorderSize = 2;
+            this.btnClosefrmPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClosefrmPlay.FlatAppearance.BorderSize = 0;
+            this.btnClosefrmPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClosefrmPlay.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnClosefrmPlay.ForeColor = System.Drawing.Color.Black;
+            this.btnClosefrmPlay.Location = new System.Drawing.Point(51, 465);
+            this.btnClosefrmPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClosefrmPlay.Name = "btnClosefrmPlay";
+            this.btnClosefrmPlay.Size = new System.Drawing.Size(151, 79);
+            this.btnClosefrmPlay.TabIndex = 12;
+            this.btnClosefrmPlay.Text = "CLOSE";
+            this.btnClosefrmPlay.UseVisualStyleBackColor = false;
+            this.btnClosefrmPlay.Click += new System.EventHandler(this.btnClosefrmPlay_Click);
+            this.btnClosefrmPlay.MouseEnter += new System.EventHandler(this.btnClosefrmPlay_MouseEnter);
+            this.btnClosefrmPlay.MouseLeave += new System.EventHandler(this.btnClosefrmPlay_MouseLeave);
+            // 
             // frmPlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1188, 626);
+            this.BackgroundImage = global::MemoryGame1.Properties.Resources.download__9_;
+            this.ClientSize = new System.Drawing.Size(1209, 626);
+            this.Controls.Add(this.btnClosefrmPlay);
+            this.Controls.Add(this.lblPlayer2NameInfrmPlay);
+            this.Controls.Add(this.lblPlayer1NameInfrmPlay);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbPlayer2ImageInfrmPlay);
+            this.Controls.Add(this.pbPlayer1ImageInfrmPlay);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblPlayerTurn);
             this.Controls.Add(this.lblPlayer2Score);
             this.Controls.Add(this.lblPlayer1Score);
             this.Controls.Add(this.PlayGamePanel);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPlay";
             this.Text = "Cards Memory Game";
@@ -513,6 +632,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2ImageInfrmPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1ImageInfrmPlay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,5 +670,12 @@
         private System.Windows.Forms.Label lblPlayerTurn;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Timer timer1;
+        private RoundedPictureBox pbPlayer1ImageInfrmPlay;
+        private RoundedPictureBox pbPlayer2ImageInfrmPlay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPlayer1NameInfrmPlay;
+        private System.Windows.Forms.Label lblPlayer2NameInfrmPlay;
+        private ModernButton btnClosefrmPlay;
     }
 }

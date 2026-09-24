@@ -40,8 +40,39 @@ namespace MemoryGame1
             GameInfo = GameInfoCopy;
         }
 
+        private Image GetCharacterImage(enCharacters character)
+        {
+            switch (character)
+            {
+                case enCharacters.B1: return Resources.B1;
+                case enCharacters.B2: return Resources.B2;
+                case enCharacters.B3: return Resources.B3;
+                case enCharacters.B4: return Resources.B4;
+                case enCharacters.B5: return Resources.B5;
+                case enCharacters.G1: return Resources.G1;
+                case enCharacters.G2: return Resources.G2;
+                case enCharacters.G3: return Resources.G3;
+                case enCharacters.G4: return Resources.G4;
+                case enCharacters.G5: return Resources.G5;
+                default: return Resources.B1;
+            }
+        }
+        
+
+        private void SetViewControls()
+        {
+
+            lblPlayerTurn.Text = GameInfo.NamePlayer1;
+            lblPlayer1NameInfrmPlay.Text = GameInfo.NamePlayer1;
+            lblPlayer2NameInfrmPlay.Text = GameInfo.NamePlayer2;
+
+            pbPlayer1ImageInfrmPlay.Image =GetCharacterImage(GameInfo.CharacterPlayer1);
+            pbPlayer2ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer2);
+
+        }
         private void frmPlay_Load(object sender, EventArgs e)
         {
+            SetViewControls();
             StartPlay();
         }
 
@@ -266,6 +297,54 @@ namespace MemoryGame1
 
                 ResetAndStartTimer();
             }
+        }
+
+        private void btnClosefrmPlay_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChangeButton(ModernButton sender)
+        {
+            if (this.Controls != null)
+            {
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl is ModernButton btn)
+                    {
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                        btn.BorderSize = 2;
+                        btn.BorderColor = Color.FromArgb(180, 195, 210);
+                    }
+                }
+            }
+
+            ModernButton clickedButton = (ModernButton)sender;
+            clickedButton.BackColor = Color.FromArgb(70, 110, 150);
+            clickedButton.ForeColor = Color.White;
+            clickedButton.BorderSize = 0;
+        }
+        private void ChangeToWhiteColor(ModernButton sender)
+        {
+            if (sender is ModernButton btn)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+                btn.BorderColor = Color.FromArgb(180, 195, 210);
+                btn.BorderSize = 2;
+
+            }
+        }
+
+        private void btnClosefrmPlay_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeButton((ModernButton)sender);
+        }
+
+        private void btnClosefrmPlay_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeToWhiteColor((ModernButton)sender);
         }
     }
 }
