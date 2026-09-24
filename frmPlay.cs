@@ -250,9 +250,6 @@ namespace MemoryGame1
             lblTimer.Text = RoundInfo.TimePerRound.ToString()+'s'; 
             if (RoundInfo.TimePerRound == 0)
             {
-
-
-
                 timer1.Stop();
 
                 if (FirstIndex != null)
