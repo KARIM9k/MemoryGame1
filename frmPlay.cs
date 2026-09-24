@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -130,6 +131,7 @@ namespace MemoryGame1
                 PicBox.Image = Resources.download__8_;
                 PicBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 PicBox.Tag = i;
+                PicBox.Click+= PictureBox_Click;
                 SetPictures((int)PicBox.Tag);
 
 
@@ -140,7 +142,19 @@ namespace MemoryGame1
 
         private void SetPictures( int PicTag)
         {
+            PictureBox Picture = new PictureBox();
+            
+            //Picture.Click;
+        }
 
+        private void PictureBox_Click(object sender,EventArgs e)
+        {
+            RoundedPictureBox clickedPic = sender as RoundedPictureBox;
+            if (clickedPic != null)
+            {
+                int index = Convert.ToInt32(clickedPic.Tag);
+                clickedPic.Image = Resources.B1;
+            }
         }
 
         private void StartGame()
