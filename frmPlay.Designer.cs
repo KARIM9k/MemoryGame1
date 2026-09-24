@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlay));
             this.PlayGamePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblPlayer1Score = new System.Windows.Forms.Label();
+            this.lblPlayer2Score = new System.Windows.Forms.Label();
             this.roundedPictureBox3 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox1 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox2 = new MemoryGame1.RoundedPictureBox();
@@ -54,6 +56,7 @@
             this.roundedPictureBox22 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox23 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox24 = new MemoryGame1.RoundedPictureBox();
+            this.lblPlayerTurn = new System.Windows.Forms.Label();
             this.PlayGamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
@@ -112,6 +115,24 @@
             this.PlayGamePanel.Name = "PlayGamePanel";
             this.PlayGamePanel.Size = new System.Drawing.Size(930, 626);
             this.PlayGamePanel.TabIndex = 1;
+            // 
+            // lblPlayer1Score
+            // 
+            this.lblPlayer1Score.AutoSize = true;
+            this.lblPlayer1Score.Location = new System.Drawing.Point(102, 254);
+            this.lblPlayer1Score.Name = "lblPlayer1Score";
+            this.lblPlayer1Score.Size = new System.Drawing.Size(44, 16);
+            this.lblPlayer1Score.TabIndex = 2;
+            this.lblPlayer1Score.Text = "label1";
+            // 
+            // lblPlayer2Score
+            // 
+            this.lblPlayer2Score.AutoSize = true;
+            this.lblPlayer2Score.Location = new System.Drawing.Point(102, 354);
+            this.lblPlayer2Score.Name = "lblPlayer2Score";
+            this.lblPlayer2Score.Size = new System.Drawing.Size(44, 16);
+            this.lblPlayer2Score.TabIndex = 3;
+            this.lblPlayer2Score.Text = "label2";
             // 
             // roundedPictureBox3
             // 
@@ -425,12 +446,24 @@
             this.roundedPictureBox24.TabIndex = 25;
             this.roundedPictureBox24.TabStop = false;
             // 
+            // lblPlayerTurn
+            // 
+            this.lblPlayerTurn.AutoSize = true;
+            this.lblPlayerTurn.Location = new System.Drawing.Point(102, 99);
+            this.lblPlayerTurn.Name = "lblPlayerTurn";
+            this.lblPlayerTurn.Size = new System.Drawing.Size(44, 16);
+            this.lblPlayerTurn.TabIndex = 4;
+            this.lblPlayerTurn.Text = "label1";
+            // 
             // frmPlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1188, 626);
+            this.Controls.Add(this.lblPlayerTurn);
+            this.Controls.Add(this.lblPlayer2Score);
+            this.Controls.Add(this.lblPlayer1Score);
             this.Controls.Add(this.PlayGamePanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPlay";
@@ -462,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -491,5 +525,8 @@
         private RoundedPictureBox roundedPictureBox22;
         private RoundedPictureBox roundedPictureBox23;
         private RoundedPictureBox roundedPictureBox24;
+        private System.Windows.Forms.Label lblPlayer1Score;
+        private System.Windows.Forms.Label lblPlayer2Score;
+        private System.Windows.Forms.Label lblPlayerTurn;
     }
 }

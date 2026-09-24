@@ -42,7 +42,7 @@ namespace MemoryGame1
             Player1FinalScore = 0;
             Player2FinalScore = 0;
             Level = enLevel.enEasy;
-            TowPlayers = false;
+            TowPlayers = true;
             NumberOfRounds = 5;
             TimePerRound = 30;
 

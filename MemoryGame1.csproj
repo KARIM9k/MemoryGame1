@@ -173,5 +173,41 @@
   <ItemGroup>
     <None Include="Resources\download %288%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcelona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cockroach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Real Madrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whale.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

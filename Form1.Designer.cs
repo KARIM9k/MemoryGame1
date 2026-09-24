@@ -122,7 +122,7 @@
             this.panelStartGame.Controls.Add(this.pbStartGamePlayer2);
             this.panelStartGame.Controls.Add(this.pbStartGamePlayer1);
             this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(279, 41);
+            this.panelStartGame.Location = new System.Drawing.Point(279, 37);
             this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelStartGame.Name = "panelStartGame";
             this.panelStartGame.Size = new System.Drawing.Size(889, 547);
@@ -630,11 +630,13 @@
             // rbTwoPlayers
             // 
             this.rbTwoPlayers.AutoSize = true;
+            this.rbTwoPlayers.Checked = true;
             this.rbTwoPlayers.Location = new System.Drawing.Point(160, 29);
             this.rbTwoPlayers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbTwoPlayers.Name = "rbTwoPlayers";
             this.rbTwoPlayers.Size = new System.Drawing.Size(129, 28);
             this.rbTwoPlayers.TabIndex = 1;
+            this.rbTwoPlayers.TabStop = true;
             this.rbTwoPlayers.Text = "Two Players";
             this.rbTwoPlayers.UseVisualStyleBackColor = true;
             this.rbTwoPlayers.CheckedChanged += new System.EventHandler(this.rbTwoPlayers_CheckedChanged);
