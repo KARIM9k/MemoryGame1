@@ -61,11 +61,11 @@ namespace MemoryGame1
 
 
 
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         stGameInfo GameInfo; 
        
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -673,6 +673,11 @@ namespace MemoryGame1
         {
             ChangeToWhiteColor((ModernButton)sender);
 
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            GameInfo.NumberOfRounds =(int)numericUpDown1.Value;
         }
     }
 }

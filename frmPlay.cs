@@ -14,6 +14,9 @@ namespace MemoryGame1
         public enum enPictures { enAirPlane = 0, enApple = 1, enBarcelona, enCar, enCat, enChair, enCockroach, enEgg, enMonkey, enRealMadrid, enSwan, enWhale }
         private stGameInfo GameInfo;
 
+        private int _CurrentRound = 1;
+        private int _Player1RoundsWon = 0;
+        private int _Player2RoundsWon = 0;
         private bool FirstPlayerTurn = true;
 
         private RoundedPictureBox FirstIndex = null;
@@ -98,6 +101,12 @@ namespace MemoryGame1
 
         private void FillPictureVector(int NumberOfPic)
         {
+
+            RoundInfo.Player1Score = 0;
+            RoundInfo.Player2Score = 0;
+            lblPlayer1Score.Text = "0";
+            lblPlayer2Score.Text = "0";
+             
             HashSet<string> PicVectorSet = new HashSet<string>();
             Random random = new Random();
 
@@ -120,6 +129,8 @@ namespace MemoryGame1
             RoundInfo.PicturesNames = PicVector;
             RoundInfo.FirstChoice = false;
             lblPlayerTurn.Text = GameInfo.NamePlayer1;
+
+
         }
 
         private void StartPlay()
@@ -224,7 +235,16 @@ namespace MemoryGame1
                 FirstIndex = null;
                 SecondIndex = null;
                 RoundInfo.FirstChoice = false;
-               ResetAndStartTimer();
+
+                if (CheckIfRoundFinished())
+                {
+                    await HandleRoundEnd();
+                }
+                else
+                {
+                    ResetAndStartTimer();
+                }
+
             }
               
         }
@@ -346,5 +366,77 @@ namespace MemoryGame1
         {
             ChangeToWhiteColor((ModernButton)sender);
         }
+
+        private bool CheckIfRoundFinished()
+        {
+            foreach(Control ctrl in PlayGamePanel.Controls)
+            {
+                if(ctrl is RoundedPictureBox pic && pic.Enabled)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private async Task HandleRoundEnd()
+        {
+            timer1.Stop();
+
+            string roundWinner = "";
+            if (RoundInfo.Player1Score > RoundInfo.Player2Score)
+            {
+                _Player1RoundsWon++;
+                roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer1}";
+            }
+            else if (RoundInfo.Player2Score > RoundInfo.Player1Score)
+            {
+                _Player2RoundsWon++;
+                roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer2}";
+            }
+            else
+            {
+                roundWinner = $"Round {_CurrentRound} ended in a Draw!";
+            }
+
+            if (_CurrentRound >= GameInfo.NumberOfRounds)
+            {
+                MessageBox.Show($"{roundWinner}\n\nAll rounds have been completed!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowFinalWinner();
+            }
+            else
+            {
+                MessageBox.Show($"{roundWinner}\n\nClick OK to start the next round.", $"Round {_CurrentRound} Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                _CurrentRound++;
+
+                StartPlay();
+            }
+        }
+
+        private void ShowFinalWinner()
+        {
+            string message = "";
+
+            if (_Player1RoundsWon > _Player2RoundsWon)
+            {
+                message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer1}\nWon {_Player1RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+            }
+            else if (_Player2RoundsWon > _Player1RoundsWon)
+            {
+                message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer2}\nWon {_Player2RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+            }
+            else
+            {
+                message = $"🤝 The game ended in a overall Draw ({_Player1RoundsWon} - {_Player2RoundsWon})!";
+            }
+
+            MessageBox.Show(message, "Final Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); 
+        }
+
+
+
+
     }
 }
