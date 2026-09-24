@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlay));
             this.PlayGamePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblPlayer1Score = new System.Windows.Forms.Label();
             this.lblPlayer2Score = new System.Windows.Forms.Label();
+            this.lblPlayerTurn = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundedPictureBox3 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox1 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox2 = new MemoryGame1.RoundedPictureBox();
@@ -56,7 +60,6 @@
             this.roundedPictureBox22 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox23 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox24 = new MemoryGame1.RoundedPictureBox();
-            this.lblPlayerTurn = new System.Windows.Forms.Label();
             this.PlayGamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
@@ -133,6 +136,30 @@
             this.lblPlayer2Score.Size = new System.Drawing.Size(44, 16);
             this.lblPlayer2Score.TabIndex = 3;
             this.lblPlayer2Score.Text = "label2";
+            // 
+            // lblPlayerTurn
+            // 
+            this.lblPlayerTurn.AutoSize = true;
+            this.lblPlayerTurn.Location = new System.Drawing.Point(102, 99);
+            this.lblPlayerTurn.Name = "lblPlayerTurn";
+            this.lblPlayerTurn.Size = new System.Drawing.Size(44, 16);
+            this.lblPlayerTurn.TabIndex = 4;
+            this.lblPlayerTurn.Text = "label1";
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lblTimer.Location = new System.Drawing.Point(58, 27);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(132, 48);
+            this.lblTimer.TabIndex = 5;
+            this.lblTimer.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // roundedPictureBox3
             // 
@@ -446,21 +473,13 @@
             this.roundedPictureBox24.TabIndex = 25;
             this.roundedPictureBox24.TabStop = false;
             // 
-            // lblPlayerTurn
-            // 
-            this.lblPlayerTurn.AutoSize = true;
-            this.lblPlayerTurn.Location = new System.Drawing.Point(102, 99);
-            this.lblPlayerTurn.Name = "lblPlayerTurn";
-            this.lblPlayerTurn.Size = new System.Drawing.Size(44, 16);
-            this.lblPlayerTurn.TabIndex = 4;
-            this.lblPlayerTurn.Text = "label1";
-            // 
             // frmPlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1188, 626);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblPlayerTurn);
             this.Controls.Add(this.lblPlayer2Score);
             this.Controls.Add(this.lblPlayer1Score);
@@ -528,5 +547,7 @@
         private System.Windows.Forms.Label lblPlayer1Score;
         private System.Windows.Forms.Label lblPlayer2Score;
         private System.Windows.Forms.Label lblPlayerTurn;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

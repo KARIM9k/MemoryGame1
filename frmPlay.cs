@@ -28,7 +28,8 @@ namespace MemoryGame1
             public List<string> PicturesNames;
             public string FirstImage;
             public string SecondImage;
-            public bool FirstChoice; 
+            public bool FirstChoice;
+            public int TimePerRound; 
         }
 
         stRoundInfo RoundInfo;
@@ -107,6 +108,7 @@ namespace MemoryGame1
                     GetPicBoxes(24, 120, 110);
                     break;
             }
+            ResetAndStartTimer(); 
         }
 
         private void GetPicBoxes(int NumberOfPic, int Height, int Width)
@@ -149,9 +151,12 @@ namespace MemoryGame1
 
         private async void PictureBox_Click(object sender, EventArgs e)
         {
+
             if (isProcessing) return;
 
             RoundedPictureBox clickedPic = sender as RoundedPictureBox;
+
+            if (!clickedPic.Enabled) return;
 
             if (clickedPic == FirstIndex) return;
 
@@ -161,32 +166,36 @@ namespace MemoryGame1
                 string ImageName = RoundInfo.PicturesNames[index - 1];
                 Image pic = GetImageFromVector(ImageName);
                 clickedPic.Image = pic;
-
                 await StartGame(clickedPic);
             }
         }
 
         private async Task StartGame(RoundedPictureBox clickedPic)
         {
+           
+           
             if (!RoundInfo.FirstChoice)
             {
 
                 RoundInfo.FirstImage = RoundInfo.PicturesNames[(int)clickedPic.Tag - 1];
                 FirstIndex = clickedPic;
-                RoundInfo.FirstChoice = true; 
+                RoundInfo.FirstChoice = true;
             }
             else
             {
 
                 RoundInfo.SecondImage = RoundInfo.PicturesNames[(int)clickedPic.Tag - 1];
                 SecondIndex = clickedPic;
+                timer1.Stop();
 
                 await CompareChoices(FirstIndex, SecondIndex);
 
                 FirstIndex = null;
                 SecondIndex = null;
                 RoundInfo.FirstChoice = false;
+               ResetAndStartTimer();
             }
+              
         }
 
         private async Task CompareChoices(RoundedPictureBox pic1, RoundedPictureBox pic2)
@@ -226,6 +235,40 @@ namespace MemoryGame1
             lblPlayer1Score.Text = RoundInfo.Player1Score.ToString();
             lblPlayer2Score.Text = RoundInfo.Player2Score.ToString();
             lblPlayerTurn.Text = FirstPlayerTurn ? GameInfo.NamePlayer1 : GameInfo.NamePlayer2;
+        }
+
+        private void ResetAndStartTimer()
+        {
+            timer1.Stop();
+            RoundInfo.TimePerRound = GameInfo.TimePerRound;
+            lblTimer.Text = RoundInfo.TimePerRound.ToString();
+            timer1.Start();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            RoundInfo.TimePerRound--;
+            lblTimer.Text = RoundInfo.TimePerRound.ToString(); 
+            if (RoundInfo.TimePerRound == 0)
+            {
+
+
+
+                timer1.Stop();
+
+                if (FirstIndex != null)
+                {
+                   
+                    FirstIndex.Image = Resources.download__8_;
+                    FirstIndex = null; 
+                }
+
+                RoundInfo.FirstChoice = false;
+
+                FirstPlayerTurn = !FirstPlayerTurn;
+                lblPlayerTurn.Text = FirstPlayerTurn ? GameInfo.NamePlayer1 : GameInfo.NamePlayer2;
+
+                ResetAndStartTimer();
+            }
         }
     }
 }
