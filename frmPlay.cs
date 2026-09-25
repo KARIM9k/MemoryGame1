@@ -69,7 +69,7 @@ namespace MemoryGame1
             lblPlayer1NameInfrmPlay.Text = GameInfo.NamePlayer1;
             lblPlayer2NameInfrmPlay.Text = GameInfo.NamePlayer2;
 
-            pbPlayer1ImageInfrmPlay.Image =GetCharacterImage(GameInfo.CharacterPlayer1);
+            pbPlayer1ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer1);
             pbPlayer2ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer2);
 
         }

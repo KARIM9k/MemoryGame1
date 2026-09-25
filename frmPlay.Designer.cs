@@ -47,14 +47,12 @@
             this.roundedPictureBox14 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox15 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox16 = new MemoryGame1.RoundedPictureBox();
-            this.roundedPictureBox17 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox18 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox19 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox20 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox21 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox22 = new MemoryGame1.RoundedPictureBox();
             this.roundedPictureBox23 = new MemoryGame1.RoundedPictureBox();
-            this.roundedPictureBox24 = new MemoryGame1.RoundedPictureBox();
             this.lblPlayer1Score = new System.Windows.Forms.Label();
             this.lblPlayer2Score = new System.Windows.Forms.Label();
             this.lblPlayerTurn = new System.Windows.Forms.Label();
@@ -69,6 +67,8 @@
             this.btnClosefrmPlay = new ModernButton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblRounds = new System.Windows.Forms.Label();
+            this.roundedPictureBox17 = new MemoryGame1.RoundedPictureBox();
+            this.roundedPictureBox24 = new MemoryGame1.RoundedPictureBox();
             this.PlayGamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
@@ -86,16 +86,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2ImageInfrmPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1ImageInfrmPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayGamePanel
@@ -118,13 +118,13 @@
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox14);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox15);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox16);
-            this.PlayGamePanel.Controls.Add(this.roundedPictureBox17);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox18);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox19);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox20);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox21);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox22);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox23);
+            this.PlayGamePanel.Controls.Add(this.roundedPictureBox17);
             this.PlayGamePanel.Controls.Add(this.roundedPictureBox24);
             this.PlayGamePanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.PlayGamePanel.Location = new System.Drawing.Point(279, 0);
@@ -340,26 +340,13 @@
             this.roundedPictureBox16.TabIndex = 17;
             this.roundedPictureBox16.TabStop = false;
             // 
-            // roundedPictureBox17
-            // 
-            this.roundedPictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPictureBox17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundedPictureBox17.BorderSize = 3;
-            this.roundedPictureBox17.CornerRadius = 20;
-            this.roundedPictureBox17.Location = new System.Drawing.Point(615, 311);
-            this.roundedPictureBox17.Name = "roundedPictureBox17";
-            this.roundedPictureBox17.Size = new System.Drawing.Size(147, 148);
-            this.roundedPictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.roundedPictureBox17.TabIndex = 18;
-            this.roundedPictureBox17.TabStop = false;
-            // 
             // roundedPictureBox18
             // 
             this.roundedPictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.roundedPictureBox18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox18.BorderSize = 3;
             this.roundedPictureBox18.CornerRadius = 20;
-            this.roundedPictureBox18.Location = new System.Drawing.Point(768, 311);
+            this.roundedPictureBox18.Location = new System.Drawing.Point(615, 311);
             this.roundedPictureBox18.Name = "roundedPictureBox18";
             this.roundedPictureBox18.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,7 +359,7 @@
             this.roundedPictureBox19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox19.BorderSize = 3;
             this.roundedPictureBox19.CornerRadius = 20;
-            this.roundedPictureBox19.Location = new System.Drawing.Point(3, 465);
+            this.roundedPictureBox19.Location = new System.Drawing.Point(768, 311);
             this.roundedPictureBox19.Name = "roundedPictureBox19";
             this.roundedPictureBox19.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -385,7 +372,7 @@
             this.roundedPictureBox20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox20.BorderSize = 3;
             this.roundedPictureBox20.CornerRadius = 20;
-            this.roundedPictureBox20.Location = new System.Drawing.Point(156, 465);
+            this.roundedPictureBox20.Location = new System.Drawing.Point(3, 465);
             this.roundedPictureBox20.Name = "roundedPictureBox20";
             this.roundedPictureBox20.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,7 +385,7 @@
             this.roundedPictureBox21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox21.BorderSize = 3;
             this.roundedPictureBox21.CornerRadius = 20;
-            this.roundedPictureBox21.Location = new System.Drawing.Point(309, 465);
+            this.roundedPictureBox21.Location = new System.Drawing.Point(156, 465);
             this.roundedPictureBox21.Name = "roundedPictureBox21";
             this.roundedPictureBox21.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -411,7 +398,7 @@
             this.roundedPictureBox22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox22.BorderSize = 3;
             this.roundedPictureBox22.CornerRadius = 20;
-            this.roundedPictureBox22.Location = new System.Drawing.Point(462, 465);
+            this.roundedPictureBox22.Location = new System.Drawing.Point(309, 465);
             this.roundedPictureBox22.Name = "roundedPictureBox22";
             this.roundedPictureBox22.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -424,25 +411,12 @@
             this.roundedPictureBox23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPictureBox23.BorderSize = 3;
             this.roundedPictureBox23.CornerRadius = 20;
-            this.roundedPictureBox23.Location = new System.Drawing.Point(615, 465);
+            this.roundedPictureBox23.Location = new System.Drawing.Point(462, 465);
             this.roundedPictureBox23.Name = "roundedPictureBox23";
             this.roundedPictureBox23.Size = new System.Drawing.Size(147, 148);
             this.roundedPictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.roundedPictureBox23.TabIndex = 24;
             this.roundedPictureBox23.TabStop = false;
-            // 
-            // roundedPictureBox24
-            // 
-            this.roundedPictureBox24.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPictureBox24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundedPictureBox24.BorderSize = 3;
-            this.roundedPictureBox24.CornerRadius = 20;
-            this.roundedPictureBox24.Location = new System.Drawing.Point(768, 465);
-            this.roundedPictureBox24.Name = "roundedPictureBox24";
-            this.roundedPictureBox24.Size = new System.Drawing.Size(147, 148);
-            this.roundedPictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.roundedPictureBox24.TabIndex = 25;
-            this.roundedPictureBox24.TabStop = false;
             // 
             // lblPlayer1Score
             // 
@@ -607,6 +581,32 @@
             this.lblRounds.TabIndex = 14;
             this.lblRounds.Text = "0/0";
             // 
+            // roundedPictureBox17
+            // 
+            this.roundedPictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPictureBox17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPictureBox17.BorderSize = 3;
+            this.roundedPictureBox17.CornerRadius = 20;
+            this.roundedPictureBox17.Location = new System.Drawing.Point(615, 465);
+            this.roundedPictureBox17.Name = "roundedPictureBox17";
+            this.roundedPictureBox17.Size = new System.Drawing.Size(147, 148);
+            this.roundedPictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.roundedPictureBox17.TabIndex = 25;
+            this.roundedPictureBox17.TabStop = false;
+            // 
+            // roundedPictureBox24
+            // 
+            this.roundedPictureBox24.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPictureBox24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPictureBox24.BorderSize = 3;
+            this.roundedPictureBox24.CornerRadius = 20;
+            this.roundedPictureBox24.Location = new System.Drawing.Point(768, 465);
+            this.roundedPictureBox24.Name = "roundedPictureBox24";
+            this.roundedPictureBox24.Size = new System.Drawing.Size(147, 148);
+            this.roundedPictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.roundedPictureBox24.TabIndex = 26;
+            this.roundedPictureBox24.TabStop = false;
+            // 
             // frmPlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -650,16 +650,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2ImageInfrmPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1ImageInfrmPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox24)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -683,14 +683,12 @@
         private RoundedPictureBox roundedPictureBox14;
         private RoundedPictureBox roundedPictureBox15;
         private RoundedPictureBox roundedPictureBox16;
-        private RoundedPictureBox roundedPictureBox17;
         private RoundedPictureBox roundedPictureBox18;
         private RoundedPictureBox roundedPictureBox19;
         private RoundedPictureBox roundedPictureBox20;
         private RoundedPictureBox roundedPictureBox21;
         private RoundedPictureBox roundedPictureBox22;
         private RoundedPictureBox roundedPictureBox23;
-        private RoundedPictureBox roundedPictureBox24;
         private System.Windows.Forms.Label lblPlayer1Score;
         private System.Windows.Forms.Label lblPlayer2Score;
         private System.Windows.Forms.Label lblPlayerTurn;
@@ -705,5 +703,7 @@
         private ModernButton btnClosefrmPlay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblRounds;
+        private RoundedPictureBox roundedPictureBox17;
+        private RoundedPictureBox roundedPictureBox24;
     }
 }
