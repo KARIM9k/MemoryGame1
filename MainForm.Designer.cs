@@ -30,17 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.panelStartGame = new System.Windows.Forms.Panel();
-            this.btnPlay = new ModernButton();
-            this.lblStartGamePlayer2 = new System.Windows.Forms.Label();
-            this.lblStartGamePlayer1 = new System.Windows.Forms.Label();
-            this.pbStartGamePlayer2 = new System.Windows.Forms.PictureBox();
-            this.pbStartGamePlayer1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelHowToPlay = new System.Windows.Forms.Panel();
             this.pBHowToPlay = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelSettings = new System.Windows.Forms.Panel();
+            this.panelMainMenue = new System.Windows.Forms.Panel();
             this.gbPlayer1Info = new CustomGroupBox();
             this.gbGenderAndCharacter1 = new CustomGroupBox();
             this.pb1_5 = new System.Windows.Forms.PictureBox();
@@ -73,21 +67,25 @@
             this.tbTimePerRound = new System.Windows.Forms.TrackBar();
             this.lblTimePerRound = new System.Windows.Forms.Label();
             this.cgbLevel = new CustomGroupBox();
+            this.panelStartGame = new System.Windows.Forms.Panel();
+            this.btnPlay = new ModernButton();
+            this.lblStartGamePlayer2 = new System.Windows.Forms.Label();
+            this.lblStartGamePlayer1 = new System.Windows.Forms.Label();
+            this.pbStartGamePlayer2 = new System.Windows.Forms.PictureBox();
+            this.pbStartGamePlayer1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.rbHard = new System.Windows.Forms.RadioButton();
             this.rbEasy = new System.Windows.Forms.RadioButton();
             this.rbMid = new System.Windows.Forms.RadioButton();
-            this.panelMainMenue = new System.Windows.Forms.Panel();
             this.modernButton1 = new ModernButton();
             this.modernButton3 = new ModernButton();
             this.modernButton2 = new ModernButton();
             this.modernButton4 = new ModernButton();
-            this.panelStartGame.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer1)).BeginInit();
             this.panelHowToPlay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBHowToPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panelSettings.SuspendLayout();
+            this.panelMainMenue.SuspendLayout();
             this.gbPlayer1Info.SuspendLayout();
             this.gbGenderAndCharacter1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1_5)).BeginInit();
@@ -108,97 +106,10 @@
             this.gbTimePerRound.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).BeginInit();
             this.cgbLevel.SuspendLayout();
-            this.panelMainMenue.SuspendLayout();
+            this.panelStartGame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelStartGame
-            // 
-            this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelStartGame.BackgroundImage = global::MemoryGame1.Properties.Resources.Firefly_RemoveBackground;
-            this.panelStartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelStartGame.Controls.Add(this.btnPlay);
-            this.panelStartGame.Controls.Add(this.lblStartGamePlayer2);
-            this.panelStartGame.Controls.Add(this.lblStartGamePlayer1);
-            this.panelStartGame.Controls.Add(this.pbStartGamePlayer2);
-            this.panelStartGame.Controls.Add(this.pbStartGamePlayer1);
-            this.panelStartGame.Controls.Add(this.label2);
-            this.panelStartGame.Location = new System.Drawing.Point(275, 37);
-            this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelStartGame.Name = "panelStartGame";
-            this.panelStartGame.Size = new System.Drawing.Size(889, 547);
-            this.panelStartGame.TabIndex = 6;
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.White;
-            this.btnPlay.BorderColor = System.Drawing.Color.LightGray;
-            this.btnPlay.BorderRadius = 20;
-            this.btnPlay.BorderSize = 2;
-            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlay.FlatAppearance.BorderSize = 0;
-            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnPlay.ForeColor = System.Drawing.Color.Black;
-            this.btnPlay.Location = new System.Drawing.Point(373, 441);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(151, 64);
-            this.btnPlay.TabIndex = 5;
-            this.btnPlay.Text = "PLAY";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
-            this.btnPlay.MouseEnter += new System.EventHandler(this.btnPlay_MouseEnter);
-            this.btnPlay.MouseLeave += new System.EventHandler(this.btnPlay_MouseLeave);
-            // 
-            // lblStartGamePlayer2
-            // 
-            this.lblStartGamePlayer2.AutoSize = true;
-            this.lblStartGamePlayer2.Font = new System.Drawing.Font("Lucida Fax", 18F);
-            this.lblStartGamePlayer2.Location = new System.Drawing.Point(555, 415);
-            this.lblStartGamePlayer2.Name = "lblStartGamePlayer2";
-            this.lblStartGamePlayer2.Size = new System.Drawing.Size(127, 34);
-            this.lblStartGamePlayer2.TabIndex = 4;
-            this.lblStartGamePlayer2.Text = "Player2";
-            // 
-            // lblStartGamePlayer1
-            // 
-            this.lblStartGamePlayer1.AutoSize = true;
-            this.lblStartGamePlayer1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartGamePlayer1.Location = new System.Drawing.Point(213, 415);
-            this.lblStartGamePlayer1.Name = "lblStartGamePlayer1";
-            this.lblStartGamePlayer1.Size = new System.Drawing.Size(127, 34);
-            this.lblStartGamePlayer1.TabIndex = 3;
-            this.lblStartGamePlayer1.Text = "Player1";
-            // 
-            // pbStartGamePlayer2
-            // 
-            this.pbStartGamePlayer2.BackgroundImage = global::MemoryGame1.Properties.Resources.UserImage;
-            this.pbStartGamePlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbStartGamePlayer2.Location = new System.Drawing.Point(532, 169);
-            this.pbStartGamePlayer2.Name = "pbStartGamePlayer2";
-            this.pbStartGamePlayer2.Size = new System.Drawing.Size(174, 210);
-            this.pbStartGamePlayer2.TabIndex = 2;
-            this.pbStartGamePlayer2.TabStop = false;
-            // 
-            // pbStartGamePlayer1
-            // 
-            this.pbStartGamePlayer1.BackgroundImage = global::MemoryGame1.Properties.Resources.UserImage;
-            this.pbStartGamePlayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbStartGamePlayer1.Location = new System.Drawing.Point(184, 169);
-            this.pbStartGamePlayer1.Name = "pbStartGamePlayer1";
-            this.pbStartGamePlayer1.Size = new System.Drawing.Size(174, 210);
-            this.pbStartGamePlayer1.TabIndex = 1;
-            this.pbStartGamePlayer1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Magneto", 34.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(234, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(405, 72);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Start Game";
             // 
             // panelHowToPlay
             // 
@@ -245,6 +156,22 @@
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(884, 544);
             this.panelSettings.TabIndex = 6;
+            // 
+            // panelMainMenue
+            // 
+            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
+            this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMainMenue.Controls.Add(this.modernButton1);
+            this.panelMainMenue.Controls.Add(this.modernButton3);
+            this.panelMainMenue.Controls.Add(this.modernButton2);
+            this.panelMainMenue.Controls.Add(this.modernButton4);
+            this.panelMainMenue.Location = new System.Drawing.Point(12, 37);
+            this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelMainMenue.Name = "panelMainMenue";
+            this.panelMainMenue.Size = new System.Drawing.Size(237, 551);
+            this.panelMainMenue.TabIndex = 5;
             // 
             // gbPlayer1Info
             // 
@@ -662,7 +589,8 @@
             this.tbTimePerRound.Name = "tbTimePerRound";
             this.tbTimePerRound.Size = new System.Drawing.Size(252, 56);
             this.tbTimePerRound.TabIndex = 0;
-            this.tbTimePerRound.Value = 5;
+            this.tbTimePerRound.Value = 10;
+            this.tbTimePerRound.Scroll += new System.EventHandler(this.tbTimePerRound_Scroll);
             this.tbTimePerRound.ValueChanged += new System.EventHandler(this.tbTimePerRound_ValueChanged);
             // 
             // lblTimePerRound
@@ -671,9 +599,9 @@
             this.lblTimePerRound.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTimePerRound.Location = new System.Drawing.Point(100, 37);
             this.lblTimePerRound.Name = "lblTimePerRound";
-            this.lblTimePerRound.Size = new System.Drawing.Size(38, 34);
+            this.lblTimePerRound.Size = new System.Drawing.Size(51, 34);
             this.lblTimePerRound.TabIndex = 1;
-            this.lblTimePerRound.Text = "5s";
+            this.lblTimePerRound.Text = "10s";
             // 
             // cgbLevel
             // 
@@ -690,6 +618,95 @@
             this.cgbLevel.TabIndex = 5;
             this.cgbLevel.TabStop = false;
             this.cgbLevel.Text = "Level";
+            // 
+            // panelStartGame
+            // 
+            this.panelStartGame.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelStartGame.BackgroundImage = global::MemoryGame1.Properties.Resources.Firefly_RemoveBackground;
+            this.panelStartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelStartGame.Controls.Add(this.btnPlay);
+            this.panelStartGame.Controls.Add(this.lblStartGamePlayer2);
+            this.panelStartGame.Controls.Add(this.lblStartGamePlayer1);
+            this.panelStartGame.Controls.Add(this.pbStartGamePlayer2);
+            this.panelStartGame.Controls.Add(this.pbStartGamePlayer1);
+            this.panelStartGame.Controls.Add(this.label2);
+            this.panelStartGame.Location = new System.Drawing.Point(275, 38);
+            this.panelStartGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelStartGame.Name = "panelStartGame";
+            this.panelStartGame.Size = new System.Drawing.Size(889, 547);
+            this.panelStartGame.TabIndex = 6;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.White;
+            this.btnPlay.BorderColor = System.Drawing.Color.LightGray;
+            this.btnPlay.BorderRadius = 20;
+            this.btnPlay.BorderSize = 2;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPlay.ForeColor = System.Drawing.Color.Black;
+            this.btnPlay.Location = new System.Drawing.Point(373, 441);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(151, 64);
+            this.btnPlay.TabIndex = 5;
+            this.btnPlay.Text = "PLAY";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.btnPlay.MouseEnter += new System.EventHandler(this.btnPlay_MouseEnter);
+            this.btnPlay.MouseLeave += new System.EventHandler(this.btnPlay_MouseLeave);
+            // 
+            // lblStartGamePlayer2
+            // 
+            this.lblStartGamePlayer2.AutoSize = true;
+            this.lblStartGamePlayer2.Font = new System.Drawing.Font("Lucida Fax", 18F);
+            this.lblStartGamePlayer2.Location = new System.Drawing.Point(555, 415);
+            this.lblStartGamePlayer2.Name = "lblStartGamePlayer2";
+            this.lblStartGamePlayer2.Size = new System.Drawing.Size(127, 34);
+            this.lblStartGamePlayer2.TabIndex = 4;
+            this.lblStartGamePlayer2.Text = "Player2";
+            // 
+            // lblStartGamePlayer1
+            // 
+            this.lblStartGamePlayer1.AutoSize = true;
+            this.lblStartGamePlayer1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartGamePlayer1.Location = new System.Drawing.Point(213, 415);
+            this.lblStartGamePlayer1.Name = "lblStartGamePlayer1";
+            this.lblStartGamePlayer1.Size = new System.Drawing.Size(127, 34);
+            this.lblStartGamePlayer1.TabIndex = 3;
+            this.lblStartGamePlayer1.Text = "Player1";
+            // 
+            // pbStartGamePlayer2
+            // 
+            this.pbStartGamePlayer2.BackgroundImage = global::MemoryGame1.Properties.Resources.UserImage;
+            this.pbStartGamePlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbStartGamePlayer2.Location = new System.Drawing.Point(532, 169);
+            this.pbStartGamePlayer2.Name = "pbStartGamePlayer2";
+            this.pbStartGamePlayer2.Size = new System.Drawing.Size(174, 210);
+            this.pbStartGamePlayer2.TabIndex = 2;
+            this.pbStartGamePlayer2.TabStop = false;
+            // 
+            // pbStartGamePlayer1
+            // 
+            this.pbStartGamePlayer1.BackgroundImage = global::MemoryGame1.Properties.Resources.UserImage;
+            this.pbStartGamePlayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbStartGamePlayer1.Location = new System.Drawing.Point(184, 169);
+            this.pbStartGamePlayer1.Name = "pbStartGamePlayer1";
+            this.pbStartGamePlayer1.Size = new System.Drawing.Size(174, 210);
+            this.pbStartGamePlayer1.TabIndex = 1;
+            this.pbStartGamePlayer1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Magneto", 34.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(234, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(405, 72);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Start Game";
             // 
             // rbHard
             // 
@@ -729,22 +746,6 @@
             this.rbMid.Text = "Mid";
             this.rbMid.UseVisualStyleBackColor = true;
             this.rbMid.CheckedChanged += new System.EventHandler(this.rbMid_CheckedChanged);
-            // 
-            // panelMainMenue
-            // 
-            this.panelMainMenue.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelMainMenue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMainMenue.BackgroundImage")));
-            this.panelMainMenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMainMenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMainMenue.Controls.Add(this.modernButton1);
-            this.panelMainMenue.Controls.Add(this.modernButton3);
-            this.panelMainMenue.Controls.Add(this.modernButton2);
-            this.panelMainMenue.Controls.Add(this.modernButton4);
-            this.panelMainMenue.Location = new System.Drawing.Point(12, 37);
-            this.panelMainMenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelMainMenue.Name = "panelMainMenue";
-            this.panelMainMenue.Size = new System.Drawing.Size(237, 551);
-            this.panelMainMenue.TabIndex = 5;
             // 
             // modernButton1
             // 
@@ -851,14 +852,11 @@
             this.Name = "MainForm";
             this.Text = "Card Mach Game";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panelStartGame.ResumeLayout(false);
-            this.panelStartGame.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer1)).EndInit();
             this.panelHowToPlay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBHowToPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panelSettings.ResumeLayout(false);
+            this.panelMainMenue.ResumeLayout(false);
             this.gbPlayer1Info.ResumeLayout(false);
             this.gbPlayer1Info.PerformLayout();
             this.gbGenderAndCharacter1.ResumeLayout(false);
@@ -887,7 +885,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimePerRound)).EndInit();
             this.cgbLevel.ResumeLayout(false);
             this.cgbLevel.PerformLayout();
-            this.panelMainMenue.ResumeLayout(false);
+            this.panelStartGame.ResumeLayout(false);
+            this.panelStartGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStartGamePlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,12 +17,15 @@ namespace MemoryGame1
     public enum enLevel {enEasy=0,enMid=1,enHard=2 };
     public enum enGender {enMale =0, enFemale=1 }; 
 
-    public enum enCharacters {B1=0,B2=1,B3=2,B4=3,B5=4,G1=5,G2=6,G3=7,G4=8,G5=9}; 
+    public enum enCharacters {B1=0,B2=1,B3=2,B4=3,B5=4,G1=5,G2=6,G3=7,G4=8,G5=9};
+
+    public enum enGameMode { SinglePlayer, TwoPlayers };
    
     public struct stGameInfo 
     {
        public enLevel Level;
-       public bool TowPlayers;
+
+       public enGameMode Mode;
        public int NumberOfRounds;
        public int TimePerRound;
        public string NamePlayer1;
@@ -41,10 +44,10 @@ namespace MemoryGame1
 
             Player1FinalScore = 0;
             Player2FinalScore = 0;
-            Level = enLevel.enEasy;
-            TowPlayers = true;
-            NumberOfRounds = 5;
-            TimePerRound = 30;
+            Level = enLevel.enMid;
+            Mode = enGameMode.TwoPlayers;
+            NumberOfRounds = 3;
+            TimePerRound = 10;
 
             NamePlayer1 = "Player 1";
             NamePlayer2 = "Player 2";
@@ -71,7 +74,6 @@ namespace MemoryGame1
 
             GameInfo = new stGameInfo();
             GameInfo.SetDefault();                
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -191,20 +193,45 @@ namespace MemoryGame1
             lblTimePerRound.Text = tbTimePerRound.Value.ToString()+"s"; 
         }
 
+        void UpdateTimeSettings()
+        {
+            if (rbOnePlayer.Checked)
+            {
+                gbTimePerRound.Text = "Time To Finish";
+                lblTimePerRound.Text = "60s";
+                tbTimePerRound.Maximum = 250;
+                tbTimePerRound.Minimum = 20;
+                tbTimePerRound.Value = 60;
+            }
+            else
+            {     
+                gbTimePerRound.Text = "Time Per Round";
+                lblTimePerRound.Text = "10s";
+                tbTimePerRound.Maximum = 20;
+                tbTimePerRound.Minimum = 5;
+                tbTimePerRound.Value = 10;
+
+            }
+        }
+
         void UpdateNumberOfPlayers()
         {
             if (rbOnePlayer.Checked)
             {
-                GameInfo.TowPlayers = false;
+                GameInfo.Mode = enGameMode.SinglePlayer;
                 gbPlayer1Info.Enabled = true;
-                gbPlayer2Info.Enabled = false; 
+                gbPlayer2Info.Enabled = false;
+                
+                
             }
             else if (rbTwoPlayers.Checked)
             {
-                GameInfo.TowPlayers = true;
+                GameInfo.Mode = enGameMode.TwoPlayers;
                 gbPlayer1Info.Enabled = true;
                 gbPlayer2Info.Enabled = true;
+
             }
+            UpdateTimeSettings();
         }
 
         enGender GetGender(RadioButton Gender)
@@ -678,6 +705,11 @@ namespace MemoryGame1
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             GameInfo.NumberOfRounds =(int)numericUpDown1.Value;
+        }
+
+        private void tbTimePerRound_Scroll(object sender, EventArgs e)
+        {
+            //lblTimePerRound.Text = tbTimePerRound.Value.ToString();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace MemoryGame1
     {
         public enum enPictures { enAirPlane = 0, enApple = 1, enBarcelona, enCar, enCat, enChair, enCockroach, enEgg, enMonkey, enRealMadrid, enSwan, enWhale }
         private stGameInfo GameInfo;
+
+        private bool OnePlayer = false;
 
         private int _CurrentRound = 1;
         private int _Player1RoundsWon = 0;
@@ -32,7 +35,7 @@ namespace MemoryGame1
             public string FirstImage;
             public string SecondImage;
             public bool FirstChoice;
-            public int TimePerRound; 
+            public int TimePerRound;
         }
 
         stRoundInfo RoundInfo;
@@ -60,21 +63,53 @@ namespace MemoryGame1
                 default: return Resources.B1;
             }
         }
-        
+
 
         private void SetViewControls()
         {
 
-            lblPlayerTurn.Text = GameInfo.NamePlayer1;
-            lblPlayer1NameInfrmPlay.Text = GameInfo.NamePlayer1;
-            lblPlayer2NameInfrmPlay.Text = GameInfo.NamePlayer2;
+            //update
+            if (OnePlayer)
+            {
+                lblPlayerTurn.Visible = false;
 
-            pbPlayer1ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer1);
-            pbPlayer2ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer2);
+                lblPlayer1NameInfrmPlay.Text = GameInfo.NamePlayer1;
+                lblPlayer2NameInfrmPlay.Visible = false;
+
+                pbPlayer1ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer1);
+                pbPlayer2ImageInfrmPlay.Visible = false;
+
+
+                lblPlayer1Score.Visible = false;
+                lblPlayer2Score.Visible = false;
+
+                lblTurnTitle.Visible = false;
+
+                lblPlayer1NameInfrmPlay.Font = new Font(lblPlayer1NameInfrmPlay.Font.FontFamily, 25);
+                lblPlayer1NameInfrmPlay.Location = new Point(40, 185);
+                pbPlayer1ImageInfrmPlay.Size = new Size(130, 130);
+                pbPlayer1ImageInfrmPlay.Location = new Point(40, 235);
+
+
+            }
+            else
+            {
+                lblPlayerTurn.Text = GameInfo.NamePlayer1;
+
+                lblPlayer1NameInfrmPlay.Text = GameInfo.NamePlayer1;
+                lblPlayer2NameInfrmPlay.Text = GameInfo.NamePlayer2;
+
+                pbPlayer1ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer1);
+                pbPlayer2ImageInfrmPlay.Image = GetCharacterImage(GameInfo.CharacterPlayer2);
+
+            }
+
+
 
         }
         private void frmPlay_Load(object sender, EventArgs e)
         {
+            OnePlayer = (GameInfo.Mode == enGameMode.SinglePlayer) ? true : false;
             SetViewControls();
             StartPlay();
         }
@@ -106,7 +141,7 @@ namespace MemoryGame1
             RoundInfo.Player2Score = 0;
             lblPlayer1Score.Text = "0";
             lblPlayer2Score.Text = "0";
-             
+
             HashSet<string> PicVectorSet = new HashSet<string>();
             Random random = new Random();
 
@@ -151,7 +186,7 @@ namespace MemoryGame1
                     GetPicBoxes(24, 120, 110);
                     break;
             }
-            ResetAndStartTimer(); 
+            ResetAndStartTimer();
         }
 
         private void GetPicBoxes(int NumberOfPic, int Height, int Width)
@@ -215,8 +250,8 @@ namespace MemoryGame1
 
         private async Task StartGame(RoundedPictureBox clickedPic)
         {
-           
-           
+
+
             if (!RoundInfo.FirstChoice)
             {
 
@@ -229,7 +264,12 @@ namespace MemoryGame1
 
                 RoundInfo.SecondImage = RoundInfo.PicturesNames[(int)clickedPic.Tag - 1];
                 SecondIndex = clickedPic;
-                timer1.Stop();
+
+                if (!OnePlayer)
+                {
+                    timer1.Stop();
+
+                }
 
                 await CompareChoices(FirstIndex, SecondIndex);
 
@@ -243,20 +283,25 @@ namespace MemoryGame1
                 }
                 else
                 {
-                    ResetAndStartTimer();
+
+                    if (!OnePlayer)//update
+                        ResetAndStartTimer();
                 }
 
             }
-              
+
         }
 
         private async Task CompareChoices(RoundedPictureBox pic1, RoundedPictureBox pic2)
         {
+
+            isProcessing = true;
+
             bool Matched = RoundInfo.FirstImage == RoundInfo.SecondImage;
 
             if (Matched)
             {
-                if (FirstPlayerTurn)
+                if (OnePlayer || FirstPlayerTurn)
                     RoundInfo.Player1Score++;
                 else
                     RoundInfo.Player2Score++;
@@ -266,8 +311,10 @@ namespace MemoryGame1
                 pic2.Enabled = false;
 
                 //if we want to change turn when the player get true answer
-                FirstPlayerTurn = !FirstPlayerTurn;
-               
+
+                if (!OnePlayer)//update
+                    FirstPlayerTurn = !FirstPlayerTurn;
+
 
             }
             else
@@ -276,47 +323,77 @@ namespace MemoryGame1
 
                 await Task.Delay(1500);
 
-                pic1.Image = Resources.download__8_;
-                pic2.Image = Resources.download__8_;
 
-                FirstPlayerTurn = !FirstPlayerTurn;
+                if (RoundInfo.TimePerRound > 0 || !OnePlayer)
+                {
+                    pic1.Image = Resources.download__8_;
+                    pic2.Image = Resources.download__8_;
+                }
+
+                if (!OnePlayer)//update
+                    FirstPlayerTurn = !FirstPlayerTurn;
 
                 isProcessing = false;
             }
-            
+
             lblPlayer1Score.Text = RoundInfo.Player1Score.ToString();
             lblPlayer2Score.Text = RoundInfo.Player2Score.ToString();
             lblPlayerTurn.Text = FirstPlayerTurn ? GameInfo.NamePlayer1 : GameInfo.NamePlayer2;
+            isProcessing = false;
         }
 
         private void ResetAndStartTimer()
         {
             timer1.Stop();
             RoundInfo.TimePerRound = GameInfo.TimePerRound;
-            lblTimer.Text = RoundInfo.TimePerRound.ToString()+'s';
+            lblTimer.Text = RoundInfo.TimePerRound.ToString() + 's';
             timer1.Start();
         }
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private async void timer1_Tick(object sender, EventArgs e)
         {
             RoundInfo.TimePerRound--;
-            lblTimer.Text = RoundInfo.TimePerRound.ToString()+'s'; 
+            lblTimer.Text = RoundInfo.TimePerRound.ToString() + 's';
             if (RoundInfo.TimePerRound == 0)
             {
                 timer1.Stop();
 
+
+                while (isProcessing)
+                {
+                    await Task.Delay(100);
+                }
+
                 if (FirstIndex != null)
                 {
-                   
+
                     FirstIndex.Image = Resources.download__8_;
-                    FirstIndex = null; 
+                    FirstIndex = null;
                 }
 
                 RoundInfo.FirstChoice = false;
 
-                FirstPlayerTurn = !FirstPlayerTurn;
-                lblPlayerTurn.Text = FirstPlayerTurn ? GameInfo.NamePlayer1 : GameInfo.NamePlayer2;
 
-                ResetAndStartTimer();
+                if (OnePlayer)
+                {
+                    foreach (Control ctrl in PlayGamePanel.Controls)
+                    {
+                        if (ctrl is RoundedPictureBox pic)
+                        {
+                            pic.Enabled = false;
+                        }
+                    }
+                    MessageBox.Show("Time OUT you lost this round", "STOP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                await HandleRoundEnd();
+                }
+                
+                else
+                {
+                    MessageBox.Show("Time OUT", "STOP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FirstPlayerTurn = !FirstPlayerTurn;
+                    lblPlayerTurn.Text = FirstPlayerTurn ? GameInfo.NamePlayer1 : GameInfo.NamePlayer2;
+                    ResetAndStartTimer();
+                }
             }
         }
 
@@ -370,9 +447,10 @@ namespace MemoryGame1
 
         private bool CheckIfRoundFinished()
         {
-            foreach(Control ctrl in PlayGamePanel.Controls)
+
+            foreach (Control ctrl in PlayGamePanel.Controls)
             {
-                if(ctrl is RoundedPictureBox pic && pic.Enabled)
+                if (ctrl is RoundedPictureBox pic && pic.Enabled)
                 {
                     return false;
                 }
@@ -385,54 +463,106 @@ namespace MemoryGame1
             timer1.Stop();
 
             string roundWinner = "";
-            if (RoundInfo.Player1Score > RoundInfo.Player2Score)
+            if (OnePlayer)
             {
-                _Player1RoundsWon++;
-                roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer1}";
-            }
-            else if (RoundInfo.Player2Score > RoundInfo.Player1Score)
-            {
-                _Player2RoundsWon++;
-                roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer2}";
+
+                if (RoundInfo.TimePerRound > 0)
+                {
+                    _Player1RoundsWon++;
+                    roundWinner = $"You win the round Number {_CurrentRound}";
+                }
+                else
+                {
+                    roundWinner = $"You lost the round Number{_CurrentRound}";
+                }
+
+                if (_CurrentRound >= GameInfo.NumberOfRounds)
+                {
+                    MessageBox.Show($"{roundWinner}\n\nAll rounds have been completed!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowFinalWinner();
+                }
+                else
+                {
+                    MessageBox.Show($"{roundWinner}\n\nClick OK to start the next round.", $"Round {_CurrentRound} Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _CurrentRound++;
+                    StartPlay();
+                }
             }
             else
             {
-                roundWinner = $"Round {_CurrentRound} ended in a Draw!";
-            }
+                if (RoundInfo.Player1Score > RoundInfo.Player2Score)
+                {
+                    _Player1RoundsWon++;
+                    roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer1}";
+                }
+                else if (RoundInfo.Player2Score > RoundInfo.Player1Score)
+                {
+                    _Player2RoundsWon++;
+                    roundWinner = $"Round {_CurrentRound} Winner: {GameInfo.NamePlayer2}";
+                }
+                else
+                {
+                    roundWinner = $"Round {_CurrentRound} ended in a Draw!";
+                }
 
-            if (_CurrentRound >= GameInfo.NumberOfRounds)
-            {
-                MessageBox.Show($"{roundWinner}\n\nAll rounds have been completed!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ShowFinalWinner();
-            }
-            else
-            {
-                MessageBox.Show($"{roundWinner}\n\nClick OK to start the next round.", $"Round {_CurrentRound} Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (_CurrentRound >= GameInfo.NumberOfRounds)
+                {
+                    MessageBox.Show($"{roundWinner}\n\nAll rounds have been completed!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowFinalWinner();
+                }
+                else
+                {
+                    MessageBox.Show($"{roundWinner}\n\nClick OK to start the next round.", $"Round {_CurrentRound} Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                _CurrentRound++;
-                StartPlay();
-            }
+                    _CurrentRound++;
+                    StartPlay();
+                }
+
+           }
+
+
+
         }
 
         private void ShowFinalWinner()
         {
             string message = "";
 
-            if (_Player1RoundsWon > _Player2RoundsWon)
+
+            if (OnePlayer)
             {
-                message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer1}\nWon {_Player1RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
-            }
-            else if (_Player2RoundsWon > _Player1RoundsWon)
-            {
-                message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer2}\nWon {_Player2RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+                int requiredRoundsToWin = (GameInfo.NumberOfRounds / 2) + 1;
+                if (_Player1RoundsWon >=requiredRoundsToWin)
+                {
+                    message = $"🏆 Congratulations! The overall result is {GameInfo.NamePlayer1}\nWon {_Player1RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+
+                }
+                else
+                {
+                    message = $"Sorry your overall result is fail {GameInfo.NamePlayer1}\nWon {_Player1RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+                }
             }
             else
             {
-                message = $"🤝 The game ended in a overall Draw ({_Player1RoundsWon} - {_Player2RoundsWon})!";
+                if (_Player1RoundsWon > _Player2RoundsWon)
+                {
+                    message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer1}\nWon {_Player1RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+                }
+                else if (_Player2RoundsWon > _Player1RoundsWon)
+                {
+                    message = $"🏆 Congratulations! The overall winner is {GameInfo.NamePlayer2}\nWon {_Player2RoundsWon} out of {GameInfo.NumberOfRounds} rounds.";
+                }
+                else
+                {
+                    message = $"🤝 The game ended in a overall Draw ({_Player1RoundsWon} - {_Player2RoundsWon})!";
+                }
             }
 
+
+
+
             MessageBox.Show(message, "Final Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close(); 
+            this.Close();
         }
 
 
