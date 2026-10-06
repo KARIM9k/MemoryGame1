@@ -1,4 +1,83 @@
+# 🃏 Memory Card Game (C# Windows Forms)
+
+A dynamic, interactive, and responsive desktop **Memory Card Game** built with **C#** and **.NET Framework (Windows Forms)**. The game supports both **Single-Player** and **Two-Player (VS)** modes, custom player avatars, sound settings, customizable timer controls, and multiple difficulty levels.
+
+---
+
+## 📸 Screenshots
+
+| Main Menu | Gameplay Board |
+| :---: | :---: |
+| ![Main Menu](https://via.placeholder.com/400x250?text=Main+Menu+Preview) | ![Gameplay Board](https://via.placeholder.com/400x250?text=Gameplay+Board+Preview) |
+
+---
+
+## ✨ Features
+
+- 🎮 **Multiple Game Modes:**
+  - **Single Player:** Play against the clock and try to match all cards before time runs out.
+  - **Two Players (1v1):** Pass-and-play turn-based competition with real-time score tracking.
+
+- ⚙️ **Customizable Settings:**
+  - **3 Difficulty Levels:**
+    - **Easy:** 6 Cards (3 Pairs)
+    - **Medium:** 12 Cards (6 Pairs)
+    - **Hard:** 24 Cards (12 Pairs)
+  - Customizable round durations and total round counts.
+
+- 👤 **Player Customization:**
+  - Dynamic avatar choice (Boys/Girls presets) with visual selection feedback (image darkening effect).
+  - Custom player names with input validation (`ErrorProvider`).
+
+- ⚡ **Asynchronous & Non-Blocking UI:**
+  - Built using `async / await` and `Task.Delay` to handle card flipping animations smoothly without freezing the UI or blocking the main thread.
+  - State management (`isProcessing`) to prevent double-clicking or race conditions during card matching.
+
+- 🎨 **Modern UI Components:**
+  - Custom UI controls like `RoundedPictureBox` and `ModernButton`.
+  - Dynamic button hover states (`MouseEnter` / `MouseLeave`).
+
+---
+
+## 🛠️ Tech Stack & Concepts Applied
+
+- **Language:** C#
+- **Framework:** .NET Framework (Windows Forms)
+- **Asynchronous Programming:** `async`, `await`, `Task.Delay`
+- **Object-Oriented Design (OOP):** Structs/Classes for game state management (`stGameInfo`, `stRoundInfo`).
+- **Graphics & UI:** Custom `ColorMatrix` for dimming unselected avatars, dynamic control generation, and custom event handlers.
+- **Data Structures:** `HashSet<T>` for random pair distribution and `List<T>` shuffling algorithms.
+
+---
+
+## 👥 Collaborative Development & Version Control
+
+This project was built collaboratively by a team of two developers using **Git** and **GitHub** for version control and smooth collaboration.
+
+### 🔄 Collaborative Workflow Applied:
+- **Feature Branching:** Developed new controls, game logic, and UI elements in separate feature branches to keep the codebase clean.
+- **Push & Pull Synchronization:** Frequently synchronized progress via `git push` and `git pull` to integrate changes safely.
+- **Merge & Conflict Resolution:** Executed clean merges into the `main` branch, resolving code conflicts using Visual Studio Merge Tools.
 
 
+## 👥 Authors & Contributors
+
+- **Karim Ghanem** - [GitHub Profile](https://github.com/KARIM9k)
+- **Co-Developer Ahmad Malak** - [GitHub Profile](https://github.com/PartnerUsername)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Visual Studio 2019 or later (with **.NET Desktop Development** workload installed).
+- .NET Framework 4.7.2 or higher.
+
+### Installation & Running
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YourUsername/MemoryGame1.git](https://github.com/YourUsername/MemoryGame1.git)
+
+
+## 📸 GamePlay Video
 https://github.com/user-attachments/assets/796f7d12-fb12-4241-af87-cb37e9379e7d
 
