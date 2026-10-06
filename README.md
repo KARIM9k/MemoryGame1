@@ -8,7 +8,8 @@ A dynamic, interactive, and responsive desktop **Memory Card Game** built with *
 
 | Main Menu | Gameplay Board |
 | :---: | :---: |
-| ![Main Menu](https://via.placeholder.com/400x250?text=Main+Menu+Preview) | ![Gameplay Board](https://via.placeholder.com/400x250?text=Gameplay+Board+Preview) |
+| ![Main Menu](<img width="1100" height="663" alt="image" src="https://github.com/user-attachments/assets/7f9a63ff-9c47-49d2-817f-568d8e51afa3" />
+) | ![Gameplay Board](https://via.placeholder.com/400x250?text=Gameplay+Board+Preview) |
 
 ---
 
