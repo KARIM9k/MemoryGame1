@@ -62,7 +62,7 @@ This project was built collaboratively by a team of two developers using **Git**
 
 ## 👥 Authors & Contributors
 
-- **Karim Ghanem** - [GitHub Profile](https://github.com/KARIM9k)
+- **Karim Ghanem (me)** - [GitHub Profile](https://github.com/KARIM9k)
 - **Co-Developer Ahmad Malak** - [GitHub Profile](https://github.com/PartnerUsername)
 
 ## 🚀 Getting Started
