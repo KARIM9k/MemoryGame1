@@ -75,7 +75,7 @@ This project was built collaboratively by a team of two developers using **Git**
 ### Installation & Running
 
 1. **Clone the repository:**
-   ```bash git clone [https://github.com/KARIM9k/MemoryGame1.git](https://github.com/KARIM9k/MemoryGame1.git)
+  git clone [https://github.com/KARIM9k/MemoryGame1.git](https://github.com/KARIM9k/MemoryGame1.git)
 
 ## 📸 GamePlay Video
 https://github.com/user-attachments/assets/796f7d12-fb12-4241-af87-cb37e9379e7d
